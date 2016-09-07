@@ -1,0 +1,11 @@
+base:
+  version: 1.x
+  css:
+    base:
+      css/styles.css: {weight: 9999}
+  js:
+    js/main.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
