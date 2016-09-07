@@ -4,7 +4,7 @@ status: true
 dependencies: {  }
 name: Artist
 type: artist
-description: ''
+description: 'Artists yay'
 help: ''
 new_revision: false
 preview_mode: 1
