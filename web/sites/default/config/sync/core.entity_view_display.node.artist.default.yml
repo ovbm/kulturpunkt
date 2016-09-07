@@ -1,0 +1,25 @@
+uuid: c5cc1e8c-e1ee-4c7d-b0f3-5d58c4922db7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.artist.body
+    - node.type.artist
+  module:
+    - text
+    - user
+id: node.artist.default
+targetEntityType: node
+bundle: artist
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+hidden:
+  langcode: true
