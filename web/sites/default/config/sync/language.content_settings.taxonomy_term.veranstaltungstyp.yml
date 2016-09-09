@@ -1,0 +1,11 @@
+uuid: 6f2ab283-60e7-4251-a4ae-dd79f84a63c1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.veranstaltungstyp
+id: taxonomy_term.veranstaltungstyp
+target_entity_type_id: taxonomy_term
+target_bundle: veranstaltungstyp
+default_langcode: de
+language_alterable: false

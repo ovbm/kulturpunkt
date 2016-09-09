@@ -1,16 +1,16 @@
-uuid: c5cc1e8c-e1ee-4c7d-b0f3-5d58c4922db7
+uuid: 867f6c00-36ba-44e6-ba6e-11da4eacbdb9
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.artist.body
-    - node.type.artist
+    - field.field.node.page.body
+    - node.type.page
   module:
     - text
     - user
-id: node.artist.default
+id: node.page.default
 targetEntityType: node
-bundle: artist
+bundle: page
 mode: default
 content:
   body:

@@ -1,0 +1,68 @@
+uuid: 2894e9e9-d7b5-4774-931c-2018cc6bd887
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.event.body
+    - field.field.node.event.field_event_bild
+    - field.field.node.event.field_event_datum
+    - field.field.node.event.field_event_land
+    - field.field.node.event.field_event_links
+    - field.field.node.event.field_event_organisation
+    - field.field.node.event.field_event_preis
+    - field.field.node.event.field_event_typ
+    - field.field.node.event.field_event_video
+    - field.field.node.event.field_genre
+    - image.style.large
+    - node.type.event
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.event.teaser
+targetEntityType: node
+bundle: event
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 3
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_event_bild:
+    type: image
+    weight: 1
+    label: above
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+  field_event_datum:
+    type: datetime_custom
+    weight: 0
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: 'm.d.y H:i'
+    third_party_settings: {  }
+  field_genre:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+hidden:
+  field_event_land: true
+  field_event_links: true
+  field_event_organisation: true
+  field_event_preis: true
+  field_event_typ: true
+  field_event_video: true
+  langcode: true
+  links: true

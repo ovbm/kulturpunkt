@@ -1,20 +1,21 @@
-uuid: 72d04703-1629-4ac8-b850-04d323d80b46
+uuid: f931a783-9ac6-422a-b7e8-291c18a2101d
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.artist.body
-    - node.type.artist
+    - field.field.node.page.body
+    - node.type.page
   module:
+    - path
     - text
-id: node.artist.default
+id: node.page.default
 targetEntityType: node
-bundle: artist
+bundle: page
 mode: default
 content:
   body:
     type: text_textarea_with_summary
-    weight: 26
+    weight: 31
     settings:
       rows: 9
       summary_rows: 3
@@ -28,6 +29,11 @@ content:
   langcode:
     type: language_select
     weight: 2
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
     settings: {  }
     third_party_settings: {  }
   promote:

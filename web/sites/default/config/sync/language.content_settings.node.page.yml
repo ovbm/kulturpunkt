@@ -1,11 +1,11 @@
-uuid: 598c35ef-c0bc-480a-8242-8fc456d3f0ee
+uuid: a02ea662-277d-48ef-878b-f7992e9b9326
 langcode: en
 status: true
 dependencies:
   config:
-    - node.type.artist
-id: node.artist
+    - node.type.page
+id: node.page
 target_entity_type_id: node
-target_bundle: artist
+target_bundle: page
 default_langcode: site_default
 language_alterable: false

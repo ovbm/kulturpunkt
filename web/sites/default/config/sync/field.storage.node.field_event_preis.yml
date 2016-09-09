@@ -1,0 +1,20 @@
+uuid: 05ad908e-7daa-4258-96ec-b72fdc7193af
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_event_preis
+field_name: field_event_preis
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: f15d7db3-6e1f-4d16-8b0c-3c45cda64b5a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Event
+type: event
+description: 'Ein Event ist der Überbegriff für alle Veranstaltungen im Kulturpunkt Flawil, ob Konzert, Workshop oder Sonstiges.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

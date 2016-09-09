@@ -1,17 +1,17 @@
-uuid: 4300fa40-3e4b-4ab7-be26-1a9b0996c6bf
+uuid: 3f6b31d3-11ac-478f-b0fb-13956739af18
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.artist.body
-    - node.type.artist
+    - field.field.node.page.body
+    - node.type.page
   module:
     - text
     - user
-id: node.artist.teaser
+id: node.page.teaser
 targetEntityType: node
-bundle: artist
+bundle: page
 mode: teaser
 content:
   body:

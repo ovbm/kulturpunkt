@@ -1,0 +1,21 @@
+uuid: a5632c98-fb8b-448f-bab3-b1b0058903d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_preis
+    - node.type.event
+  module:
+    - text
+id: node.event.field_event_preis
+field_name: field_event_preis
+entity_type: node
+bundle: event
+label: 'Event Preis'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

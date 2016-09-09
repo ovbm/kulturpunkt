@@ -1,0 +1,11 @@
+uuid: c147f918-2e29-4509-b201-e81371244085
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.land
+id: taxonomy_term.land
+target_entity_type_id: taxonomy_term
+target_bundle: land
+default_langcode: de
+language_alterable: false

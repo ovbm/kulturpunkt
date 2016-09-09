@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "041b650de43849ad99edae7a6ece9a59",
-    "content-hash": "cb8d9b5b10d845ec6b64ee5fb84afc1d",
+    "hash": "79dfd73a6dc84236ecd37dd877d88f30",
+    "content-hash": "ed7a8e98429d9e864d5c44a67690d5da",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -905,6 +905,37 @@
             "time": "2016-08-29 16:56:02"
         },
         {
+            "name": "drupal/addtoany",
+            "version": "8.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/addtoany",
+                "reference": "cd428eced42b16946d6006c89b1709343eb6dfea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/addtoany-8.x-1.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Share buttons by AddToAny, including the AddToAny universal sharing button, Facebook, Twitter, Google+, Pinterest, and over 100 more on the <a href=\"https://www.addtoany.com/\" target=\"_blank\">AddToAny</a> platform.",
+            "homepage": "https://www.drupal.org/project/addtoany",
+            "time": "2016-06-17 06:34:08"
+        },
+        {
             "name": "drupal/admin_toolbar",
             "version": "8.1.17",
             "source": {
@@ -1328,7 +1359,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/paragraphs-8.x-1.0.zip",
-                "reference": null,
+                "reference": "7d70adcb69416f35eb2d2596340461df8efda009",
                 "shasum": null
             },
             "require": {
@@ -1401,6 +1432,32 @@
             "time": "2016-04-18 18:44:27"
         },
         {
+            "name": "drupal/taxonomy_manager",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/taxonomy_manager",
+                "reference": "793f2257636b285da379b77fd22ff5a70ef00073"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/taxonomy": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Tool for administrating taxonomy terms.",
+            "homepage": "https://www.drupal.org/project/taxonomy_manager",
+            "time": "2015-12-01 22:19:12"
+        },
+        {
             "name": "drupal/token",
             "version": "8.1.0-beta1",
             "source": {
@@ -1430,6 +1487,42 @@
             "description": "Provides a user interface for the Token API and some missing core tokens.",
             "homepage": "https://www.drupal.org/project/token",
             "time": "2016-08-09 07:03:16"
+        },
+        {
+            "name": "drupal/video",
+            "version": "8.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/video",
+                "reference": "a0f381dcefe45090e8f1de41fd32e42965c78a91"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/video-8.x-1.2.zip",
+                "reference": "a0f381dcefe45090e8f1de41fd32e42965c78a91",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/file": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "package": "Field types",
+                    "version": "8.x-1.x"
+                },
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A field type for storing uploaded or embedded videos.",
+            "homepage": "https://www.drupal.org/project/video",
+            "time": "2016-02-14 17:12:08"
         },
         {
             "name": "drush/drush",

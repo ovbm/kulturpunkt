@@ -1,0 +1,9 @@
+uuid: b8e32fe7-44c7-4425-af0b-26831fbdf0a5
+langcode: de
+status: true
+dependencies: {  }
+name: Veranstaltungstyp
+vid: veranstaltungstyp
+description: ''
+hierarchy: 0
+weight: 0
