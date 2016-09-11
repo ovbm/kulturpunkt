@@ -19,8 +19,11 @@ dependencies:
   module:
     - datetime
     - image
+    - link
+    - options
     - text
     - user
+    - video
 id: node.event.teaser
 targetEntityType: node
 bundle: event
@@ -42,11 +45,56 @@ content:
     third_party_settings: {  }
   field_event_datum:
     type: datetime_custom
-    weight: 0
+    weight: 6
     label: hidden
     settings:
       timezone_override: ''
       date_format: 'd / m'
+    third_party_settings: {  }
+  field_event_land:
+    type: entity_reference_label
+    weight: 4
+    label: inline
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_event_links:
+    type: link
+    weight: 5
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_event_organisation:
+    type: list_default
+    weight: 7
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_event_preis:
+    type: text_default
+    weight: 8
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_event_typ:
+    type: entity_reference_label
+    weight: 9
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_event_video:
+    type: video_embed_thumbnail
+    weight: 10
+    label: hidden
+    settings:
+      image_style: ''
+      link_image_to: ''
     third_party_settings: {  }
   field_genre:
     type: entity_reference_label
@@ -56,11 +104,5 @@ content:
       link: false
     third_party_settings: {  }
 hidden:
-  field_event_land: true
-  field_event_links: true
-  field_event_organisation: true
-  field_event_preis: true
-  field_event_typ: true
-  field_event_video: true
   langcode: true
   links: true

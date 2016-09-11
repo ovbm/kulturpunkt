@@ -1,0 +1,6 @@
+uuid: 3bdb6809-2647-4c7d-9417-0a28a1834296
+langcode: en
+status: true
+dependencies: {  }
+id: offnungszeiten
+label: Öffnungszeiten
