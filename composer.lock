@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "79dfd73a6dc84236ecd37dd877d88f30",
-    "content-hash": "ed7a8e98429d9e864d5c44a67690d5da",
+    "hash": "12884b32875caeb4d3e83e22a861a8c8",
+    "content-hash": "16f642908b2b8962f0a3043286736a09",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -915,7 +915,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/addtoany-8.x-1.4.zip",
-                "reference": null,
+                "reference": "cd428eced42b16946d6006c89b1709343eb6dfea",
                 "shasum": null
             },
             "require": {
@@ -978,6 +978,74 @@
             "description": "Provides a drop-down menu interface to the core Drupal Toolbar.",
             "homepage": "http://drupal.org/project/admin_toolbar",
             "time": "2016-08-19 14:05:31"
+        },
+        {
+            "name": "drupal/better_exposed_filters",
+            "version": "8.3.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/better_exposed_filters",
+                "reference": "b594b44f1d65a147e66ac56b285338a07efec964"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/better_exposed_filters-8.x-3.0-alpha1.zip",
+                "reference": "b594b44f1d65a147e66ac56b285338a07efec964",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/views": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-3.x": "8.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides advanced options (such as links, checkboxes, or jQueryUI widgets) for exposed Views elements.",
+            "homepage": "https://www.drupal.org/project/better_exposed_filters",
+            "time": "2016-05-31 18:36:06"
+        },
+        {
+            "name": "drupal/calendar",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/calendar",
+                "reference": "d60e81af22058ca9c4b1f7292daa5a2f57e24ee6"
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/views": "8.*",
+                "drupal/views_templates": "8.*"
+            },
+            "replace": {
+                "drupal/calendar_datetime": "self.version"
+            },
+            "suggest": {
+                "drupal/core": "Required by drupal/calendar_datetime"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides a Views plugin to display views containing dates as Calendars.",
+            "homepage": "http://drupal.org/project/calendar",
+            "keywords": [
+                "Drupal"
+            ],
+            "time": "2016-06-26 11:01:37"
         },
         {
             "name": "drupal/console",
@@ -1279,6 +1347,33 @@
             "time": "2016-08-20 19:59:03"
         },
         {
+            "name": "drupal/date",
+            "version": "dev-8.x-1.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/date",
+                "reference": "b76414c466797aaee073336c9ef665d33095a562"
+            },
+            "require": {
+                "drupal/core": "8.*"
+            },
+            "replace": {
+                "drupal/date_api": "self.version"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "homepage": "https://www.drupal.org/project/date",
+            "time": "2012-10-28 09:20:01"
+        },
+        {
             "name": "drupal/entity_reference_revisions",
             "version": "8.1.0",
             "source": {
@@ -1432,32 +1527,6 @@
             "time": "2016-04-18 18:44:27"
         },
         {
-            "name": "drupal/taxonomy_manager",
-            "version": "dev-8.x-1.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupal.org/project/taxonomy_manager",
-                "reference": "793f2257636b285da379b77fd22ff5a70ef00073"
-            },
-            "require": {
-                "drupal/core": "8.*",
-                "drupal/taxonomy": "8.*"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-8.x-1.x": "8.1.x-dev"
-                }
-            },
-            "notification-url": "https://packagist.drupal-composer.org/downloads/",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "description": "Tool for administrating taxonomy terms.",
-            "homepage": "https://www.drupal.org/project/taxonomy_manager",
-            "time": "2015-12-01 22:19:12"
-        },
-        {
             "name": "drupal/token",
             "version": "8.1.0-beta1",
             "source": {
@@ -1523,6 +1592,102 @@
             "description": "A field type for storing uploaded or embedded videos.",
             "homepage": "https://www.drupal.org/project/video",
             "time": "2016-02-14 17:12:08"
+        },
+        {
+            "name": "drupal/views_accordion",
+            "version": "8.1.0-alpha2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_accordion",
+                "reference": "621e90b8c059d7ca16ff93b30d2a0a291afe7d4c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_accordion-8.x-1.0-alpha2.zip",
+                "reference": "621e90b8c059d7ca16ff93b30d2a0a291afe7d4c",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/views": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Provides an accordion views display plugin.",
+            "homepage": "https://www.drupal.org/project/views_accordion",
+            "time": "2016-03-11 17:16:54"
+        },
+        {
+            "name": "drupal/views_infinite_scroll",
+            "version": "8.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_infinite_scroll",
+                "reference": "d00719776edfcd16c7b4b02cc4a37395cc635af0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_infinite_scroll-8.x-1.2.zip",
+                "reference": "d00719776edfcd16c7b4b02cc4a37395cc635af0",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/views": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "A pager which allows an infinite scroll effect for views.",
+            "homepage": "https://www.drupal.org/project/views_infinite_scroll",
+            "time": "2016-07-23 12:06:51"
+        },
+        {
+            "name": "drupal/views_templates",
+            "version": "8.1.0-alpha1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/views_templates.git",
+                "reference": "c1c2bec0eaa793d32da8c6c7c39612cceeee95b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/views_templates-8.x-1.0-alpha1.zip",
+                "reference": "c1c2bec0eaa793d32da8c6c7c39612cceeee95b5",
+                "shasum": null
+            },
+            "require": {
+                "drupal/core": "8.*",
+                "drupal/views": "8.*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-8.x-1.x": "8.1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.drupal-composer.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "description": "Reintroduces dynamic default views.",
+            "homepage": "https://www.drupal.org/project/views_templates",
+            "time": "2015-12-09 20:00:50"
         },
         {
             "name": "drush/drush",

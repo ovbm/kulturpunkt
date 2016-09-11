@@ -125,5 +125,19 @@
 
 </article>
 <div class="event_detail, panel">
-  {{content.body}}
+  <div class="event_detail_col col-xs-12 col-sm-4">
+    {{content.field_event_bild}}
+  </div>
+  <div class="event_detail_col col-xs-12 col-sm-6">
+      {{content.body}}
+  </div>
+  <div class="event_detail_col col-xs-6 col-sm-2">
+    <h3>Info</h3>
+    {{content.field_event_datum}}
+    {{content.field_event_preis}}
+    {{content.field_event_organisation}}
+    {{content.field_event_links}}
+
+  </div>
+
 </div>
