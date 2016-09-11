@@ -14,11 +14,12 @@ dependencies:
     - field.field.node.event.field_event_video
     - field.field.node.event.field_genre
     - node.type.event
+    - responsive_image.styles.event_image_teaser
   module:
     - datetime
-    - image
     - link
     - options
+    - responsive_image
     - text
     - user
     - video
@@ -30,35 +31,35 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
   field_event_bild:
-    weight: 102
-    label: above
+    weight: 0
+    label: hidden
     settings:
-      image_style: ''
+      responsive_image_style: event_image_teaser
       image_link: ''
     third_party_settings: {  }
-    type: image
+    type: responsive_image
   field_event_datum:
-    weight: 104
-    label: above
+    weight: 2
+    label: hidden
     settings:
-      format_type: medium
       timezone_override: ''
+      format_type: medium
     third_party_settings: {  }
     type: datetime_default
   field_event_land:
-    weight: 106
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_event_links:
-    weight: 110
-    label: above
+    weight: 8
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -68,41 +69,43 @@ content:
     third_party_settings: {  }
     type: link
   field_event_organisation:
-    weight: 111
-    label: above
+    weight: 9
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
   field_event_preis:
-    weight: 107
-    label: above
+    weight: 5
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: text_default
   field_event_typ:
-    weight: 108
-    label: above
+    weight: 6
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   field_event_video:
-    weight: 109
-    label: above
+    weight: 7
+    label: hidden
     settings:
       width: '854'
       height: '480'
-      autoplay: true
+      autoplay: false
     third_party_settings: {  }
     type: video_embed_player
   field_genre:
-    weight: 105
-    label: above
+    weight: 3
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
   links:
-    weight: 100
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true

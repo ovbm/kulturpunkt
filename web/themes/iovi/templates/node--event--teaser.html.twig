@@ -81,15 +81,37 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<section{{ attributes.addClass(classes) }}>
+<article{{ attributes.addClass(classes,'accordion') }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+  <div{{ content_attributes.addClass('node__content event_row') }}>
+
+
+    <div class="event_date_col event_col">
+        {{ content.field_event_datum }}
+    </div>
+
+    <div class="event_image_col event_col">
+        {{ content.field_event_bild}}
+    </div>
+
+    <div class="event_title_col event_col">
+      {{ title_prefix }}
+      {% if not page %}
+        <h2{{ title_attributes }}>
+          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+        </h2>
+      {% endif %}
+      {{ title_suffix }}
+    </div>
+
+    <div class="event_type_genre_col event_col">
+      {% if not content.field_event_typ == "Konzert" %}
+        {{content.field_event_typ}}
+      {% endif %}
+        {{content.field_genre}}
+    </div>
+
+  </div>
 
   {% if display_submitted %}
     <footer class="node__meta">
@@ -101,8 +123,7 @@
     </footer>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
-    {{ content }}
-  </div>
-
-</section>
+</article>
+<div class="event_detail, panel">
+  {{content.body}}
+</div>

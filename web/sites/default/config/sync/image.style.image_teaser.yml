@@ -1,0 +1,23 @@
+uuid: 02e594fc-c8f0-4a6e-9384-0beac6f94e9e
+langcode: en
+status: true
+dependencies: {  }
+name: image_teaser
+label: 'Image Teaser'
+effects:
+  7a2e50ac-6d72-4520-8fa5-4fa50ab8d45a:
+    uuid: 7a2e50ac-6d72-4520-8fa5-4fa50ab8d45a
+    id: image_scale
+    weight: 2
+    data:
+      width: 480
+      height: null
+      upscale: true
+  03a92ab4-a84f-451f-a876-3a99ae35837a:
+    uuid: 03a92ab4-a84f-451f-a876-3a99ae35837a
+    id: image_crop
+    weight: 2
+    data:
+      width: 480
+      height: 320
+      anchor: center-center

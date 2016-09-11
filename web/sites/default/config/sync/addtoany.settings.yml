@@ -1,7 +1,7 @@
-buttons_size: 64
-additional_html: "<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n<a class=\"a2a_button_google_plus\"></a>\r\n"
-additional_css: ''
-additional_js: ''
+buttons_size: 32
+additional_html: "<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n"
+additional_css: 'a .a2a_svg { -webkit-filter: invert(1); filter: invert(1); }'
+additional_js: "a2a_config.icon_color = \"transparent\";\r\n"
 nodetypes:
   - event
 display_in_teasers: false

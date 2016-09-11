@@ -2,13 +2,17 @@ module:
   addtoany: 0
   admin_toolbar: 0
   admin_toolbar_tools: 0
+  better_exposed_filters: 0
   block: 0
   block_content: 0
   breakpoint: 0
+  calendar: 0
+  calendar_datetime: 0
   ckeditor: 0
   config: 0
   contact: 0
   ctools: 0
+  ctools_views: 0
   datetime: 0
   dblog: 0
   dynamic_page_cache: 0
@@ -41,6 +45,8 @@ module:
   user: 0
   video: 0
   views: 0
+  views_infinite_scroll: 0
+  views_templates: 0
   views_ui: 0
   pathauto: 1
   minimal: 1000
