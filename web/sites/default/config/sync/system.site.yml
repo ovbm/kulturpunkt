@@ -1,11 +1,11 @@
 uuid: 1fed46c6-60fa-4dc8-aacf-443ab2096f91
-name: Site-Install
+name: 'Kulturpunkt Flawil'
 mail: admin@example.com
-slogan: ''
+slogan: 'Kultur zusammen fördern und geniessen'
 page:
   403: ''
   404: ''
-  front: /user/login
+  front: /programm
 admin_compact_mode: false
 weight_select_max: 100
 langcode: en

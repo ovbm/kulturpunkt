@@ -11,13 +11,13 @@ dependencies:
     - field.field.node.event.field_event_organisation
     - field.field.node.event.field_event_preis
     - field.field.node.event.field_event_typ
-    - field.field.node.event.field_event_video
     - field.field.node.event.field_genre
-    - image.style.thumbnail
+    - field.field.node.event.field_video
+    - image.style.crop_thumbnail
     - node.type.event
   module:
     - datetime
-    - image
+    - image_widget_crop
     - link
     - text
     - video
@@ -35,12 +35,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
   field_event_bild:
-    weight: 10
+    weight: 1
     settings:
+      show_default_crop: true
+      preview_image_style: crop_thumbnail
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - 16_by_9
+        - 4_by_3
       progress_indicator: throbber
-      preview_image_style: thumbnail
+      show_crop_area: false
     third_party_settings: {  }
-    type: image_image
+    type: image_widget_crop
   field_event_datum:
     weight: 2
     settings: {  }
@@ -81,15 +87,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-  field_event_video:
-    weight: 9
-    settings:
-      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
-      allowed_providers:
-        youtube: youtube
-      uri_scheme: public
-    third_party_settings: {  }
-    type: video_embed
   field_genre:
     weight: 5
     settings:
@@ -98,6 +95,20 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_video:
+    weight: 26
+    settings:
+      allowed_providers:
+        dailymotion: dailymotion
+        facebook: facebook
+        instagram: instagram
+        vimeo: vimeo
+        vine: vine
+        youtube: youtube
+      file_directory: 'video-thumbnails/[date:custom:Y]-[date:custom:m]'
+      uri_scheme: public
+    third_party_settings: {  }
+    type: video_embed
   title:
     type: string_textfield
     weight: 0

@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation
 theme: iovi
 region: header
-weight: -1
+weight: 1
 provider: null
 plugin: 'system_menu_block:main'
 settings:

@@ -1,0 +1,15 @@
+uuid: 2617232b-e1eb-4380-aeaa-758cd7da0b46
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: 16_by_9
+label: '16 by 9'
+effects:
+  e6bb731d-2abc-4412-b3ef-fc01861d38ba:
+    uuid: e6bb731d-2abc-4412-b3ef-fc01861d38ba
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 16_by_9

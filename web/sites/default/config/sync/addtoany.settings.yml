@@ -1,15 +1,15 @@
 buttons_size: 32
-additional_html: "<a class=\"a2a_button_facebook\"></a>\r\n<a class=\"a2a_button_twitter\"></a>\r\n"
+additional_html: "<a class=\"a2a_button_facebook_like\"></a>\r\n<a class=\"a2a_button_twitter_tweet\"></a>"
 additional_css: 'a .a2a_svg { -webkit-filter: invert(1); filter: invert(1); }'
 additional_js: "a2a_config.icon_color = \"transparent\";\r\n"
 nodetypes:
   - event
-display_in_teasers: false
+display_in_teasers: true
 display_in_nodecont: true
 display_weight: 10
 universal_button: none
 custom_universal_button: ''
 universal_button_placement: before
-no_3p: true
+no_3p: false
 _core:
   default_config_hash: z4HqgIMM-tH7pOTLD2kurbOFyf2JYOGImvnQ-DoP65Q

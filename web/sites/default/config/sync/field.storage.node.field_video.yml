@@ -1,4 +1,4 @@
-uuid: 7b85f122-ac73-4c86-b371-7d06a4ffb1ac
+uuid: 2f4ce4bf-2622-41cb-8a60-7d5efbc525eb
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - file
     - node
     - video
-id: node.field_event_video
-field_name: field_event_video
+id: node.field_video
+field_name: field_video
 entity_type: node
 type: video
 settings:
@@ -20,7 +20,7 @@ settings:
   uri_scheme: public
 module: video
 locked: false
-cardinality: 3
+cardinality: 1
 translatable: true
 indexes: {  }
 persist_with_no_fields: false

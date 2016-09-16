@@ -81,34 +81,37 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes,'accordion') }}>
+<article{{ attributes.addClass(classes,'accordion event_header') }}>
 
-  <div{{ content_attributes.addClass('node__content event_row') }}>
+  <div{{ content_attributes.addClass('node__content event_content') }}>
 
 
-    <div class="event_date_col event_col">
-        {{ content.field_event_datum }}
-    </div>
 
-    <div class="event_image_col event_col">
+
+    <div class="event_image">
         {{ content.field_event_bild}}
     </div>
 
-    <div class="event_title_col event_col">
+    <div class="event_title">
       {{ title_prefix }}
       {% if not page %}
         <h2{{ title_attributes }}>
-          <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+          <a class="event_title_link" href="{{ "#" }}" rel="bookmark">{{ label }}</a>
         </h2>
       {% endif %}
       {{ title_suffix }}
+      <div class="event_type_genre">
+        {% if not content.field_event_typ == "Konzert" %}
+          {{content.field_event_typ}}
+        {% endif %}
+          {{content.field_genre}}
+      </div>
     </div>
 
-    <div class="event_type_genre_col event_col">
-      {% if not content.field_event_typ == "Konzert" %}
-        {{content.field_event_typ}}
-      {% endif %}
-        {{content.field_genre}}
+
+
+    <div class="event_date">
+        {{ content.field_event_datum }}
     </div>
 
   </div>
@@ -124,20 +127,24 @@
   {% endif %}
 
 </article>
-<div class="event_detail, panel">
-  <div class="event_detail_col col-xs-12 col-sm-4">
+
+<div class="event_detail">
+  <div class="event_detail_image">
     {{content.field_event_bild}}
   </div>
-  <div class="event_detail_col col-xs-12 col-sm-6">
-      {{content.body}}
+  <div class="event_detail_video">
+    {{content.field_video}}
   </div>
-  <div class="event_detail_col col-xs-6 col-sm-2">
+  <div class="event_detail_info">
     <h3>Info</h3>
     {{content.field_event_datum}}
     {{content.field_event_preis}}
     {{content.field_event_organisation}}
     {{content.field_event_links}}
-
   </div>
+  <div class="event_detail_body">
+      {{content.body}}
+  </div>
+
 
 </div>

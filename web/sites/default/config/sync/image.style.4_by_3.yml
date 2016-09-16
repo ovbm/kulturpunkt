@@ -1,0 +1,15 @@
+uuid: fb5f0f4c-97d6-4175-8658-78718f6aa529
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: 4_by_3
+label: '4 by 3'
+effects:
+  12f2c7fb-ef48-4345-8beb-057bcdcd9945:
+    uuid: 12f2c7fb-ef48-4345-8beb-057bcdcd9945
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 4_by_3

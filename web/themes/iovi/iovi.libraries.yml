@@ -3,10 +3,9 @@ base:
   css:
     base:
       css/styles.css: {weight: 9999}
-    bootstrap:
-      css/bootstrap.css: {weight:9998}
   js:
     js/main.js: {}
+    js/jquery.fitvids.js: {}
   dependencies:
     - core/jquery
     - core/drupal

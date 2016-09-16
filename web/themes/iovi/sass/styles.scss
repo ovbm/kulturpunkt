@@ -1,0 +1,266 @@
+@import "susy";
+
+$susy: (
+  flow: ltr,
+  output: float,
+  math: fluid,
+  column-width: false,
+  container: 960px, // length or % | auto
+  container-position: center,
+  columns: 12,
+  gutters: .5,
+  gutter-position: after,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+
+$nav_layout: layout(12 0 fluid float inside);
+$fontface: "modesto-text";
+@mixin diff_white {
+  color:white;
+  mix-blend-mode: difference;
+}
+
+
+body{
+  color: black;
+  font-family: $fontface;
+  line-height: 1.25;
+  font-size: 4vmin;
+}
+
+h1 {
+  font-size: 10vw;
+}
+
+h2 {
+  font-size: 5vmin;
+  margin-top: 0;
+}
+
+p {
+  font-size: 2vmin;
+}
+
+canvas{
+  margin: 0 auto;
+  position: fixed;
+  display: block;
+  background-color: white;
+  z-index: 0;
+}
+
+img{
+  width:100%;
+  height:auto;
+}
+
+.event_image{
+  overflow: hidden;
+}
+
+.field--type-image{
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.field--name-title{
+  mix-blend-mode: difference;
+}
+
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.field--name-body,.event_date,.event_detail_info,.event_type_genre{
+  @include diff_white;
+}
+
+.event_date{
+  font-size: 10vh;
+  line-height: 1;
+
+}
+
+.event_detail_info{
+
+}
+
+.event_type_genre{
+}
+
+.layout-container{
+  position: absolute;
+
+  color:black;
+  @include container;
+}
+
+.event_title a{
+  color:white;
+}
+
+header{
+  mix-blend-mode: difference;
+  @include full;
+  .site-logo{
+    @include span(2);
+  }
+  .site-name{
+    @include span(last 10);
+  }
+  .site-slogan{
+    @include span(last 10);
+  }
+}
+
+nav{
+  @include full;
+  #site-nav .menu-item{
+    @include span(3 of $nav_layout);
+  }
+}
+
+
+main{
+  @include full;
+
+  .view-filters{
+    @include full;
+  }
+  article{
+    @include full;
+    max-height: 20vh;
+    margin-bottom:2vh;
+    .event_image{
+      @include span(4);
+    }
+    .event_title{
+      @include span(6);
+    }
+    .event_type_genre{
+      @include span(6);
+    }
+    .event_date{
+      @include span(last 2);
+    }
+  }
+  .event_detail{
+    @include full;
+    .event_detail_image{
+      @include span (5);
+    }
+    .event_detail_video{
+      @include span (5);
+    }
+    .event_detail_info{
+      @include span (last 2);
+    }
+    .event_detail_body{
+      @include span (8);
+    }
+
+  }
+
+  .programm-event{
+
+  }
+}
+
+
+footer{
+
+}
+
+
+
+/*programm style
+
+
+.node__content {
+  height: 100%;
+}
+
+.event_col {
+  display: inline-block;
+  height: 100%;
+  float: left;
+}
+
+.event_date_col {
+  width: 15%;
+}
+
+.event_image_col {
+  width: 25%;
+}
+
+.event_title_col {
+  width: 45%;
+}
+
+.event_type_genre_col {
+  width: 15%;
+}
+
+.event_image_col img {
+  width: auto;
+  height: 100%;
+  float: left;
+}
+
+.event_detail_col img {
+  width: auto;
+  height: 100%;
+  float: left;
+}
+
+.event_col .field--name-field-event-bild {
+  display: inline-block;
+  height: 100%;
+  float: left;
+}
+*/
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  color: #000;
+  //mix-blend-mode: difference;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion.active,
+.accordion:hover {
+}
+/* Style the accordion panel. Note: hidden by default */
+div.event_detail {
+  background-color: none;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.6s ease-in-out;
+  opacity: 0;
+}
+/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
+div.event_detail.show {
+  opacity: 1;
+  max-height: 100vh;
+  /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
