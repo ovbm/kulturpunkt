@@ -1,0 +1,23 @@
+uuid: d3af296c-9051-47b4-afb6-59e25efff41a
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: 16_by_9_small
+label: '16 by 9 small'
+effects:
+  ed8894e2-1a56-46a1-9ea6-dde91a89a88e:
+    uuid: ed8894e2-1a56-46a1-9ea6-dde91a89a88e
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 16_by_9
+  8461077f-afcb-4aae-ad5e-b09f95418390:
+    uuid: 8461077f-afcb-4aae-ad5e-b09f95418390
+    id: image_scale
+    weight: 2
+    data:
+      width: 480
+      height: null
+      upscale: false

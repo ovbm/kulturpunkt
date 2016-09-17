@@ -12,6 +12,7 @@ dependencies:
     - field.field.node.event.field_event_preis
     - field.field.node.event.field_event_typ
     - field.field.node.event.field_genre
+    - field.field.node.event.field_test
     - field.field.node.event.field_video
     - image.style.crop_thumbnail
     - node.type.event
@@ -95,6 +96,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+  field_test:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
   field_video:
     weight: 26
     settings:

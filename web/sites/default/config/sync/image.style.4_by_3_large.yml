@@ -1,0 +1,23 @@
+uuid: 78743c75-d6de-4974-bcf2-bc7d0c001df2
+langcode: en
+status: true
+dependencies:
+  module:
+    - crop
+name: 4_by_3_large
+label: '4 by 3 large'
+effects:
+  733f12ce-997f-4b7d-9d84-e969db185dec:
+    uuid: 733f12ce-997f-4b7d-9d84-e969db185dec
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: 4_by_3
+  c25d1cbf-f621-4ff6-b970-a15e1c142590:
+    uuid: c25d1cbf-f621-4ff6-b970-a15e1c142590
+    id: image_scale
+    weight: 2
+    data:
+      width: 960
+      height: null
+      upscale: false

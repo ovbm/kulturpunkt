@@ -5,7 +5,7 @@ dependencies:
   module:
     - crop
 name: 16_by_9
-label: '16 by 9'
+label: '16 by 9 large'
 effects:
   e6bb731d-2abc-4412-b3ef-fc01861d38ba:
     uuid: e6bb731d-2abc-4412-b3ef-fc01861d38ba
@@ -13,3 +13,11 @@ effects:
     weight: 1
     data:
       crop_type: 16_by_9
+  4ca356c4-8b77-456b-ad79-24e15ee85d1f:
+    uuid: 4ca356c4-8b77-456b-ad79-24e15ee85d1f
+    id: image_scale
+    weight: 2
+    data:
+      width: 960
+      height: null
+      upscale: false

@@ -52,7 +52,7 @@ h2 {
 }
 
 p {
-  font-size: 2vmin;
+  font-size: 4vmin;
 }
 
 canvas{
@@ -66,6 +66,23 @@ canvas{
 img{
   width:100%;
   height:auto;
+}
+
+a{
+  color:white;
+  mix-blend-mode: difference;
+  text-decoration: underline;
+}
+
+a:hover{
+  color:white;
+  opacity: 90%;
+
+}
+
+a:active{
+  color: white;
+  font-weight: bold;
 }
 
 .event_image{

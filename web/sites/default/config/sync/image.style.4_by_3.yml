@@ -5,7 +5,7 @@ dependencies:
   module:
     - crop
 name: 4_by_3
-label: '4 by 3'
+label: '4 by 3 small'
 effects:
   12f2c7fb-ef48-4345-8beb-057bcdcd9945:
     uuid: 12f2c7fb-ef48-4345-8beb-057bcdcd9945
@@ -13,3 +13,11 @@ effects:
     weight: 1
     data:
       crop_type: 4_by_3
+  12d34bea-f0d8-44f1-9230-59649f7be2b6:
+    uuid: 12d34bea-f0d8-44f1-9230-59649f7be2b6
+    id: image_scale
+    weight: 2
+    data:
+      width: 480
+      height: null
+      upscale: false

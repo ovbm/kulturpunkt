@@ -1,0 +1,8 @@
+name: Custom Views Filter - Monthly
+description: Allows users to select months for which events should show.
+package: Custom
+
+type: module
+core: 8.x
+
+configure: monthlyfilter.settings
