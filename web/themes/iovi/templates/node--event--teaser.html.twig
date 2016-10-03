@@ -80,11 +80,12 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
+
 {{ attach_library('classy/node') }}
+
 <article{{ attributes.addClass(classes,'accordion event_header') }}>
 
   <div{{ content_attributes.addClass('node__content event_content') }}>
-
     <div class="event_image">
         {{ content.field_event_bild[0] }}
     </div>
@@ -123,27 +124,27 @@
 
 </article>
 
-
 <div class="event_detail">
-  <div class="event_detail_image">
-    <div class="main-carousel">
-        {{ content.field_event_bild }}
+  <div class="event_detail_row">
+    <div class="event_detail_image">
+      <div class="main-carousel">
+          {{ content.field_event_bild }}
       </div>
+    </div>
+    <div class="event_detail_video">
+      {{content.field_video}}
+    </div>
   </div>
-
-
-  <div class="event_detail_video">
-    {{content.field_video}}
-  </div>
-  <div class="event_detail_info">
-    <h3>Info</h3>
-    {{ node.field_event_datum[0].value|date('d.m.Y') }}
-    {{ content.field_event_preis }}
-    {{ content.field_event_organisation }}
-    {{ content.field_event_links }}
-  </div>
-  <div class="event_detail_body">
+  <div class="event_detail_row">
+    <div class="event_detail_info">
+      <h3>Info</h3>
+      {{ node.field_event_datum[0].value|date('d.m.Y') }}
+      {{ content.field_event_preis }}
+      {{ content.field_event_organisation }}
+      {{ content.field_event_links }}
+    </div>
+    <div class="event_detail_body">
       {{content.body}}
+    </div>
   </div>
-
 </div>

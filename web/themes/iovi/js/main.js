@@ -71,7 +71,8 @@ for (i = 0; i < acc.length; i++) {
       cellAlign: 'left',
       contain: true,
       imagesLoaded: true,
-      lazyLoad: false
+      lazyLoad: true,
+      wrapAround: true,
     });
 
 
