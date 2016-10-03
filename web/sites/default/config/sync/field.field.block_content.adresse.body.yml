@@ -1,0 +1,26 @@
+uuid: dad10f90-9ed9-4cc5-9938-5484725762a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.adresse
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.adresse.body
+field_name: body
+entity_type: block_content
+bundle: adresse
+label: Body
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    summary: ''
+    value: "<p><br />\r\nKontakt<br />\r\nVerein KulturPunkt Flawil<br />\r\nSt. Gallerstrasse 13<br />\r\nCH-9230 Flawil<br />\r\nTel. +41 79 224 82 88<br />\r\ninfo [at] kulturpunkt-flawil [dot] ch<br />\r\ntech [at] kulturpunkt-flawil [dot] ch&nbsp;<br />\r\nFür Gönner und Sponsoren<br />\r\nIBAN: CH07 8132 5000 0075 1093 1<br />\r\nDanke für Ihre Unterstützung des KulturPunkt Flawil.<br />\r\n© 2015 KulturPunkt Flawil</p>\r\n"
+    format: body_text
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

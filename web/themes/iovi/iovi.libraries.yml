@@ -3,9 +3,13 @@ base:
   css:
     base:
       css/styles.css: {weight: 9999}
+    flickity:
+      css/flickity.css: {weight:9998}
   js:
-    js/main.js: {}
     js/jquery.fitvids.js: {}
+    js/flickity.pkgd.js: {}
+    js/main.js: {}
+
   dependencies:
     - core/jquery
     - core/drupal

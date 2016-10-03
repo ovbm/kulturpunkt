@@ -1,0 +1,22 @@
+uuid: f7dddd73-cc35-4080-9ec5-601ef75c2d0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.adresse
+    - field.field.block_content.adresse.body
+  module:
+    - text
+id: block_content.adresse.default
+targetEntityType: block_content
+bundle: adresse
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

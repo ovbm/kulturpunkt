@@ -11,7 +11,7 @@ id: node.event.field_event_preis
 field_name: field_event_preis
 entity_type: node
 bundle: event
-label: 'Event Preis'
+label: Preis
 description: ''
 required: true
 translatable: false

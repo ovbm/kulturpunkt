@@ -85,14 +85,11 @@
 
   <div{{ content_attributes.addClass('node__content event_content') }}>
 
-
-
-
     <div class="event_image">
-        {{ content.field_event_bild}}
+        {{ content.field_event_bild[0] }}
     </div>
 
-    <div class="event_title">
+    <div class="event_title carousel">
       {{ title_prefix }}
       {% if not page %}
         <h2{{ title_attributes }}>
@@ -108,10 +105,8 @@
       </div>
     </div>
 
-
-
     <div class="event_date">
-        {{ content.field_event_datum }}
+        {{ content.field_event_datum}}
     </div>
 
   </div>
@@ -128,13 +123,19 @@
 
 </article>
 
+
 <div class="event_detail">
   <div class="event_detail_image">
-    {{content.field_event_bild}}
+    <div class="main-carousel">
+        {{ content.field_event_bild }}
+      </div>
   </div>
+
+
   <div class="event_detail_video">
     {{content.field_video}}
   </div>
+
   <div class="event_detail_info">
     <h3>Info</h3>
     {{content.field_event_datum}}
@@ -145,6 +146,5 @@
   <div class="event_detail_body">
       {{content.body}}
   </div>
-
 
 </div>

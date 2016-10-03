@@ -40,7 +40,6 @@
     <js-placeholder token="{{ placeholder_token|raw }}">
   </head>
   <body{{ attributes.addClass(body_classes) }}>
-  <canvas id="myCanvas"></canvas>
 
     {#
       Keyboard navigation/accessibility link to main content section in
@@ -50,6 +49,8 @@
       {{ 'Skip to main content'|t }}
     </a>
     {{ page_top }}
+    <canvas id="myCanvas"></canvas>
+
     {{ page }}
     {{ page_bottom }}
 

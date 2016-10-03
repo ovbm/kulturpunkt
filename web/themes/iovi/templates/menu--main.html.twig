@@ -18,7 +18,6 @@
  *   - in_active_trail: TRUE if the link is in the active trail.
  */
 #}
-<nav id="site-nav">
 
   {% import _self as menus %}
 
@@ -32,7 +31,7 @@
     {% import _self as menus %}
     {% if items %}
       {% if menu_level == 0 %}
-        <ul{{ attributes.addClass('menu') }}>
+        <ul id="myTopnav" {{ attributes.addClass('menu') }}>
       {% else %}
         <ul class="menu">
       {% endif %}
@@ -52,7 +51,9 @@
           {% endif %}
         </li>
       {% endfor %}
+        <li class="icon">
+            <a href="javascript:void(0);" onclick="toggleNav()">&#9776;</a>
+        </li>
       </ul>
     {% endif %}
   {% endmacro %}
-</nav>

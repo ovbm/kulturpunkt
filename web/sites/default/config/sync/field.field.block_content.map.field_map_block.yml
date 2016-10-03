@@ -1,0 +1,21 @@
+uuid: 20e5cdf0-56a4-48f0-93dc-acfcdcfeae87
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map
+    - field.storage.block_content.field_map_block
+  module:
+    - geofield
+id: block_content.map.field_map_block
+field_name: field_map_block
+entity_type: block_content
+bundle: map
+label: map_block
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geofield

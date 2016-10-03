@@ -1,0 +1,23 @@
+uuid: ecf871bb-13e0-42e0-aba0-dc95675331ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.map
+    - field.field.block_content.map.field_map_block
+  module:
+    - geofield
+id: block_content.map.default
+targetEntityType: block_content
+bundle: map
+mode: default
+content:
+  field_map_block:
+    weight: 1
+    label: above
+    settings:
+      output_format: wkt
+    third_party_settings: {  }
+    type: geofield_default
+hidden:
+  langcode: true

@@ -1,0 +1,25 @@
+uuid: c3d840d8-a6f6-4c1b-b965-54e069e259b5
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:map:a6674736-0cf8-49ff-9a71-94d0e5fc1caf'
+  module:
+    - block_content
+  theme:
+    - iovi
+id: footermap
+theme: iovi
+region: footer
+weight: -2
+provider: null
+plugin: 'block_content:a6674736-0cf8-49ff-9a71-94d0e5fc1caf'
+settings:
+  id: 'block_content:a6674736-0cf8-49ff-9a71-94d0e5fc1caf'
+  label: 'footer map'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

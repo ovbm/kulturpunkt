@@ -1,0 +1,35 @@
+uuid: eb6be42f-9108-4ac3-80ef-ae7c34b6737e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.adresse
+    - field.field.block_content.adresse.body
+  module:
+    - text
+id: block_content.adresse.default
+targetEntityType: block_content
+bundle: adresse
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 3
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: -5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
