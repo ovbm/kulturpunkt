@@ -2,9 +2,9 @@ base:
   version: 1.x
   css:
     base:
+      css/flickity.css: {weight:9998}
       css/styles.css: {weight: 9999}
     flickity:
-      css/flickity.css: {weight:9998}
   js:
     js/jquery.fitvids.js: {}
     js/flickity.pkgd.js: {}
