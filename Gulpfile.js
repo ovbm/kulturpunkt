@@ -9,7 +9,10 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('web/themes/iovi/css/'));
 });
 
-//Watch task
-gulp.task('default',function() {
+//Develop task
+gulp.task('develop',function() {
     gulp.watch('web/themes/iovi/sass/**/*.scss',['styles']);
 });
+
+//Default task
+gulp.task('default', ['styles']);

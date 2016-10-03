@@ -135,13 +135,13 @@
   <div class="event_detail_video">
     {{content.field_video}}
   </div>
-
   <div class="event_detail_info">
     <h3>Info</h3>
-    {{content.field_event_datum}}
-    {{content.field_event_preis}}
-    {{content.field_event_organisation}}
-    {{content.field_event_links}}
+    {{ node.field_event_datum[0].value|date('d.m.Y') }}
+    {{ content.field_event_datum }}
+    {{ content.field_event_preis }}
+    {{ content.field_event_organisation }}
+    {{ content.field_event_links }}
   </div>
   <div class="event_detail_body">
       {{content.body}}

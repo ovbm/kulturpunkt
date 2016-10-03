@@ -70,6 +70,7 @@ for (i = 0; i < acc.length; i++) {
       // options
       cellAlign: 'left',
       contain: true,
+      imagesLoaded: true,
       lazyLoad: false
     });
 

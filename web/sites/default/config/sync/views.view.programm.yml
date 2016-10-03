@@ -9,7 +9,6 @@ dependencies:
     - taxonomy.vocabulary.genre
     - taxonomy.vocabulary.veranstaltungstyp
   module:
-    - better_exposed_filters
     - datetime
     - node
     - taxonomy
@@ -45,35 +44,15 @@ display:
           query_comment: ''
           query_tags: {  }
       exposed_form:
-        type: bef
+        type: basic
         options:
           submit_button: Apply
-          reset_button: 0
+          reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: 1
+          expose_sort_order: true
           sort_asc_label: Asc
           sort_desc_label: Desc
-          bef:
-            general:
-              allow_secondary: 0
-              secondary_label: 'Advanced options'
-            field_genre_target_id:
-              bef_format: bef_links
-              more_options:
-                bef_select_all_none: 1
-                bef_collapsible: 1
-                is_secondary: 0
-                rewrite:
-                  filter_rewrite_values: ''
-            field_event_typ_target_id:
-              bef_format: bef_links
-              more_options:
-                bef_select_all_none: 1
-                bef_collapsible: 1
-                is_secondary: 0
-                rewrite:
-                  filter_rewrite_values: ''
       pager:
         type: mini
         options:
@@ -171,10 +150,11 @@ display:
             identifier: field_genre_target_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              editor: '0'
             reduce: false
           is_grouped: false
           group_info:
@@ -215,10 +195,11 @@ display:
             identifier: field_event_typ_target_id
             required: false
             remember: false
-            multiple: true
+            multiple: false
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
+              editor: '0'
             reduce: false
           is_grouped: false
           group_info:
