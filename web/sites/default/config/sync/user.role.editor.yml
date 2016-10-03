@@ -1,0 +1,27 @@
+uuid: 2605b12b-3bd8-424c-885e-2ea3dff11842
+langcode: de
+status: true
+dependencies: {  }
+id: editor
+label: Editor
+weight: 2
+is_admin: null
+permissions:
+  0: 'access files overview'
+  1: 'access content overview'
+  2: 'administer nodes'
+  4: 'create url aliases'
+  5: 'administer redirects'
+  7: 'access administration pages'
+  8: 'view the administration theme'
+  9: 'administer taxonomy'
+  10: 'access toolbar'
+  11: 'view files'
+  12: 'create event content'
+  13: 'delete any event content'
+  14: 'delete own event content'
+  15: 'delete event revisions'
+  16: 'edit any event content'
+  17: 'edit own event content'
+  18: 'revert event revisions'
+  19: 'view event revisions'
