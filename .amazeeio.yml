@@ -3,6 +3,8 @@ deploy_tasks:
   development:
     before_deploy:
       - composer install
+      - npm install
+      - npm run gulp --
     after_deploy:
       - cd web && drush -y updb --cache-clear=0
       - cd web && drush -y cim
@@ -10,6 +12,8 @@ deploy_tasks:
   production:
     before_deploy:
       - composer install
+      - npm install
+      - npm run gulp --
     after_deploy:
         - cd web && drush -y updb --cache-clear=0
         - cd web && drush -y cr
