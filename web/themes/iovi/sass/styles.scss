@@ -29,9 +29,14 @@ $susy: (
 
 $nav_layout: layout(12 0 fluid float inside);
 $fontface: "modesto-text";
-@mixin diff_white {
-  color:white;
+
+@mixin mix-blend-mode-difference {
+  color: white;
   mix-blend-mode: difference;
+  .user-logged-in & {
+    color: black;
+    mix-blend-mode: normal;
+  }
 }
 
 body{
@@ -66,19 +71,15 @@ img{
   width:100%;
   height:auto;
 }
-
 a{
-  color:white;
-  mix-blend-mode: difference;
+  @include mix-blend-mode-difference;
   text-decoration: underline;
 }
 
 a:hover{
   color:white;
   opacity: 90%;
-
 }
-
 a:active{
   color: white;
   font-weight: bold;
@@ -94,7 +95,7 @@ a:active{
 }
 
 .field--name-title{
-  mix-blend-mode: difference;
+  @include mix-blend-mode-difference;
 }
 
 ul, li{
@@ -104,7 +105,7 @@ ul, li{
 }
 
 .field--name-body,.event_date,.event_detail_info,.event_type_genre{
-  @include diff_white;
+  @include mix-blend-mode-difference;
 }
 
 .event_date{
@@ -133,7 +134,7 @@ ul, li{
 }
 
 header{
-  mix-blend-mode: difference;
+  @include mix-blend-mode-difference;
   @include full;
 
   #block-sitebranding{
