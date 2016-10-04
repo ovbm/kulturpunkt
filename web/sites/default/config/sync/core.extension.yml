@@ -27,6 +27,7 @@ module:
   geofield: 0
   image: 0
   image_widget_crop: 0
+  kint: 0
   language: 0
   link: 0
   linkit: 0
