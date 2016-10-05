@@ -75,19 +75,7 @@ img{
   width:100%;
   height:auto;
 }
-a{
-  @include mix-blend-mode-difference;
-  text-decoration: underline;
-}
 
-a:hover{
-  color:white;
-  opacity: 90%;
-}
-a:active{
-  color: white;
-  font-weight: bold;
-}
 
 .event_image{
   overflow: hidden;
@@ -120,6 +108,17 @@ ul, li{
 .layout-container{
   position: relative;
   color:black;
+  a{
+    @include mix-blend-mode-difference;
+    text-decoration: underline;
+  }
+
+  a:hover{
+    opacity: 90%;
+  }
+  a:active{
+    font-weight: bold;
+  }
 }
 
 .event_title a{
@@ -144,9 +143,12 @@ header{
     img{
       width:10vmin;
     }
+
     a{
       text-decoration: none;
     }
+
+
   }
   .site-slogan{
     color:#fff;
@@ -164,6 +166,7 @@ nav.navigation{
 
   }
   ul.menu{
+    margin-left:10vmin;;
     a{
       text-decoration: none;
     }
@@ -223,6 +226,9 @@ main{
   @include container;
   .view-filters{
     @include full;
+    .form--inline .form-item {
+      float:right;
+    }
   }
 
   article{

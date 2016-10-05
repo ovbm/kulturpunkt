@@ -343,6 +343,7 @@ display:
         type: normal
         title: Programm
         menu_name: main
+        weight: 1
     cache_metadata:
       max-age: -1
       contexts:
