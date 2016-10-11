@@ -9,7 +9,7 @@ features:
   favicon: true
   node_user_picture: false
 logo:
-  path: ''
+  path: 'public://Kulturpunkt Flawil Logo mit Schrift rot.svg'
   url: ''
   use_default: false
 _core:
