@@ -32,7 +32,7 @@ $fontface: "modesto-text";
 
 @mixin mix-blend-mode-difference {
   color: white;
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
   .user-logged-in & {
     color: black;
     mix-blend-mode: normal;
@@ -40,7 +40,7 @@ $fontface: "modesto-text";
 }
 
 @mixin mix-blend-mode-difference-footer {
-  mix-blend-mode: difference;
+  //mix-blend-mode: difference;
   .user-logged-in & {
     mix-blend-mode: normal;
   }
