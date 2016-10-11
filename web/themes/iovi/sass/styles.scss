@@ -46,6 +46,13 @@ $fontface: "modesto-text";
   }
 }
 
+@mixin topofpage {
+  top: 0;
+  .user-logged-in &{
+    top:80px;
+  }
+}
+
 body{
   color: black;
   font-family: $fontface;
@@ -136,9 +143,25 @@ ul, li{
   display: none;
 }
 
+.headroom {
+    will-change: transform;
+    transition: transform 200ms linear;
+}
+.headroom--pinned {
+    transform: translateY(0%);
+}
+.headroom--unpinned {
+    transform: translateY(-100%);
+}
+
+
 header{
   @include mix-blend-mode-difference;
   @include full;
+  @include topofpage;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #fff;
   #block-sitebranding{
     @include span(2);
   }
@@ -157,8 +180,8 @@ header{
   }
   nav.navigation{
     @include span(10 last);
+    margin:3em auto;
     @include susy-breakpoint(0px 414px){
-
     }
     ul.menu{
       margin-left:10vmin;;
@@ -220,6 +243,7 @@ header{
 
 main{
   @include container;
+  margin: 6.5em auto 15vh;
   .view-filters{
     @include full;
     .form--inline .form-item {
@@ -296,7 +320,8 @@ main{
 
 footer{
   @include full;
-  margin-top:20vh;
+  margin-top:10vh;
+  background-color: #fff;
   @include mix-blend-mode-difference-footer;
   .region-footer{
     @include full;
