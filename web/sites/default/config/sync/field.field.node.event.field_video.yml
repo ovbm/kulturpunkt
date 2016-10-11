@@ -12,7 +12,7 @@ field_name: field_video
 entity_type: node
 bundle: event
 label: video
-description: ''
+description: 'Hier kann ein Video Link eingegeben werden. Folgende Video-Provider Links werden unterstützt: dailymotion, facebook, instagram, vimeo, vine, youtube'
 required: false
 translatable: false
 default_value: {  }

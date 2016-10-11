@@ -12,7 +12,6 @@ dependencies:
     - field.field.node.event.field_event_preis
     - field.field.node.event.field_event_typ
     - field.field.node.event.field_genre
-    - field.field.node.event.field_test
     - field.field.node.event.field_video
     - image.style.4_by_3_large
     - node.type.event
@@ -95,12 +94,6 @@ content:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
-  field_test:
-    weight: 12
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: text_default
   field_video:
     weight: 11
     label: hidden

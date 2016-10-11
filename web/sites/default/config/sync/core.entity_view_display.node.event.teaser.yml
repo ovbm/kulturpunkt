@@ -13,7 +13,6 @@ dependencies:
     - field.field.node.event.field_event_preis
     - field.field.node.event.field_event_typ
     - field.field.node.event.field_genre
-    - field.field.node.event.field_test
     - field.field.node.event.field_video
     - image.style.16_by_9
     - node.type.event
@@ -106,6 +105,5 @@ content:
       autoplay: false
     third_party_settings: {  }
 hidden:
-  field_test: true
   langcode: true
   links: true

@@ -12,7 +12,7 @@ field_name: field_event_bild
 entity_type: node
 bundle: event
 label: 'Event Bild'
-description: ''
+description: 'Bilder können hochgeladen und dann beschnitten werden, damit sie sich gut die die Seite einfügen und ein einheitliches Erscheinungsbild gewährleistet ist. Dazu ein Bild hochladen und anschliessend auf "CROP IMAGE" klicken und den gewünschten Ausschnitt wählen.  '
 required: true
 translatable: false
 default_value: {  }
