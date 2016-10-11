@@ -135,10 +135,6 @@ ul, li{
   }
 }
 
-.event_title a{
-  color:white;
-}
-
 #edit-submit-programm{
   display: none;
 }
@@ -272,7 +268,8 @@ main{
       h2{
         margin:0;
       }
-      a{text-decoration: none
+      a{
+        text-decoration: none
       }
     }
     .event_type_genre{
