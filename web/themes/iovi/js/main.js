@@ -65,15 +65,19 @@ for (i = 0; i < acc.length; i++) {
   })(document);
 
 // FLICKITY
-    var elem = document.querySelector('.main-carousel');
-    var flkty = new Flickity( elem, {
-      // options
+    var galleryElems = document.querySelector('.main-carousel');
+
+    for ( var i=0, len = galleryElems.length; i < len; i++ ) {
+      var galleryElem = galleryElems[i];
+      new Flickity( galleryElem, {
+    // options...
       cellAlign: 'left',
       contain: true,
       imagesLoaded: true,
       lazyLoad: true,
       wrapAround: true,
     });
+  }
 
 
 // NAV function
