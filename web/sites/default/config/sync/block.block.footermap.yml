@@ -6,6 +6,7 @@ dependencies:
     - 'block_content:map:a6674736-0cf8-49ff-9a71-94d0e5fc1caf'
   module:
     - block_content
+    - ctools
   theme:
     - iovi
 id: footermap
@@ -22,4 +23,10 @@ settings:
   status: true
   info: ''
   view_mode: full
-visibility: {  }
+visibility:
+  'entity_bundle:paragraph':
+    id: 'entity_bundle:paragraph'
+    bundles:
+      map: map
+    negate: false
+    context_mapping: {  }

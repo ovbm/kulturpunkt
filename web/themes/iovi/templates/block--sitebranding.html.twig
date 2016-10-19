@@ -21,4 +21,15 @@
     </a>
   </div>
   {% endif %}
+
+  {% if site_name %}
+    <div class="site-name">
+      <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">kulturpunkt </br> flawil</a>
+    </div>
+  {% endif %}
+
+  <a id="nav-toggle" href="#"><span></span></a>
+
+
+
 {% endblock %}
