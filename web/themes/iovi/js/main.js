@@ -65,7 +65,7 @@ for (i = 0; i < acc.length; i++) {
   })(document);
 
 // FLICKITY
-    var galleryElems = document.querySelector('.main-carousel');
+    var galleryElems = document.querySelectorAll('.main-carousel');
 
     for ( var i=0, len = galleryElems.length; i < len; i++ ) {
       var galleryElem = galleryElems[i];

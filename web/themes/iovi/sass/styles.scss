@@ -159,20 +159,32 @@ header{
   box-sizing: border-box;
   background-color: #fff;
   #block-sitebranding{
-    @include span(2);
-  }
-  .site-logo{
-    img{
-      width:100%;
+    @include prefix(1);
+    margin-top:1rem;
+    .site-logo{
+      float:left;
+      margin-right:1rem;
+      img{
+        height:60px;
+        width:auto;
+      }
+      a{
+        text-decoration: none;
+      }
     }
-    a{
-      text-decoration: none;
+    .site-name{
+      height:60px;
+      a{
+        text-decoration: none;
+        color: #e94c4f;
+      }
     }
-  }
-  .site-slogan{
-    color:#fff;
-    font-size: 3vmin;
-    @include span(last 11);
+
+    .site-slogan{
+      color:#fff;
+      font-size: 3vmin;
+      @include span(last 11);
+    }
   }
   nav.navigation{
     @include span(10 last);
