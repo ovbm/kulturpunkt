@@ -12,12 +12,14 @@ dependencies:
     - field.field.node.event.field_event_organisation
     - field.field.node.event.field_event_preis
     - field.field.node.event.field_event_typ
+    - field.field.node.event.field_file
     - field.field.node.event.field_genre
     - field.field.node.event.field_video
     - image.style.16_by_9
     - node.type.event
   module:
     - datetime
+    - file
     - image
     - link
     - options
@@ -87,6 +89,12 @@ content:
     label: inline
     settings:
       link: true
+    third_party_settings: {  }
+  field_file:
+    type: file_default
+    weight: 11
+    label: above
+    settings: {  }
     third_party_settings: {  }
   field_genre:
     type: entity_reference_label
