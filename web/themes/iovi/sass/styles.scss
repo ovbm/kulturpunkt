@@ -160,6 +160,7 @@ header{
   background-color: #fff;
   #block-sitebranding{
     @include prefix(1);
+    @include suffix(1);
     margin-top:1rem;
     .site-logo{
       float:left;
@@ -174,21 +175,71 @@ header{
     }
     .site-name{
       height:60px;
+      float:left;
       a{
         text-decoration: none;
         color: #e94c4f;
+        font-size: 1.5em;
+        line-height: 1;
       }
     }
-
     .site-slogan{
       color:#fff;
       font-size: 3vmin;
       @include span(last 11);
     }
+
+    #nav-toggle {
+    	float:right;
+    	margin: 1em;
+    }
+
+    #nav-toggle {
+    	cursor: pointer;
+    	padding: 10px 35px 16px 0px;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: #e94c4f;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+    #nav-toggle span:before {
+      top: -10px;
+    }
+    #nav-toggle span:after {
+      bottom: -10px;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      transition: all 500ms ease-in-out;
+
+    }
+    #nav-toggle.active span {
+      background-color: transparent;
+    }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0;
+      background-color: #e94c4f;
+    }
+    #nav-toggle.active span:before {
+      transform: rotate(45deg);
+    }
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg);
+    }
+  }
+  #block-mainnavigation{
+    display:none;
   }
   nav.navigation{
     @include span(10 last);
-    margin:3em auto;
+    margin:1em auto;
     @include susy-breakpoint(0px 414px){
       margin:1em auto;
     }
