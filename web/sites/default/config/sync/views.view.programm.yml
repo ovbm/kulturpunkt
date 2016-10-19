@@ -312,7 +312,7 @@ display:
             label: 'Event Datum (field_event_datum)'
           granularity: day
           plugin_id: datetime
-      title: Programm
+      title: programm
       header: {  }
       footer: {  }
       empty: {  }

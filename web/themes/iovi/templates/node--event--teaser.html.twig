@@ -154,6 +154,9 @@
       {{ content.field_event_preis }}
       {{ content.field_event_organisation }}
       {{ content.field_event_links }}
+        {% if content.field_file %}
+          {{ content.field_file }}
+        {% endif %}
     </div>
     <div class="event_detail_body">
       {{content.body}}
