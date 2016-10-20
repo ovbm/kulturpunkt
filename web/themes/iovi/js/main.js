@@ -16,41 +16,56 @@
   });
 })(jQuery);
 
+
+//Accordion & Scroll To Active Accordion
 (function($) {
 
   var allPanels = $('#accordion > .event_detail').hide();
+  var allHeaders = $('#accordion > .event_header');
 
   $('#accordion > .accordion').click(function() {
       $this = $(this);
       $target =  $this.next();
 
+      if(!$this.hasClass('headeractive')){
+        allHeaders.removeClass('headeractive');
+        allHeaders.removeAttr("id");
+        $this.addClass('headeractive');
+        $this.attr("id","scrolltop");
+        $('html, body').animate({
+              scrollTop: $("#scrolltop").offset().top-100
+            }, 1000);
+      };
+
       if(!$target.hasClass('active')){
-         allPanels.removeClass('active').slideUp();
-         $target.addClass('active').slideDown();
+         allPanels.removeClass('active').slideUp("slow");
+         allPanels.removeAttr("id");
+         $target.attr("id","scrolltop");
+         $target.addClass('active').slideDown("slow");
       }
 
     return false;
   });
 
 })(jQuery);
-/*
-//Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons. The "active" class is used to add a background color to the current button when its belonging panel is open. The "show" class is used to open the specific accordion panel
-var acc = document.getElementsByClassName("accordion");
-var i;
 
-for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-        this.getElementsByTagName("div")[1].classList.toggle("moveout");
-        this.nextElementSibling.getElementsByTagName("div")[0].classList.toggle("movein")
 
-    }
-}
-*/
+//Flickity
+(function($) {
+$('.main-carousel').flickity({
+  // options
+  cellAlign: 'left',
+  contain: true,
+  imagesLoaded: true,
+  lazyLoad: true,
+  wrapAround: true,
+  setGallerySize:false,
+  percentPosition:true
+});
+})(jQuery);
+
+
 // Full Width and height canvas;
-
-
 (function() {
     var canvas = document.getElementById('myCanvas'),
             context = canvas.getContext('2d');
@@ -90,6 +105,7 @@ for (i = 0; i < acc.length; i++) {
 })();
 
 
+//typekit
 
   (function(d) {
     var config = {
@@ -101,25 +117,23 @@ for (i = 0; i < acc.length; i++) {
   })(document);
 
 
-// FLICKITY
     var galleryElems = document.querySelectorAll('.main-carousel');
 
     for ( var i=0, len = galleryElems.length; i < len; i++ ) {
       var galleryElem = galleryElems[i];
       new Flickity( galleryElem, {
     // options...
-    //  cellAlign: 'left',
-    //  contain: true,
-    //  imagesLoaded: true,
-    //  lazyLoad: true,
-    //  wrapAround: true,
-    //  setGallerySize: false
+      cellAlign: 'left',
+      contain: true,
+      imagesLoaded: true,
+      lazyLoad: true,
+      wrapAround: true,
     });
   }
 
 
 // NAV function
-
+/*
 function toggleNav() {
     var x = document.getElementById("myTopnav");
     if (x.className === "menu") {
@@ -127,7 +141,7 @@ function toggleNav() {
     } else {
         x.className = "menu";
     }
-}
+}*/
 
 /*!
  * headroom.js v0.9.3 - Give your page some headroom. Hide your header until you need it

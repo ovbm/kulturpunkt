@@ -341,9 +341,13 @@ display:
       path: programm
       menu:
         type: normal
-        title: Programm
+        title: programm
         menu_name: main
         weight: 1
+        description: ''
+        parent: ''
+        expanded: false
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

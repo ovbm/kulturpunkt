@@ -62,19 +62,23 @@ body{
 
 h1 {
   font-size: 4vmin;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 3vmin;
   margin-top: 0;
+  font-weight:400;
 }
 
 h3{
   font-size: 2.5vmin;
+  font-weight:400;
 }
 
 p {
   font-size: 2vmin;
+  font-weight:300;
 }
 
 canvas{
@@ -96,8 +100,8 @@ img{
 }
 
 .field--type-image{
-  overflow: hidden;
-  position: relative;
+  //overflow: hidden;
+  //position: relative;
 }
 
 .field--name-title{
@@ -358,6 +362,9 @@ main{
       .event_detail_body{
         @include full;
         margin-bottom:1em;
+        p{
+          line-height: 1.25 !important;
+        }
       }
       .event_detail_info{
         @include full;
@@ -366,12 +373,20 @@ main{
     .event_detail_col2{
       @include span(last 6);
       .event_detail_image{
-        @include full;
-          .main-carousel{
+        img{
+        }
+        //@include full;
+        .main-carousel {
+          //padding-bottom: 33.3%;
           }
-          .carousel-cell{
-            width:100%;
-            height:100%;
+          /* viewport inherit size from carousel */
+          .main-carousel .flickity-viewport {
+        //  position: absolute;
+        //  width: 100%;
+          }
+          /* cell inherit height from carousel */
+          .carousel-cell {
+        //  height: 100%;
           }
       }
       .event_detail_video{
@@ -385,14 +400,11 @@ main{
     //float: left;
      padding-right: 0.5em;
     }
-
   }
 
   .programm-event{
-
   }
 }
-
 
 footer{
   @include full;
