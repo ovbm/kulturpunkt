@@ -57,11 +57,11 @@ body{
   color: black;
   font-family: $fontface;
   line-height: 1.25;
-  font-size: 2.5vmin;
+  font-size: 2.0vmin;
 }
 
 h1 {
-  font-size: 5vmin;
+  font-size: 4vmin;
 }
 
 h2 {
@@ -353,10 +353,11 @@ main{
     @include full;
     .event_detail_col1{
       @include span(6);
-      margin-top:1vmin;
+      margin-top:2em;
 
       .event_detail_body{
         @include full;
+        margin-bottom:1em;
       }
       .event_detail_info{
         @include full;
@@ -379,10 +380,10 @@ main{
 
 
     }
-    .field__label{
-      font-size: 2.5vmin;
-      float: left;
-      padding-right: 0.5em;
+  .field__label{
+    font-size: 2vmin;
+    //float: left;
+     padding-right: 0.5em;
     }
 
   }
@@ -407,18 +408,4 @@ footer{
       @include span (4);
     }
   }
-}
-
-/* Style the buttons that are used to open and close the accordion panel */
-.accordion {
-  color: #000;
-  //mix-blend-mode: difference;
-  cursor: pointer;
-  border: none;
-  outline: none;
-//  transition: 0.4s;
-}
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion.active,
-.accordion:hover {
 }

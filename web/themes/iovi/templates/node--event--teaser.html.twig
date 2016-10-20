@@ -130,26 +130,26 @@
       {{content.body}}
     </div>
     <div class="event_detail_info">
-      <h3>Info</h3>
-      <div class="field__label">Datum:</div>
-      <div class="field__item">
-        <p>
-          {{ node.field_event_datum[0].value|date('d.m.Y') }}
-        </p>
+
+      <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
+        <div class="field__label">Datum</div>
+        <div class="field__item">
+            {{ node.field_event_datum[0].value|date('d.m.Y') }}
+        </div>
       </div>
-      <div class="field__label">Beginn:</div>
-      <div class="field__item">
-        <p>
-          {{ node.field_event_datum[0].value|date('H:i') }}
-        </p>
+      <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
+        <div class="field__label">Beginn</div>
+        <div class="field__item">
+            {{ node.field_event_datum[0].value|date('H:i') }}
+        </div>
       </div>
 
       {{ content.field_event_preis }}
       {{ content.field_event_organisation }}
       {{ content.field_event_links }}
-        {% if content.field_file %}
-          {{ content.field_file }}
-        {% endif %}
+      {% if content.field_file %}
+        {{ content.field_file }}
+      {% endif %}
     </div>
 
   </div>
