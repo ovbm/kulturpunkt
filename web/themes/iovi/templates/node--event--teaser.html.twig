@@ -83,7 +83,7 @@
 
 {{ attach_library('classy/node') }}
 
-<article{{ attributes.addClass(classes,'accordion-header event_header') }}>
+<article{{ attributes.addClass(classes,'accordion event_header') }}>
 
   <div{{ content_attributes.addClass('node__content event_content') }}>
     <div class="event_image">
@@ -125,17 +125,10 @@
 </article>
 
 <div class="event_detail">
-  <div class="event_detail_row">
-    <div class="event_detail_image">
-      <div class="main-carousel">
-          {{ content.field_event_bild }}
-      </div>
+  <div class="event_detail_col1">
+    <div class="event_detail_body">
+      {{content.body}}
     </div>
-    <div class="event_detail_video">
-      {{content.field_video}}
-    </div>
-  </div>
-  <div class="event_detail_row">
     <div class="event_detail_info">
       <h3>Info</h3>
       <div class="field__label">Datum:</div>
@@ -158,8 +151,16 @@
           {{ content.field_file }}
         {% endif %}
     </div>
-    <div class="event_detail_body">
-      {{content.body}}
+
+  </div>
+  <div class="event_detail_col2">
+    <div class="event_detail_image">
+      <div class="main-carousel">
+          {{ content.field_event_bild }}
+      </div>
+    </div>
+    <div class="event_detail_video">
+      {{content.field_video}}
     </div>
   </div>
 </div>
