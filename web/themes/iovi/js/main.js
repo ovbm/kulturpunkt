@@ -16,7 +16,24 @@
   });
 })(jQuery);
 
+(function($) {
 
+  var allPanels = $('#accordion > .event_detail').hide();
+
+  $('#accordion > .accordion-header').click(function() {
+      $this = $(this);
+      $target =  $this.next();
+
+      if(!$target.hasClass('active')){
+         allPanels.removeClass('active').slideUp();
+         $target.addClass('active').slideDown();
+      }
+
+    return false;
+  });
+
+})(jQuery);
+/*
 //Toggle between adding and removing the "active" and "show" classes when the user clicks on one of the "Section" buttons. The "active" class is used to add a background color to the current button when its belonging panel is open. The "show" class is used to open the specific accordion panel
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -30,7 +47,7 @@ for (i = 0; i < acc.length; i++) {
 
     }
 }
-
+*/
 // Full Width and height canvas;
 
 

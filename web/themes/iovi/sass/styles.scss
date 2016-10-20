@@ -360,6 +360,7 @@ main{
 
         .carousel-cell{
           width:100%;
+          height:100%;
         }
 
       }
@@ -404,79 +405,16 @@ footer{
   }
 }
 
-
-
-/*programm style
-
-
-.node__content {
-  height: 100%;
-}
-
-.event_col {
-  display: inline-block;
-  height: 100%;
-  float: left;
-}
-
-.event_date_col {
-  width: 15%;
-}
-
-.event_image_col {
-  width: 25%;
-}
-
-.event_title_col {
-  width: 45%;
-}
-
-.event_type_genre_col {
-  width: 15%;
-}
-
-.event_image_col img {
-  width: auto;
-  height: 100%;
-  float: left;
-}
-
-.event_detail_col img {
-  width: auto;
-  height: 100%;
-  float: left;
-}
-
-.event_col .field--name-field-event-bild {
-  display: inline-block;
-  height: 100%;
-  float: left;
-}
-*/
 /* Style the buttons that are used to open and close the accordion panel */
-.accordion {
+.accordion-header {
   color: #000;
   //mix-blend-mode: difference;
   cursor: pointer;
   border: none;
   outline: none;
-  transition: 0.4s;
+//  transition: 0.4s;
 }
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion.active,
-.accordion:hover {
-}
-/* Style the accordion panel. Note: hidden by default */
-div.event_detail {
-  background-color: none;
-  max-height: 0;
-  overflow: hidden;
-  transition: 0.6s ease-in-out;
-  opacity: 0;
-}
-/* The "show" class is added to the accordion panel when the user clicks on one of the buttons. This will show the panel content */
-div.event_detail.show {
-  opacity: 1;
-  max-height: 100vh;
-  /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+.accordion-header.active,
+.accordion-header:hover {
 }
