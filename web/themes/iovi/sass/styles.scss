@@ -148,6 +148,7 @@ header{
   @include mix-blend-mode-difference;
   @include container;
   @include topofpage;
+  width:100%;
   position: fixed;
   box-sizing: border-box;
   background-color: #fff;
