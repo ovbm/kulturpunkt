@@ -127,7 +127,8 @@ for ( var i=0, len = galleryElems.length; i < len; i++ ) {
 cellAlign: 'left',
 contain: true,
 imagesLoaded: true,
-wrapAround: true
+wrapAround: true,
+adaptiveHeight: true
 });
 }
 
