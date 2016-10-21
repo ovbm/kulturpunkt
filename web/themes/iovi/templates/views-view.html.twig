@@ -63,7 +63,9 @@
 
   {% if rows %}
     <div class="view-content">
-      {{ rows }}
+      <div id="accordion">
+        {{ rows }}
+      </div>
     </div>
   {% elseif empty %}
     <div class="view-empty">

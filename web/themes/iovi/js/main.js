@@ -3,10 +3,10 @@ Drupal.behaviors.myBehavior = {
     //Accordion & Scroll To Active Accordion
     (function($) {
 
-      var allPanels = $('#accordion > .event_detail');
-      var allHeaders = $('#accordion > .event_header');
+      var allPanels = $('#accordion > .views-infinite-scroll-content-wrapper > .event_detail');
+      var allHeaders = $('#accordion > .views-infinite-scroll-content-wrapper > .event_header');
 
-      $('#accordion > .accordion').once().click(function() {
+      $('#accordion > .views-infinite-scroll-content-wrapper > .accordion').once().click(function() {
           $this = $(this);
           $target =  $this.next();
 
