@@ -16,11 +16,10 @@
   });
 })(jQuery);
 
-
 //Accordion & Scroll To Active Accordion
 (function($) {
 
-  var allPanels = $('#accordion > .event_detail').hide();
+  var allPanels = $('#accordion > .event_detail');
   var allHeaders = $('#accordion > .event_header');
 
   $('#accordion > .accordion').click(function() {
@@ -33,15 +32,15 @@
         $this.addClass('headeractive');
         $this.attr("id","scrolltop");
         $('html, body').animate({
-              scrollTop: $("#scrolltop").offset().top-100
+              scrollTop: $("#scrolltop").offset().top
             }, 1000);
       };
 
       if(!$target.hasClass('active')){
-         allPanels.removeClass('active').slideUp("slow");
+         allPanels.removeClass('active');
          allPanels.removeAttr("id");
          $target.attr("id","scrolltop");
-         $target.addClass('active').slideDown("slow");
+         $target.addClass('active');
       }
 
     return false;
