@@ -125,7 +125,35 @@
 </article>
 
 <div class="event_detail">
-  <div class="event_detail_row">
+  <div class="event_detail_col1">
+    <div class="event_detail_body">
+      {{content.body}}
+    </div>
+    <div class="event_detail_info">
+
+      <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
+        <div class="field__label">Datum</div>
+        <div class="field__item">
+            {{ node.field_event_datum[0].value|date('d.m.Y') }}
+        </div>
+      </div>
+      <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
+        <div class="field__label">Beginn</div>
+        <div class="field__item">
+            {{ node.field_event_datum[0].value|date('H:i') }}
+        </div>
+      </div>
+
+      {{ content.field_event_preis }}
+      {{ content.field_event_organisation }}
+      {{ content.field_event_links }}
+      {% if content.field_file %}
+        {{ content.field_file }}
+      {% endif %}
+    </div>
+
+  </div>
+  <div class="event_detail_col2">
     <div class="event_detail_image">
       <div class="main-carousel">
           {{ content.field_event_bild }}
@@ -133,33 +161,6 @@
     </div>
     <div class="event_detail_video">
       {{content.field_video}}
-    </div>
-  </div>
-  <div class="event_detail_row">
-    <div class="event_detail_info">
-      <h3>Info</h3>
-      <div class="field__label">Datum:</div>
-      <div class="field__item">
-        <p>
-          {{ node.field_event_datum[0].value|date('d.m.Y') }}
-        </p>
-      </div>
-      <div class="field__label">Beginn:</div>
-      <div class="field__item">
-        <p>
-          {{ node.field_event_datum[0].value|date('H:i') }}
-        </p>
-      </div>
-
-      {{ content.field_event_preis }}
-      {{ content.field_event_organisation }}
-      {{ content.field_event_links }}
-        {% if content.field_file %}
-          {{ content.field_file }}
-        {% endif %}
-    </div>
-    <div class="event_detail_body">
-      {{content.body}}
     </div>
   </div>
 </div>

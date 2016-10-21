@@ -4,10 +4,10 @@ base:
     base:
       css/flickity.css: {weight:9998}
       css/styles.css: {weight: 9999}
-    flickity:
   js:
     js/jquery.fitvids.js: {}
     js/flickity.pkgd.js: {}
+    js/jquery-scrollto.js: {}
     js/main.js: {}
 
   dependencies:
