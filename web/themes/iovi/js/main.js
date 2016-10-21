@@ -1,3 +1,39 @@
+Drupal.behaviors.myBehavior = {
+  attach: function (context, settings) {
+    //Accordion & Scroll To Active Accordion
+    (function($) {
+
+      var allPanels = $('#accordion > .event_detail');
+      var allHeaders = $('#accordion > .event_header');
+
+      $('#accordion > .accordion').once().click(function() {
+          $this = $(this);
+          $target =  $this.next();
+
+          if(!$this.hasClass('headeractive')){
+            allHeaders.removeClass('headeractive');
+            allHeaders.removeAttr("id");
+            $this.addClass('headeractive');
+            $this.attr("id","scrolltop");
+            $('html, body').animate({
+                  scrollTop: $("#scrolltop").offset().top
+                }, 1000);
+          };
+
+          if(!$target.hasClass('active')){
+             allPanels.removeClass('active');
+             allPanels.removeAttr("id");
+             $target.attr("id","scrolltop");
+             $target.addClass('active');
+          }
+
+        return false;
+      });
+
+    })(jQuery);
+  }
+};
+
 //Toggel INFO Nav
 (function($){
   $(document).ready(function() {

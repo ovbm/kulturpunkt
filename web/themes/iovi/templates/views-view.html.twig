@@ -36,6 +36,7 @@
     'view-' ~ id|clean_class,
     'view-id-' ~ id,
     'view-display-id-' ~ display_id,
+    dom_id ? 'js-view-dom-id-' ~ dom_id,
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
@@ -62,9 +63,7 @@
 
   {% if rows %}
     <div class="view-content">
-      <div id="accordion">
-        {{ rows }}
-      </div>
+      {{ rows }}
     </div>
   {% elseif empty %}
     <div class="view-empty">
