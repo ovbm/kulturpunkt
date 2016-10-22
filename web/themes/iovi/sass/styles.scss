@@ -28,6 +28,7 @@ $susy: (
 );
 
 $nav_layout: layout(12 0 fluid float inside);
+$nav_layout_mobile: layout(12 0);
 $fontface: "modesto-text";
 
 @mixin mix-blend-mode-difference {
@@ -158,6 +159,7 @@ header{
     .site-logo{
       float:left;
       margin-right:1rem;
+      padding-left:5px;
       img{
         height:60px;
         width:auto;
@@ -174,6 +176,9 @@ header{
         color: #e94c4f;
         font-size: 1.5em;
         line-height: 1;
+        @include susy-breakpoint(0px 414px){
+          font-size: 4em;
+        }
       }
     }
     .site-slogan{
@@ -236,12 +241,25 @@ header{
     @include span(7);
     margin-top:1em;
     @include susy-breakpoint(0px 414px){
-      margin-top:1em;
+      @include full;
+      @include prefix(0);
+      @include suffix(1);
+      margin-top:5em;
+      margin-left:8.75em;
+      height:100vh;
     }
+
+    #myTopnav > li.menu-item{
+      padding:0 0 2em 0;
+    }
+
     ul.menu
       a{
         color:#e94c4f;
         text-decoration: none;
+        @include susy-breakpoint(0px 414px){
+          font-size: 4em;
+        }
       }
       a:hover{
         font-style: italic;
@@ -257,17 +275,18 @@ header{
     ul.menu li.menu-item{
       @include span(3 of $nav_layout);
       @include susy-breakpoint(0px 414px){
-        display:none;
-        @include full;
+        @include span(12 of $nav_layout_mobile);
       }
+    }
+    ul.menu li.menu-item--expanded{
+      list-style-image:none;
     }
     ul.menu li.icon{
       display:none;
       @include susy-breakpoint(0px 414px){
-        float: right;
-        display: inline-block;
-        margin-right: 10vmin;
+
       }
+
       a{
         font-size: 7vmin;
       }
