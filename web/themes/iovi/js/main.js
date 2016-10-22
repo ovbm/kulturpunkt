@@ -15,9 +15,9 @@ Drupal.behaviors.myBehavior = {
             allHeaders.removeAttr("id");
             $this.addClass('headeractive');
             $this.attr("id","scrolltop");
-            $('html, body').animate({
+            /*$('html, body').animate({
                   scrollTop: $("#scrolltop").offset().top
-                }, 1000);
+                }, 1000);*/
           };
 
           if(!$target.hasClass('active')){
@@ -25,9 +25,31 @@ Drupal.behaviors.myBehavior = {
              allPanels.removeAttr("id");
              $target.attr("id","scrolltop");
              $target.addClass('active');
+          } else {
+            $target.removeClass('active');
           }
 
         return false;
+      });
+
+      //FLICKITY
+      var galleryElems = document.querySelectorAll('.main-carousel');
+
+      for ( var i=0, len = galleryElems.length; i < len; i++ ) {
+        var galleryElem = galleryElems[i];
+        new Flickity( galleryElem, {
+      // options...
+      cellAlign: 'left',
+      contain: true,
+      imagesLoaded: true,
+      wrapAround: true,
+      adaptiveHeight: true
+      });
+      }
+
+      jQuery(document).ready(function(){
+        // Target your .container, .wrapper, .post, etc.
+        jQuery(".field--type-video").fitVids();
       });
 
     })(jQuery);
@@ -153,20 +175,7 @@ $('.main-carousel').flickity({
 })(document);
 
 
-//FLICKITY
-var galleryElems = document.querySelectorAll('.main-carousel');
 
-for ( var i=0, len = galleryElems.length; i < len; i++ ) {
-  var galleryElem = galleryElems[i];
-  new Flickity( galleryElem, {
-// options...
-cellAlign: 'left',
-contain: true,
-imagesLoaded: true,
-wrapAround: true,
-adaptiveHeight: true
-});
-}
 
 
 // NAV function

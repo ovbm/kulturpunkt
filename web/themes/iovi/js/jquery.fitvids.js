@@ -85,8 +85,3 @@
 
 // Works with either jQuery or Zepto
 })( window.jQuery || window.Zepto );
-
-jQuery(document).ready(function(){
-  // Target your .container, .wrapper, .post, etc.
-  jQuery(".field--type-video").fitVids();
-});
