@@ -14,3 +14,4 @@ base:
     - core/jquery
     - core/drupal
     - core/drupalSettings
+    - core/jquery.once

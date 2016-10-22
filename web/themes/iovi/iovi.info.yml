@@ -24,4 +24,3 @@ regions:
   footer: 'Footer'
 libraries-override:
   classy/base: false
-  system/base: false

@@ -68,7 +68,7 @@ h1 {
 h2 {
   font-size: 3vmin;
   margin-top: 0;
-  font-weight:400;
+  font-weight:300;
 }
 
 h3{
@@ -114,11 +114,12 @@ ul, li{
 }
 
 .event_date{
-  font-size: 7vmin;
+  font-size: 5vmin;
   line-height: 1;
 }
 
 .layout-container{
+  @include container;
   position: relative;
   color:black;
   a{
@@ -145,14 +146,14 @@ ul, li{
 
 header{
   @include mix-blend-mode-difference;
-  @include full;
+  @include container;
   @include topofpage;
+  width:100%;
   position: fixed;
   box-sizing: border-box;
   background-color: #fff;
   #block-sitebranding{
-    @include prefix(1);
-    @include suffix(1);
+    @include full;
     margin-top:1rem;
     .site-logo{
       float:left;
@@ -305,7 +306,7 @@ header{
 
 
 main{
-  @include container;
+  @include full;
   margin: 6.5em auto 15vh;
   .view-filters{
     @include full;
@@ -362,7 +363,7 @@ main{
     }
 
     .event_detail_col1{
-      @include span(6);
+      @include span(7);
       margin-top:2em;
 
       .event_detail_body{
@@ -377,7 +378,8 @@ main{
       }
     }
     .event_detail_col2{
-      @include span(last 6);
+      @include span(last 5);
+      margin-top:2em;
       .event_detail_image{
         @include full;
         img{
@@ -395,11 +397,14 @@ main{
 
 
     }
-  .field__label{
-    font-size: 2vmin;
-    //float: left;
-     padding-right: 0.5em;
+  .field__label:after{
+    content:":";
+  }
+  .field--label-inline .field__label{
+    float: left;
+    padding-right: 0.5em;
     }
+
   }
 
   .programm-event{
