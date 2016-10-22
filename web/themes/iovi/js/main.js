@@ -28,7 +28,6 @@ Drupal.behaviors.myBehavior = {
           } else {
             $target.removeClass('active');
           }
-
         return false;
       });
 
