@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5c1c77673fcfc0d26d7e5cb8880f2223",
-    "content-hash": "a0c149eac353d139cebd47f82d7d38b5",
+    "hash": "aae7bb352faaa38c893cfa5f3c2697e4",
+    "content-hash": "3d075c19d0cea89e219b66206e6a4e23",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1074,7 +1074,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/addtoany-8.x-1.6.zip",
-                "reference": null,
+                "reference": "e3b2a9706586e944ebf85ba327569ab744174f59",
                 "shasum": null
             },
             "require": {
@@ -1793,7 +1793,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/extlink-8.x-1.0-alpha3.zip",
-                "reference": null,
+                "reference": "62eca1c0f5c67a17676152e48ab49e86c195d78c",
                 "shasum": null
             },
             "require": {
@@ -2037,7 +2037,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/pathauto-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "05a0bc51694b70efb697b3c8b175f2884bff7b34",
                 "shasum": null
             },
             "require": {
@@ -2070,7 +2070,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/styled_google_map-8.x-1.2.zip",
-                "reference": null,
+                "reference": "a42e5e652cf35150bf11e8ea34143b05cb80501b",
                 "shasum": null
             },
             "require": {
@@ -2102,7 +2102,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/token-8.x-1.0-beta2.zip",
-                "reference": null,
+                "reference": "724ccaa7a60f1aa7e8883e82de737115b0f73a3f",
                 "shasum": null
             },
             "require": {
@@ -2169,7 +2169,7 @@
             "dist": {
                 "type": "zip",
                 "url": "https://ftp.drupal.org/files/projects/views_accordion-8.x-1.0-beta1.zip",
-                "reference": null,
+                "reference": "b918426ed4aedfccb5253e89b0566d0feaec3e41",
                 "shasum": null
             },
             "require": {
