@@ -1,0 +1,23 @@
+uuid: 2b4bd497-679e-4fee-841a-511e8d64ad2d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vorverkauf
+    - node.type.event
+  module:
+    - link
+id: node.event.field_vorverkauf
+field_name: field_vorverkauf
+entity_type: node
+bundle: event
+label: Vorverkauf
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

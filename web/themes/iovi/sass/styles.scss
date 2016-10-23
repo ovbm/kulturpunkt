@@ -178,7 +178,7 @@ header{
         font-size: 32px;
         line-height: 1;
         @include susy-breakpoint(0px 414px){
-          font-size: 4em;
+          font-size: 32px;
         }
       }
     }
@@ -259,7 +259,7 @@ header{
         color:#e94c4f;
         text-decoration: none;
         @include susy-breakpoint(0px 414px){
-          font-size: 4em;
+          font-size: 3em;
         }
       }
       a:hover{
@@ -281,6 +281,7 @@ header{
     }
     ul.menu li.menu-item--expanded{
       list-style-image:none;
+      list-style-type: none;
     }
     ul.menu li.icon{
       display:none;
@@ -385,7 +386,9 @@ main{
     .event_detail_col1{
       @include span(7);
       margin-top:2em;
-
+        @include susy-breakpoint(0px 414px){
+          @include full;
+        }
       .event_detail_body{
         @include full;
         margin-bottom:1em;
@@ -400,6 +403,9 @@ main{
     .event_detail_col2{
       @include span(last 5);
       margin-top:2em;
+        @include susy-breakpoint(0px 414px){
+          @include full;
+        }
       .event_detail_image{
         @include full;
         img{
