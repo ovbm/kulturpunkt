@@ -155,14 +155,20 @@ ul, li{
   z-index:9999;
 }
 
-.overlay h1,h2{
+.overlay-title{
+  text-align: center;
+  margin: 5em 0 2em 0:
+  color:#fff;
+}
+
+h2.overlay-toggle{
   text-align: center;
   margin: 5em 0 2em 0:
   color:#fff;
 }
 
 /* Overlay closing cross */
-.overlay button.overlay-toggle {
+button.overlay-toggle {
 	width: 80px;
 	height: 80px;
 	position: absolute;

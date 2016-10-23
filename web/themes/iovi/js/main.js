@@ -113,9 +113,8 @@ Drupal.behaviors.myBehavior = {
 (function($) {
   $('.overlay-toggle').click(function() {
       $('.overlay').toggleClass('open');
-      };
-  });
-})(jQuery);
+    });
+  })(jQuery);
 
 
 //Flickity
