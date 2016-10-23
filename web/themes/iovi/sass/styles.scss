@@ -152,6 +152,7 @@ ul, li{
 	top: 0;
 	left: 0;
 	background: rgba(233,76,79,0.9);
+  z-index:9999;
 }
 
 /* Overlay closing cross */
@@ -185,6 +186,16 @@ ul, li{
 	transition: opacity 0.5s;
 }
 
+.welcomevideowrap{
+  max-width:960px;
+  margin: 0 auto;
+}
+
+.welcomevideo{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
 header{
   @include mix-blend-mode-difference;
