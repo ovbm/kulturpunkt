@@ -111,9 +111,8 @@ Drupal.behaviors.myBehavior = {
 
 // Overlay toggleNav
 (function($) {
-  $('.overlay-close').click(function() {
-      if($('.overlay').hasClass('open')){
-        $('.overlay').removeClass('open');
+  $('.overlay-toggle').click(function() {
+      $('.overlay').toggleClass('open');
       };
   });
 })(jQuery);
