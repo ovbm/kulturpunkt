@@ -50,11 +50,13 @@
       {{ header }}
     </div>
   {% endif %}
+  {#
   {% if exposed %}
-    <div class="view-filters">
-      {{ exposed }}
-    </div>
-  {% endif %}
+    /**<div class="view-filters">
+      * {{ exposed }}
+      *  </div>
+    * {% endif %} */
+  #}
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}

@@ -115,7 +115,7 @@ ul, li{
 }
 
 .event_date{
-  font-size: 5vmin;
+  font-size: 3vh;
   line-height: 1;
 }
 
@@ -418,7 +418,9 @@ main{
       }
       .event_detail_video{
         @include full;
-        margin-bottom:2em;
+        .field--type-video{
+          margin: 2em 0 2em 0;
+        }
       }
 
 

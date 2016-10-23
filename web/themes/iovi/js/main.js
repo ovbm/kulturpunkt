@@ -42,6 +42,7 @@ Drupal.behaviors.myBehavior = {
       contain: true,
       imagesLoaded: true,
       wrapAround: true,
+      lazyLoad:true,
       adaptiveHeight: true
       });
       }

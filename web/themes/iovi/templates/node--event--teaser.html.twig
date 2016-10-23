@@ -83,7 +83,7 @@
 
 {{ attach_library('classy/node') }}
 
-<article{{ attributes.addClass(classes,'accordion event_header') }}>
+<article href="#{{node.canonical}}"{{ attributes.addClass(classes,'accordion event_header') }}>
 
   <div{{ content_attributes.addClass('node__content event_content') }}>
     <div class="event_image">
@@ -108,7 +108,9 @@
 
     <div class="event_date">
         {{ content.field_event_datum}}
+        {{ node.field_event_datum[0].value|date('H:i') }}
     </div>
+
 
   </div>
 
@@ -140,7 +142,7 @@
       <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
         <div class="field__label">Beginn</div>
         <div class="field__item">
-            {{ node.field_event_datum[0].value|date('H:i') }}
+          {{ node.field_event_datum[0].value|date('H:i') }}
         </div>
       </div>
 
