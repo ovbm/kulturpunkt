@@ -59,8 +59,6 @@ Drupal.behaviors.myBehavior = {
 // Overlay
 
 
-
-
 //Toggel INFO Nav
 (function($){
   $(document).ready(function() {
@@ -109,6 +107,15 @@ Drupal.behaviors.myBehavior = {
     return false;
   });
 
+})(jQuery);
+
+// Overlay toggleNav
+(function($) {
+  $('.overlay-close').click(function() {
+      if($('.overlay').hasClass('open')){
+        $('.overlay').removeClass('open');
+      };
+  });
 })(jQuery);
 
 
