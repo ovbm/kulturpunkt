@@ -15,6 +15,7 @@ dependencies:
     - field.field.node.event.field_file
     - field.field.node.event.field_genre
     - field.field.node.event.field_video
+    - field.field.node.event.field_vorverkauf
     - image.style.16_by_9
     - node.type.event
   module:
@@ -78,14 +79,14 @@ content:
     third_party_settings: {  }
   field_event_typ:
     type: entity_reference_label
-    weight: 9
+    weight: 10
     label: inline
     settings:
       link: true
     third_party_settings: {  }
   field_file:
     type: file_default
-    weight: 11
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -98,12 +99,23 @@ content:
     third_party_settings: {  }
   field_video:
     type: video_embed_player
-    weight: 10
+    weight: 11
     label: hidden
     settings:
       width: '854'
       height: '480'
       autoplay: false
+    third_party_settings: {  }
+  field_vorverkauf:
+    type: link
+    weight: 9
+    label: inline
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
 hidden:
   field_event_organisation: true

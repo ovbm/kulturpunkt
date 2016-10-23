@@ -145,6 +145,9 @@
       </div>
 
       {{ content.field_event_preis }}
+      {% if content.field_vorverkauf %}
+        {{ content.field_vorverkauf }}
+      {% endif %}
       {{ content.field_event_organisation }}
       {{ content.field_event_links }}
       {% if content.field_file %}
