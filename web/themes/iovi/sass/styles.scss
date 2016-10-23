@@ -156,7 +156,7 @@ ul, li{
 }
 
 /* Overlay closing cross */
-.overlay .overlay-close {
+.overlay button.overlay-close {
 	width: 80px;
 	height: 80px;
 	position: absolute;
@@ -164,11 +164,11 @@ ul, li{
 	top: 20px;
 	overflow: hidden;
 	border: none;
-	background: url(../img/cross.png) no-repeat center center;
+	background: url(img/cross.png) no-repeat center center;
 	text-indent: 200%;
 	color: transparent;
 	outline: none;
-	z-index: 100;
+	z-index: 99999;
 }
 
 /* Effects */
@@ -189,6 +189,8 @@ ul, li{
 .welcomevideowrap{
   max-width:960px;
   margin: 0 auto;
+  padding:0 1em 0 1em;
+  position:relative;
 }
 
 .welcomevideo{
