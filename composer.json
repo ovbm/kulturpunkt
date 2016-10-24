@@ -33,7 +33,6 @@
         "drupal/views_infinite_scroll": "^8.1",
         "drupal/views_accordion": "~8.0",
         "drupal/calendar": "~8.0",
-        "drupal/styled_google_map": "~8.0",
         "drupal/crop": "~8.0",
         "drupal/image_widget_crop": "~8.0",
         "drupal/focal_point": "~8.0",
