@@ -9,11 +9,14 @@ eval($aliases_stub);
 /**
  * Production alias
  * Set each option to match your configuration
- */
-$aliases['prod'] = array (
-  // This is the full site alias name from which we inherit its config.
-  'uri' => 'sl85.web.hostpoint.ch',
-  'root' => '/www/kulturpunkt-flawil.ch',
-  'remote-user' => 'olivie62',
-  'remote-host' => 'p1.server.hostpoint.ch',
-);
+*
+*$aliases['prod'] = array (
+*  // This is the full site alias name from which we inherit its config.
+*  'uri' => 'kulturpunkt-flawil.ch',
+*  'root' => '/home/olivie62/www/kulturpunkt-flawil.ch',
+*  'remote-user' => 'olivie62',
+*  'remote-host' => 'sl85.web.hostpoint.ch',
+*);
+*
+*$options['ssh-options'] = '-o PasswordAuthentication=no -i /Users/Obauma/.ssh/hostpoint_rsa';
+*/
