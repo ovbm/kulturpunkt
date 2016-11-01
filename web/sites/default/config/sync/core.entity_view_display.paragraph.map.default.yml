@@ -6,65 +6,19 @@ dependencies:
     - field.field.paragraph.map.field_map
     - paragraphs.paragraphs_type.map
   module:
-    - styled_google_map
+    - geofield
 id: paragraph.map.default
 targetEntityType: paragraph
 bundle: map
 mode: default
 content:
   field_map:
-    weight: 0
-    label: hidden
+    weight: 1
+    label: above
     settings:
-      width: 400px
-      height: 400px
-      style:
-        maptype: ROADMAP
-        style: '[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]'
-        pin: ''
-      map_center:
-        center_coordinates: ''
-      popup:
-        choice: '0'
-        view_mode: default
-        text: field_map
-        shadow_style: '0'
-        padding: '13'
-        border_radius: '7'
-        border_width: '1'
-        border_color: '#cccccc'
-        background_color: '#ffffff'
-        min_width: auto
-        max_width: auto
-        min_height: auto
-        max_height: auto
-        arrow_style: '0'
-        arrow_size: '10'
-        arrow_position: '50'
-        disable_auto_pan: '0'
-        hide_close_button: '0'
-        disable_animation: '1'
-        classes:
-          content_container: sgmpopup-content-wrapper
-          background: sgmpopup-content
-          arrow: sgmpopup-arrow
-          arrow_outer: sgmpopup-arrow-outer
-          arrow_inner: sgmpopup-arrow-inner
-        label: 0
-      zoom:
-        default: '15'
-        max: '17'
-        min: '5'
-      maptypecontrol: '1'
-      scalecontrol: '1'
-      draggable: '1'
-      mobile_draggable: '1'
-      zoomcontrol: '1'
-      scrollwheel: '1'
-      rotatecontrol: 0
-      streetviewcontrol: 0
+      output_format: wkt
     third_party_settings: {  }
-    type: styled_google_map_default
+    type: geofield_default
 hidden:
   created: true
   uid: true

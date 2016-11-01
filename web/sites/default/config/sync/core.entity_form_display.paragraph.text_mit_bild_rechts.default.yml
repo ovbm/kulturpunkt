@@ -1,0 +1,40 @@
+uuid: 90439e42-d0dd-4a72-84f0-c79a028fc016
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_mit_bild_rechts.field_textbildrechts
+    - field.field.paragraph.text_mit_bild_rechts.field_textbildrechtsbild
+    - image.style.large
+    - paragraphs.paragraphs_type.text_mit_bild_rechts
+  module:
+    - image_widget_crop
+    - text
+id: paragraph.text_mit_bild_rechts.default
+targetEntityType: paragraph
+bundle: text_mit_bild_rechts
+mode: default
+content:
+  field_textbildrechts:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_textbildrechtsbild:
+    weight: 1
+    settings:
+      show_default_crop: true
+      preview_image_style: large
+      crop_preview_image_style: crop_thumbnail
+      crop_list:
+        - 16_by_9
+      progress_indicator: throbber
+      show_crop_area: false
+    third_party_settings: {  }
+    type: image_widget_crop
+hidden:
+  created: true
+  status: true
+  uid: true

@@ -1,0 +1,23 @@
+uuid: e83dd148-299e-4948-8e69-67d81be57054
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.file.field_paragraph_file
+    - paragraphs.paragraphs_type.file
+  module:
+    - file
+id: paragraph.file.default
+targetEntityType: paragraph
+bundle: file
+mode: default
+content:
+  field_paragraph_file:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_default
+hidden:
+  created: true
+  uid: true

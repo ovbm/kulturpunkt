@@ -1,0 +1,6 @@
+uuid: 55a97ded-f8a4-432f-8826-2497da7c9864
+langcode: en
+status: true
+dependencies: {  }
+id: slideshow
+label: Slideshow

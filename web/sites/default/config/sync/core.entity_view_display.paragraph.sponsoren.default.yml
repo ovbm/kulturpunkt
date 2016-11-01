@@ -1,0 +1,33 @@
+uuid: 082c0be6-1182-4f39-a9c2-538b72c8dc19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsoren.field_sponsorenbild
+    - field.field.paragraph.sponsoren.field_sponsorentitel
+    - paragraphs.paragraphs_type.sponsoren
+  module:
+    - image
+    - text
+id: paragraph.sponsoren.default
+targetEntityType: paragraph
+bundle: sponsoren
+mode: default
+content:
+  field_sponsorenbild:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  field_sponsorentitel:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+hidden:
+  created: true
+  uid: true

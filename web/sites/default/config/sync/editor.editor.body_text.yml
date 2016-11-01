@@ -18,6 +18,8 @@ settings:
             - Bold
             - Italic
             - Underline
+            - Superscript
+            - Subscript
         -
           name: Links
           items:
@@ -37,11 +39,29 @@ settings:
           name: Tools
           items:
             - Source
+        -
+          name: text
+          items:
+            - JustifyRight
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyBlock
+            - Format
+        -
+          name: Styles
+          items:
+            - Styles
+      -
+        -
+          name: Other
+          items:
+            - Undo
+            - Redo
   plugins:
     language:
       language_list: un
     stylescombo:
-      styles: ''
+      styles: "h2.paragraphtitle|Titel2\r\nh3.paragraphtitle|Titel3\r\n"
     linkit:
       linkit_profile: ''
 image_upload:

@@ -1,0 +1,35 @@
+uuid: 17be3faa-89b0-4172-a4da-3f68c316c3df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.sponsoren.field_sponsorenbild
+    - field.field.paragraph.sponsoren.field_sponsorentitel
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.sponsoren
+  module:
+    - image
+    - text
+id: paragraph.sponsoren.default
+targetEntityType: paragraph
+bundle: sponsoren
+mode: default
+content:
+  field_sponsorenbild:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+  field_sponsorentitel:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+hidden:
+  created: true
+  status: true
+  uid: true

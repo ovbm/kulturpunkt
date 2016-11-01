@@ -1,0 +1,18 @@
+uuid: f89a746f-83b9-4343-8270-187c91856a94
+langcode: en
+status: true
+dependencies:
+  theme:
+    - iovi
+id: pagetitle
+theme: iovi
+region: footer
+weight: -2
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

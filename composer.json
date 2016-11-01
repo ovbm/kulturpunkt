@@ -37,7 +37,9 @@
         "drupal/image_widget_crop": "~8.0",
         "drupal/focal_point": "~8.0",
         "drupal/devel": "~8.0",
-        "drupal/extlink": "~8.0"
+        "drupal/extlink": "~8.0",
+        "drupal/advagg": "^8.2",
+        "drupal/imageapi_optimize": "~8.0"
     },
     "require-dev": {
         "behat/mink": "~1.7",

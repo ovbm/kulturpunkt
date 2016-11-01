@@ -26,3 +26,4 @@ permissions:
   18: 'revert event revisions'
   19: 'view event revisions'
   20: 'edit any page content'
+  21: 'use text format body_text'

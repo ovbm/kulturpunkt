@@ -1,0 +1,26 @@
+uuid: 6eefe73c-4ec3-4b5d-a7e2-f7ed871083b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slideshow.field_slideshow
+    - image.style.16_by_9
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - image
+id: paragraph.slideshow.default
+targetEntityType: paragraph
+bundle: slideshow
+mode: default
+content:
+  field_slideshow:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: 16_by_9
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  uid: true

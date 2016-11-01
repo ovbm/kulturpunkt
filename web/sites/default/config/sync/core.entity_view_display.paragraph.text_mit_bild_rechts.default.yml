@@ -1,0 +1,34 @@
+uuid: b9176b42-e7a0-4388-b6cb-6cca375a47be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_mit_bild_rechts.field_textbildrechts
+    - field.field.paragraph.text_mit_bild_rechts.field_textbildrechtsbild
+    - image.style.16_by_9
+    - paragraphs.paragraphs_type.text_mit_bild_rechts
+  module:
+    - image
+    - text
+id: paragraph.text_mit_bild_rechts.default
+targetEntityType: paragraph
+bundle: text_mit_bild_rechts
+mode: default
+content:
+  field_textbildrechts:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+  field_textbildrechtsbild:
+    weight: 1
+    label: hidden
+    settings:
+      image_style: 16_by_9
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+hidden:
+  created: true
+  uid: true

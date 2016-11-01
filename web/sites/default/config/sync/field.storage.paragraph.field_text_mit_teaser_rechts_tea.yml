@@ -1,0 +1,19 @@
+uuid: 52fa7197-64e4-4fc6-b635-336b69cae2d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_text_mit_teaser_rechts_tea
+field_name: field_text_mit_teaser_rechts_tea
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

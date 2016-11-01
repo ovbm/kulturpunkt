@@ -1,0 +1,38 @@
+uuid: 504da0ec-641e-40d7-a18e-776822d58a2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slideshow
+    - paragraphs.paragraphs_type.slideshow
+  module:
+    - image
+id: paragraph.slideshow.field_slideshow
+field_name: field_slideshow
+entity_type: paragraph
+bundle: slideshow
+label: slideshow
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

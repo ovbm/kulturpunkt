@@ -30,6 +30,7 @@ $susy: (
 $nav_layout: layout(12 0 fluid float inside);
 $nav_layout_mobile: layout(12 0);
 $fontface: "modesto-text";
+$rot: #e94c4f;
 
 @mixin mix-blend-mode-difference {
   //color: white;
@@ -74,7 +75,7 @@ h2 {
 
 h3{
   font-size: 2.5vh;
-  font-weight:400;
+  font-weight:300;
 }
 
 p {
@@ -85,8 +86,7 @@ p {
 canvas{
   margin: 0 auto;
   position: fixed;
-  display: block;
-  background-color: white;
+  display: none;
   z-index: 0;
 }
 
@@ -170,11 +170,11 @@ h2.overlay-toggle{
 
 /* Overlay closing cross */
 button.overlay-toggle {
-	width: 80px;
-	height: 80px;
-	position: absolute;
+	width: 64px;
+	height: 64px;
+	position: fixed;
 	right: 20px;
-	top: 20px;
+	bottom: 20px;
 	overflow: hidden;
 	border: none;
 	background: url(img/cross.png) no-repeat center center;
@@ -185,6 +185,20 @@ button.overlay-toggle {
 	z-index: 99999;
 }
 
+.overlay-message{
+  position: fixed;
+  bottom: 20px;
+	right: 84px;
+  height: 64px;
+  background-color:rgba(233,76,79,0.9);
+  z-index:99999;
+  p{
+    color:#fff;
+    font-weight:300;
+    padding: 0 1em;
+    line-height: 1.6;
+  }
+}
 /* Effects */
 .overlay-hugeinc {
 	opacity: 0;
@@ -254,9 +268,11 @@ header{
     }
 
     #nav-toggle {
-      display:none;
     	float:right;
     	margin: 1em;
+      @include susy-breakpoint(0px 414px){
+        display: inline-block;
+      }
     }
 
     #nav-toggle {
@@ -303,9 +319,7 @@ header{
     display:none;
   }
   nav.navigation{
-    @include prefix(4);
-    @include suffix(1);
-    @include span(7);
+    @include full;
     margin-top:1em;
     @include susy-breakpoint(0px 414px){
       @include full;
@@ -317,7 +331,7 @@ header{
     }
 
     #myTopnav > li.menu-item{
-      padding:0 0 2em 0;
+      padding:0 0 2em 5px;
     }
 
     ul.menu
@@ -325,7 +339,7 @@ header{
         color:#e94c4f;
         text-decoration: none;
         @include susy-breakpoint(0px 414px){
-          font-size: 3em;
+          font-size: 2em;
         }
       }
       a:hover{
@@ -340,7 +354,7 @@ header{
       font-style: italic;
     }
     ul.menu li.menu-item{
-      @include span(3 of $nav_layout);
+      @include span(2 of $nav_layout);
       @include susy-breakpoint(0px 414px){
         @include span(12 of $nav_layout_mobile);
       }
@@ -394,7 +408,7 @@ header{
 
 main{
   @include full;
-  margin: 6.5em auto 15vh;
+  margin: 6.5em auto 5vh;
   .view-filters{
     @include full;
     .form--inline .form-item {
@@ -402,7 +416,7 @@ main{
     }
   }
 
-  article{
+  article.node--type-event{
     @include full;
     max-height: 20vh;
     margin-top:5vh;
@@ -485,11 +499,23 @@ main{
       .event_detail_video{
         @include full;
         .field--type-video{
-          margin: 2em 0 2em 0;
+          position: relative;
+          width: 100%;
+          padding-bottom: 56.25%;
+          padding-top: 35px;
+          height: 0px;
+          overflow: hidden;
+          left: 0%;
+          margin-bottom: 1em;
+          iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
         }
       }
-
-
     }
   .field__label:after{
     content:":";
@@ -503,20 +529,266 @@ main{
 
   .programm-event{
   }
+  .js-pager__items{
+    text-align: center;
+    margin-top: 5vh;
+  }
 }
 
 footer{
   @include full;
   margin-top:10vh;
-  background-color: #fff;
+  background-color: $rot;
+  color: white;
   @include mix-blend-mode-difference-footer;
-  .region-footer{
+  @include susy-breakpoint(0px 414px){
+    @include span (10);
+    @include prefix (1);
+    @include suffix (1);
+  }
+
+  .layout-container{
+    color: white;
+  }
+  .footerrow{
     @include full;
-    #block-adresse{
-      @include span (4);
+    padding: 5vh 0 2vh 0;
+    .footercol1{
+      @include span (3);
+      @include susy-breakpoint(0px 414px){
+        @include span (6);
+      }
+      .footerlogo{
+        width: 60%;
+      }
     }
-    #block-footermap{
-      @include span (4);
+    .footermenu{
+      @include span (3);
+      @include susy-breakpoint(0px 414px){
+        @include span (last 6);
+      }
+    }
+    .footerfill{
+      @include span (last 6);
+      @include susy-breakpoint(0px 414px){
+        @include span (0);
+      }
     }
   }
+  .region-footer{
+    @include full;
+    p{
+      font-size: 1.5vh;
+    }
+    h3{
+      font-size: 2vh;
+      margin: 2em 0 1em 0;
+    }
+    a{
+      color:white !important;
+    }
+    .footer-block{
+      padding: 0 0 5vh 0;
+      @include span (3);
+      @include susy-breakpoint(0px 414px){
+        @include span (full);
+      }
+      .mapcontainer {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        padding-bottom:100%;
+      }
+      .mapcontainer iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .fbcontainer {
+        position: relative;
+        height: 0;
+        overflow: hidden;
+        padding-bottom:150%;
+      }
+      .fbcontainer iframe {
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .footer-item-konto{
+        @include susy-breakpoint(0px 414px){
+          @include span (6);
+        }
+      }
+      .footer-item-kontakt{
+        @include susy-breakpoint(0px 414px){
+          @include span (last 6);
+        }
+      }
+    }
+    .footercol2{
+      @include span (5);
+      @include susy-breakpoint(0px 414px){
+        @include full;
+      }
+    }
+    .footercol3{
+      @include span (last 4);
+      @include susy-breakpoint(0px 414px){
+        @include span (full);
+      }
+    }
+  }
+}
+
+//sponsoren
+.field--name-field-paragraph .field__item:first-of-type .field--name-field-sponsorenbild{
+  @include prefix (3);
+  @include span (6);
+  height:200px;
+  @include susy-breakpoint(0px 414px){
+    height:100px;
+  }
+}
+
+.paragraph--type--sponsoren{
+  @include full;
+  @include susy-breakpoint(0px 414px){
+    @include span (10);
+    @include prefix (1);
+    @include suffix (1);
+  }
+  .field--name-field-sponsorentitel{
+    text-align:center;
+    font-size: 2.5vh;
+    margin: 2em 0 1em 0;
+  }
+  .field--name-field-sponsorenbild{
+    width: span(4);
+    float: left;
+    &:nth-child(3n+2) {
+      clear: both;
+      @include isolate(1);
+    }
+    &:nth-child(3n+3) { @include isolate(5) }
+    &:nth-child(3n+4) { @include isolate(9) }
+    margin-bottom: gutter(8);
+    padding-bottom: 0;
+    height:150px;
+    @include susy-breakpoint(0px 414px){
+      height:100px;
+    }
+  }
+  .field--name-field-sponsorenbild img{
+    height:100%;
+    width:100%;
+    object-fit: contain;
+  }
+}
+
+// über uns
+
+.field--name-field-textbildrechts{
+  @include span (8);
+  @include susy-breakpoint(0px 414px){
+    @include span (10);
+    @include prefix (1);
+    @include suffix (1);
+  }
+}
+.page-7 .field--name-field-textbildrechtsbild{
+  @include span (last 4);
+  @include susy-breakpoint(0px 414px){
+    display:none;
+  }
+}
+
+// band area
+.field--name-field-text-mit-teaser-rechts-tex{
+  @include span (7);
+  @include susy-breakpoint(0px 414px){
+    @include span (10);
+    @include prefix (1);
+    @include suffix (1);
+  }
+}
+.field--name-field-text-mit-teaser-rechts-tea{
+  @include span (last 4);
+  @include susy-breakpoint(0px 414px){
+    @include span (10);
+    @include prefix (1);
+    @include suffix (1);
+  }
+}
+.page-5{
+  .paragraph{
+    overflow: auto;
+    margin-bottom: 2em;
+  }
+  .field--name-field-textbildrechts{
+    @include span (7);
+    @include susy-breakpoint(0px 414px){
+      @include span (10);
+      @include prefix (1);
+      @include suffix (1);
+    }
+  }
+  .field--name-field-textbildrechtsbild{
+    padding-top: 4em;
+    @include span (last 4);
+    @include susy-clearfix;
+    @include susy-breakpoint(0px 414px){
+      @include span (10);
+      @include prefix (1);
+      @include suffix (1);
+    }
+  }
+
+}
+
+// newsletter
+.page-10{
+  .paragraph--type--text .field__item{
+   @include span (5);
+   @include susy-breakpoint(0px 414px){
+     @include span (10);
+     @include prefix (1);
+     @include suffix (1);
+   }
+  }
+  .paragraph--type--text .field__item:nth-child(2){
+   @include span (last 5);
+   @include susy-breakpoint(0px 414px){
+     @include span (10);
+     @include prefix (1);
+     @include suffix (1);
+     margin-top:10vh;
+   }
+  }
+  .musthave{
+    margin-bottom:2em;
+    a{
+      display:block;
+    }
+  }
+  #cr_captcha{
+    width:160px;
+  }
+  input{
+    line-height:2;
+  }
+}
+
+// Vermietung
+.paragraph ul li{
+  font-weight:300;
+}
+
+//other
+.node--type-page h3{
+  color: $rot;
 }

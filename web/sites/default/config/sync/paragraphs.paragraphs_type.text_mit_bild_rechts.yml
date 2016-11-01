@@ -1,0 +1,6 @@
+uuid: a0aa69f4-a558-4bbc-a5c7-3d26082b4896
+langcode: en
+status: true
+dependencies: {  }
+id: text_mit_bild_rechts
+label: 'Text mit Bild rechts'

@@ -1,0 +1,21 @@
+uuid: 3573b46b-4ee7-4bce-a1c9-356a40c57aa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sponsorentitel
+    - paragraphs.paragraphs_type.sponsoren
+  module:
+    - text
+id: paragraph.sponsoren.field_sponsorentitel
+field_name: field_sponsorentitel
+entity_type: paragraph
+bundle: sponsoren
+label: sponsorentitel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

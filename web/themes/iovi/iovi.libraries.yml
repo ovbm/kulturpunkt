@@ -9,6 +9,7 @@ base:
     js/flickity.pkgd.js: {}
     js/jquery-scrollto.js: {}
     js/main.js: {}
+    js/recliner.min.js: {}
 
   dependencies:
     - core/jquery

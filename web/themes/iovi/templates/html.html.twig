@@ -29,6 +29,7 @@
     not root_path ? 'path-frontpage' : 'path-' ~ root_path|clean_class,
     node_type ? 'page-node-type-' ~ node_type|clean_class,
     db_offline ? 'db-offline',
+    node.id
   ]
 %}
 <!DOCTYPE html>
@@ -42,17 +43,8 @@
   <body{{ attributes.addClass(body_classes) }}>
 
 
-    {# Overlay Video#}
-    <button type="button" class="overlay-toggle">Close</button>
-    <div class="overlay overlay-hugeinc open">
-      <div class="overlay-wrap">
-        <h1 class="overlay-title">kulturpunkt flawil</h1>
-        <h2 class="overlay-toggle"> zum programm </h2>
-        <div class="field--type-video welcomevideo">
-          <iframe src="https://player.vimeo.com/video/188136652?color=ffffff&title=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
+
+    
     {#
       Keyboard navigation/accessibility link to main content section in
       page.html.twig.

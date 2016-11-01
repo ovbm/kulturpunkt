@@ -1,0 +1,21 @@
+uuid: 528c96e2-43bd-4265-9823-c873c7ab3c8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_textbildrechts
+    - paragraphs.paragraphs_type.text_mit_bild_rechts
+  module:
+    - text
+id: paragraph.text_mit_bild_rechts.field_textbildrechts
+field_name: field_textbildrechts
+entity_type: paragraph
+bundle: text_mit_bild_rechts
+label: textbildrechts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

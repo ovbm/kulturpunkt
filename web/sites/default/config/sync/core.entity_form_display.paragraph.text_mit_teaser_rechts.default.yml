@@ -1,0 +1,33 @@
+uuid: b86740ca-4c89-4b79-ae5c-c4ef745a8cf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.text_mit_teaser_rechts.field_text_mit_teaser_rechts_tea
+    - field.field.paragraph.text_mit_teaser_rechts.field_text_mit_teaser_rechts_tex
+    - paragraphs.paragraphs_type.text_mit_teaser_rechts
+  module:
+    - text
+id: paragraph.text_mit_teaser_rechts.default
+targetEntityType: paragraph
+bundle: text_mit_teaser_rechts
+mode: default
+content:
+  field_text_mit_teaser_rechts_tea:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+  field_text_mit_teaser_rechts_tex:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+hidden:
+  created: true
+  status: true
+  uid: true

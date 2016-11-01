@@ -1,0 +1,21 @@
+uuid: 324238f8-3550-4f4d-b78c-716689b19b55
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_mit_teaser_rechts_tea
+    - paragraphs.paragraphs_type.text_mit_teaser_rechts
+  module:
+    - text
+id: paragraph.text_mit_teaser_rechts.field_text_mit_teaser_rechts_tea
+field_name: field_text_mit_teaser_rechts_tea
+entity_type: paragraph
+bundle: text_mit_teaser_rechts
+label: 'Text mit Teaser rechts teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
