@@ -63,7 +63,7 @@ Drupal.behaviors.myBehavior = {
 (function($){
   $(document).ready(function() {
     $('#myTopnav').hide();
-    $('#nav-toggle').click(function() {
+    $('#nav-toggle, #menu-nav-toggle').click(function() {
       $('#block-mainnavigation').slideToggle();
       $('#myTopnav').delay(200).animate({
           opacity:"toggle"
@@ -71,10 +71,10 @@ Drupal.behaviors.myBehavior = {
     });
   });
 
-  document.querySelector( "#nav-toggle" )
-    .addEventListener( "click", function() {
-      this.classList.toggle( "active" );
+  $( "#nav-toggle, #menu-nav-toggle" ).click(function() {
+    $('#nav-toggle').toggleClass( "active" );
   });
+
 })(jQuery);
 
 //Accordion & Scroll To Active Accordion
