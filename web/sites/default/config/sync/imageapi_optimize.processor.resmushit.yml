@@ -1,0 +1,15 @@
+uuid: 94962d44-9583-47a5-ad22-1bc5bd4fd9de
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JKjQbONyxCS68Agu4kTri6MPiJjP2nWQ2GYuDjXfrsg
+name: resmushit
+label: reSmush.it
+processors:
+  b160a7b4-debf-494c-89e6-049a7f787859:
+    uuid: b160a7b4-debf-494c-89e6-049a7f787859
+    id: resmushit
+    weight: '1'
+    data:
+      quality: ''

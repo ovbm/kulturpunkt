@@ -27,3 +27,7 @@ permissions:
   19: 'view event revisions'
   20: 'edit any page content'
   21: 'use text format body_text'
+  22: 'delete terms in genre'
+  23: 'edit terms in genre'
+  24: 'delete terms in veranstaltungstyp'
+  25: 'edit terms in veranstaltungstyp'
