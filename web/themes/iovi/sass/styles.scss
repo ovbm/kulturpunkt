@@ -788,6 +788,39 @@ footer{
   font-weight:300;
 }
 
+form#rentform{
+  font-size:0.6875em;
+
+  input{
+    margin-right: 0.5em;
+  }
+
+  legend{
+  font-size:1em;
+
+  }
+
+  label{
+    display: block;
+    margin-top:1em;
+  }
+  ul{
+    margin-bottom:1em;
+  }
+  ul li{
+    margin-bottom: 0.5em;
+  }
+  .forminfo{
+    display:block;
+    font-weight:300;
+  }
+
+  #totalPrice{
+    margin-bottom:1em;
+  }
+
+}
+
 //other
 .node--type-page h3{
   color: $rot;
