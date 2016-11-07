@@ -207,12 +207,6 @@ header {
       @media (min-width: 0px) and (max-width: 414px) {
         header #block-sitebranding #nav-toggle {
           display: inline-block; } }
-    header #block-sitebranding #menu-nav-toggle {
-      float: right;
-      margin: 0.8em 0 1em 0;
-      cursor: pointer;
-      color: #e94c4f;
-      text-decoration: none; }
     header #block-sitebranding #nav-toggle {
       cursor: pointer;
       padding: 10px 35px 16px 0px; }
@@ -613,9 +607,9 @@ footer {
       padding-left: 8.57143%;
       padding-right: 8.57143%; } }
   .paragraph--type--sponsoren .field--name-field-sponsorentitel {
+    text-align: center;
     font-size: 2.5vh;
-    margin: 2em 0 1em 0;
-    color: #e94c4f; }
+    margin: 2em 0 1em 0; }
   .paragraph--type--sponsoren .field--name-field-sponsorenbild {
     width: 31.42857%;
     float: left;

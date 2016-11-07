@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+<div id="wrap">
+  <form action="" id="rentform" onsubmit="return false;">
+     <fieldset>
+      <legend>Vermietungskosten</legend>
+
+      <label >Raummiete</label>
+      <ul>
+        <li> <input type="radio"  name="selecttarif" value="tarif1" onclick="calculateTotal()" /> Standard Tarif 1 (Mo. - Fr. 07.00-18.00 Uhr): CHF 10.-/h </li>
+        <li> <input type="radio"  name="selecttarif" value="tarif2" onclick="calculateTotal()" /> Standard Tarif 2 (Mo. - Do. 18.00-00.00 Uhr & Fr./ Samstag ab 18.Uhr & Sonntag ganztags): CHF 20.-/h </li>
+        <li> <input type="radio"  name="selecttarif" value="tarif3" onclick="calculateTotal()" /> Standard Tarif 3 (Fr. / Sa. Abend 18.00-01.00 Uhr): CHF 30.-/h </li>
+      </ul>
+      <span class="forminfo" >* Grundpauschale: 25.- </span>
+
+      <label >Dauer (in Stunden)</label>
+      <input type="text"  id="duration" name="duration" value="1" onchange="calculateTotal()" />
+      <span class="forminfo"> * Weniger als 3h: + 15% des Standard Tarifs</span>
+
+      <label >Regelmässige Vermietung</label>
+      <input type="checkbox"  name="includefrequent" value="frequent" onclick="calculateTotal()" /> ab 5 Tage: (-15%)
+
+      <label >Anzahl erwartete Gäste</label>
+      <ul>
+        <li> <input type="radio"  name="selectguests" value="guests1" onclick="calculateTotal()" /> bis 20 (+ 0.00%)</li>
+        <li> <input type="radio"  name="selectguests" value="guests2" onclick="calculateTotal()" /> 20 - 50 Gäste (+ 30%)</li>
+        <li> <input type="radio"  name="selectguests" value="guests3" onclick="calculateTotal()" /> 50 - 120 Gäste (+ 40%)</li>
+      </ul>
+
+      <label >Art der Veranstaltung </label>
+      <ul>
+        <li><input type="radio"  name="selecttype" value="type1" onclick="calculateTotal()" /> Gemeinnützig öffentlich + 0.00%</li>
+        <li><input type="radio"  name="selecttype" value="type2" onclick="calculateTotal()" /> Kommerziell (+ 40%)</li>
+        <li><input type="radio"  name="selecttype" value="type3" onclick="calculateTotal()" /> Geschlossene Gesellschaft (+ 15%)</li>
+        <li><input type="radio"  name="selecttype" value="type4" onclick="calculateTotal()" /> Kurse (+ 10%)</li>
+      </ul>
+
+      <label >Infrastruktur</label>
+      <ul>
+        <li><input type="checkbox"  name="includesound" value="sound" onclick="calculateTotal()" /> Tonanlage (20.-)</li>
+        <li><input type="checkbox"  name="includebar" value="bar" onclick="calculateTotal()" /> Bar, halbtag (20.-)</li>
+        <li><input type="checkbox"  name="includekitchen" value="kichen" onclick="calculateTotal()" /> Küche, halbtag (50.-)</li>
+        <li><input type="checkbox"  name="includeprojector" value="projector" onclick="calculateTotal()" /> Beamer + Leinwand (50.-)</li>
+      </ul>
+      <span class="forminfo"> * (Tontechnik/Mikrofone für Konzerte nach Absprache) </span>
+
+      <ul>
+        <li><input type="checkbox"  name="includeservices" value="services" onclick="calculateTotal()" /> Dienstleistung (Barbetrieb/Reinigung): 30.-/h</li>
+      </ul>
+      <div id="totalPrice"></div>
+      <button type="button" name="button" onclick="composeMail()">Offerte Anfragen</button>
+   </fieldset>
+  </form>
+</div>
+
+<style media="screen">
+  #wrap{
+  width:600px;
+  margin:0 auto;
+  text-align:left;
+  margin-top:8px;
+  padding:5px;
+  background:#fff;
+    font-family:AvenirLTStd, Arial, Helvetica, sans-serif;
+  font-size:13px;
+    line-height:16px;
+  }
+  #wrap .cont_details fieldset,.cont_order fieldset{
+  margin:10px;
+  padding:20px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -khtml-border-radius: 10px;
+    border-radius: 10px;
+  }
+  #wrap legend{
+  font-size:16px;
+  font-family:Georgia, "Times New Roman", Times, serif;
+  color:#000;
+  font-weight:bold;
+  font-style:italic;
+    padding-bottom:10px;
+  }
+  #wrap .cont_details input{
+  margin-bottom:10px;
+  color:#000;
+  }
+  #wrap .input1:hover,.input1:active{
+
+  }
+  #wrap label{
+  display:block;
+  font-size:12px;
+  color:#000;
+    font-weight:bold;
+  }
+  #wrap label.inlinelabel
+  {
+    display:inline;
+  }
+  #wrap .cont_order input{
+  margin-bottom:5px;
+  }
+  #wrap .cont_order p{
+  padding-top:5px;
+  }
+
+  #wrap input[type="radio"]
+  {
+  margin-top:8px;
+  margin-bottom:8px;
+  }
+
+  #wrap input[type="text"]:hover,
+  #wrap input[type="text"]:active {
+  background-color: #FAF398;
+  }
+
+  #wrap input#submit
+  {
+  margin:10px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:10px;
+  padding-bottom:10px;
+  }
+
+  #wrap div#totalPrice
+  {
+    padding:10px;
+    font-weight:bold;
+    background-color:#ff0;
+  }
+
+  #wrap label.radiolabel
+  {
+  font-weight:normal;
+  display:inline;
+  }
+</style>
+
+<script type="text/javascript">
+
+  var tarif = {'tarif1' : 10, 'tarif2' : 20, 'tarif3' : 30 };
+  var guests ={'guests1' : 0, 'guests2' : 30, 'guests3' : 40 };
+  var type = {'type1' : 0, 'type2' : 40, 'type3' : 15, 'type4' : 10 };
+
+  function getTarifPrice(){
+    var tarifPrice = 0;
+    var theForm = document.forms["rentform"];
+    var selectedTarif = theForm.elements['selecttarif'];
+
+    for (var i=0 ; i < selectedTarif.length ; i++){
+      if(selectedTarif[i].checked){
+        tarifPrice = tarif[selectedTarif[i].value];
+        break;
+      }
+    }
+    return tarifPrice;
+  }
+
+
+  function getGuestsPrice(){
+    var guestsPrice = 0;
+    var theForm = document.forms["rentform"];
+    var selectedGuests = theForm.elements['selectguests'];
+
+    for (var i=0 ; i < selectedGuests.length ; i++){
+      if(selectedGuests[i].checked){
+        guestsPrice = guests[selectedGuests[i].value];
+        break;
+      }
+    }
+    return guestsPrice;
+  }
+
+  function getTypePrice(){
+    var typePrice = 0;
+    var theForm = document.forms["rentform"];
+    var selectedType = theForm.elements['selecttype'];
+
+    for (var i=0 ; i < selectedType.length ; i++){
+      if(selectedType[i].checked){
+        typePrice = type[selectedType[i].value];
+        break;
+      }
+    }
+
+    return typePrice;
+  }
+
+  function soundPrice(){
+      var soundPrice=0;
+      var theForm = document.forms["rentform"];
+      var includeSound = theForm.elements["includesound"];
+      if(includeSound.checked==true){ soundPrice=20;}
+      return soundPrice;
+    }
+
+    function barPrice(){
+      var barPrice=0;
+      var theForm = document.forms["rentform"];
+      var includeBar = theForm.elements["includebar"];
+      if(includeBar.checked==true){ barPrice=20;}
+      return barPrice;
+    }
+
+      function kitchenPrice(){
+      var kitchenPrice=0;
+      var theForm = document.forms["rentform"];
+      var includeKitchen = theForm.elements["includekitchen"];
+      if(includeKitchen.checked==true){ kitchenPrice=20;}
+      return kitchenPrice;
+    }
+
+      function projectorPrice(){
+      var projectorPrice=0;
+      var theForm = document.forms["rentform"];
+      var includeProjector = theForm.elements["includeprojector"];
+      if(includeProjector.checked==true){ projectorPrice=20;}
+      return projectorPrice;
+    }
+
+      function servicesPrice(){
+      var servicesPrice=0;
+      var theForm = document.forms["rentform"];
+      var includeServices = theForm.elements["includeservices"];
+      if(includeServices.checked==true){ servicesPrice=20;}
+      return servicesPrice;
+    }
+
+      function frequentPrice(){
+      var frequentPrice=0;
+      var theForm = document.forms["rentform"];
+      var includeFrequent = theForm.elements["includefrequent"];
+      if(includeFrequent.checked==true){ frequentPrice=15;}
+      return frequentPrice;
+    }
+
+      function getDuration(){
+        var theForm = document.forms["rentform"];
+        var duration = theForm.elements['duration'];
+        var hours = 0;
+        if (duration.value!=""){
+          hours = parseInt(duration.value);
+        }
+        return hours;
+        alert(hours);
+    }
+
+  function calculateTotal(){
+    var rentPrice = 25 + getDuration() * (getTarifPrice() - getTarifPrice() * (frequentPrice()/100)) * (1+getGuestsPrice()/100) * (1+getTypePrice()/100) + soundPrice() + barPrice() + kitchenPrice() + projectorPrice() + servicesPrice();
+    document.getElementById('totalPrice').innerHTML = "geschätzte Vermietungskosten: CHF " + Math.round(rentPrice);
+    return Math.round(rentPrice);
+  }
+
+  function composeMail(){
+    var theForm = document.forms["rentform"];
+    var subject = 'Offerte Vermietung Kulturpunkt Flawil';
+    if (getGuestsPrice()==0) {
+      var guestsNumber = 'bis 20 Gäste';
+    } else if (getGuestsPrice()==30){
+      var guestsNumber = '20 - 50 Gäste';
+    } else{
+      var guestsNumber = '50 - 120 Gäste';
+    };
+
+    if (getTypePrice()==0) {
+      var guestType = "Gemeinnützig öffentlich";
+    } else if (getTypePrice()==40){
+      var guestType = "Kommerziell";
+    } else if (getTypePrice()==15){
+      var guestType = "Geschlossene Gesellschaft";
+    } else {
+      var guestType = "Kurse";
+    };
+
+    if (soundPrice()!=0){
+      var infrastructure = 'Tonanlage, ';
+    } else {
+      var infrastructure = '';
+    };
+    if (barPrice()!=0){
+      infrastructure += 'Bar, ';
+    }
+    if (kitchenPrice()!=0){
+      infrastructure += 'Küche, ';
+    }
+    if (projectorPrice()!=0){
+      infrastructure += 'Beamer, ';
+    }
+    if (servicesPrice()!=0){
+      infrastructure += 'Dienstleistungen, ';
+    }
+
+    if (frequentPrice()!=0){
+      var frequentyes = 'Ja';
+    }
+
+
+    var emailbody1 = 'Angaben zu ihrer Veranstaltung: '
+    var emailbody2 = 'Tarif: '+ getTarifPrice()/10 + ' / Dauer: '+ getDuration()+' Stunden / geschätzte Kosten: CHF ' + calculateTotal() ;
+    var emailbody3 = 'Anzahl erwartete Gäste: ' + guestsNumber; + ', Art der Veranstaltung: ' + guestType;
+    var emailbody4 = 'Infrastruktur: ' + infrastructure ;
+
+
+    window.open('mailto:info@kulturpunkt-flawil.ch?subject=' + subject + '&body=' + emailbody1 + "%0D%0A" + emailbody2+ "%0D%0A" + emailbody3+ "%0D%0A" + emailbody4 );
+  }
+
+</script>
+
+</body>
+</html>
