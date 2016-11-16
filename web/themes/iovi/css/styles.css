@@ -201,6 +201,15 @@ header {
       width: 91.42857%;
       float: right;
       margin-right: 0; }
+    header #block-sitebranding #menu-nav-toggle {
+      color: #e94c4f;
+      float: right;
+      text-decoration: none;
+      margin: 1em 0;
+      cursor: pointer; }
+      @media (min-width: 0px) and (max-width: 414px) {
+        header #block-sitebranding #menu-nav-toggle {
+          display: none; } }
     header #block-sitebranding #nav-toggle {
       float: right;
       margin: 1em; }
@@ -316,6 +325,12 @@ main {
   margin-left: 0;
   margin-right: 0;
   margin: 6.5em auto 5vh; }
+  @media (min-width: 0px) and (max-width: 960px) {
+    main {
+      float: none;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto; } }
   main .view-filters {
     clear: both;
     width: 100%;
@@ -462,13 +477,15 @@ footer {
     mix-blend-mode: normal; }
   @media (min-width: 0px) and (max-width: 414px) {
     footer {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
   footer .layout-container {
     color: white; }
+    @media (min-width: 0px) and (max-width: 960px) {
+      footer .layout-container {
+        width: 95%; } }
   footer .footerrow {
     clear: both;
     width: 100%;
@@ -643,11 +660,10 @@ footer {
   margin-right: 2.85714%; }
   @media (min-width: 0px) and (max-width: 414px) {
     .field--name-field-textbildrechts {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
 
 .page-7 .field--name-field-textbildrechtsbild {
   width: 31.42857%;
@@ -663,11 +679,10 @@ footer {
   margin-right: 2.85714%; }
   @media (min-width: 0px) and (max-width: 414px) {
     .field--name-field-text-mit-teaser-rechts-tex {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
 
 .field--name-field-text-mit-teaser-rechts-tea {
   width: 31.42857%;
@@ -675,11 +690,32 @@ footer {
   margin-right: 0; }
   @media (min-width: 0px) and (max-width: 414px) {
     .field--name-field-text-mit-teaser-rechts-tea {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
+
+.page-3 .field--name-field-text-mit-teaser-rechts-tex {
+  width: 48.57143%;
+  float: left;
+  margin-right: 2.85714%; }
+  @media (min-width: 0px) and (max-width: 414px) {
+    .page-3 .field--name-field-text-mit-teaser-rechts-tex {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+
+.page-3 .field--name-field-text-mit-teaser-rechts-tea {
+  width: 48.57143%;
+  float: right;
+  margin-right: 0; }
+  @media (min-width: 0px) and (max-width: 414px) {
+    .page-3 .field--name-field-text-mit-teaser-rechts-tea {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
 
 .page-5 .paragraph {
   overflow: auto;
@@ -691,11 +727,10 @@ footer {
   margin-right: 2.85714%; }
   @media (min-width: 0px) and (max-width: 414px) {
     .page-5 .field--name-field-textbildrechts {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
 
 .page-5 .field--name-field-textbildrechtsbild {
   padding-top: 4em;
@@ -708,11 +743,10 @@ footer {
     clear: both; }
   @media (min-width: 0px) and (max-width: 414px) {
     .page-5 .field--name-field-textbildrechtsbild {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
 
 .page-10 .paragraph--type--text .field__item {
   width: 40%;
@@ -720,11 +754,10 @@ footer {
   margin-right: 2.85714%; }
   @media (min-width: 0px) and (max-width: 414px) {
     .page-10 .paragraph--type--text .field__item {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%; } }
+      margin-left: 0;
+      margin-right: 0; } }
 
 .page-10 .paragraph--type--text .field__item:nth-child(2) {
   width: 40%;
@@ -732,11 +765,10 @@ footer {
   margin-right: 0; }
   @media (min-width: 0px) and (max-width: 414px) {
     .page-10 .paragraph--type--text .field__item:nth-child(2) {
-      width: 82.85714%;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%;
-      padding-left: 8.57143%;
-      padding-right: 8.57143%;
+      margin-left: 0;
+      margin-right: 0;
       margin-top: 10vh; } }
 
 .page-10 .musthave {
@@ -754,7 +786,8 @@ footer {
   font-weight: 300; }
 
 form#rentform {
-  font-size: 0.6875em; }
+  font-size: 0.6875em;
+  margin-top: 2em; }
   form#rentform input {
     margin-right: 0.5em; }
   form#rentform legend {

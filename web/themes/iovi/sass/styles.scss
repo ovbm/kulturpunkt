@@ -267,6 +267,17 @@ header{
       @include span(last 11);
     }
 
+    #menu-nav-toggle{
+      color: $rot;
+      float: right;
+      text-decoration: none;
+      margin: 1em 0;
+      cursor: pointer;
+      @include susy-breakpoint(0px 414px){
+        display: none;
+      }
+    }
+
     #nav-toggle {
     	float:right;
     	margin: 1em;
@@ -409,6 +420,12 @@ header{
 main{
   @include full;
   margin: 6.5em auto 5vh;
+  @include susy-breakpoint(0px 960px){
+    float:none;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .view-filters{
     @include full;
     .form--inline .form-item {
@@ -541,14 +558,16 @@ footer{
   background-color: $rot;
   color: white;
   @include mix-blend-mode-difference-footer;
+
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
   }
 
   .layout-container{
     color: white;
+    @include susy-breakpoint(0px 960px){
+      width:95%;
+    }
   }
   .footerrow{
     @include full;
@@ -695,9 +714,7 @@ footer{
 .field--name-field-textbildrechts{
   @include span (8);
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
   }
 }
 .page-7 .field--name-field-textbildrechtsbild{
@@ -707,23 +724,39 @@ footer{
   }
 }
 
-// band area
+// Text mit teaser rechts
 .field--name-field-text-mit-teaser-rechts-tex{
   @include span (7);
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
+
   }
 }
 .field--name-field-text-mit-teaser-rechts-tea{
   @include span (last 4);
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
   }
 }
+
+// Band area
+.page-3{
+  .field--name-field-text-mit-teaser-rechts-tex{
+    @include span (6);
+    @include susy-breakpoint(0px 414px){
+      @include span (12);
+    }
+  }
+  .field--name-field-text-mit-teaser-rechts-tea{
+    @include span (last 6);
+    @include susy-breakpoint(0px 414px){
+      @include span (12);
+    }
+  }
+
+}
+
+
 .page-5{
   .paragraph{
     overflow: auto;
@@ -732,9 +765,8 @@ footer{
   .field--name-field-textbildrechts{
     @include span (7);
     @include susy-breakpoint(0px 414px){
-      @include span (10);
-      @include prefix (1);
-      @include suffix (1);
+      @include span (12);
+
     }
   }
   .field--name-field-textbildrechtsbild{
@@ -742,9 +774,7 @@ footer{
     @include span (last 4);
     @include susy-clearfix;
     @include susy-breakpoint(0px 414px){
-      @include span (10);
-      @include prefix (1);
-      @include suffix (1);
+      @include span (12);
     }
   }
 
@@ -755,17 +785,13 @@ footer{
   .paragraph--type--text .field__item{
    @include span (5);
    @include susy-breakpoint(0px 414px){
-     @include span (10);
-     @include prefix (1);
-     @include suffix (1);
+     @include span (12);
    }
   }
   .paragraph--type--text .field__item:nth-child(2){
    @include span (last 5);
    @include susy-breakpoint(0px 414px){
-     @include span (10);
-     @include prefix (1);
-     @include suffix (1);
+     @include span (12);
      margin-top:10vh;
    }
   }
@@ -790,6 +816,7 @@ footer{
 
 form#rentform{
   font-size:0.6875em;
+  margin-top:2em;
 
   input{
     margin-right: 0.5em;
