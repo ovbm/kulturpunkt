@@ -56,8 +56,18 @@ Drupal.behaviors.myBehavior = {
   }
 };
 
-// Overlay
-
+// Animate First appearance of
+/*
+(function($){
+  $(document).ready(function() {
+    $(".node--type-event").each(function() {
+      $(this).delay(1500*($(this).index()/2)).queue(function(){
+        $(this).addClass("active")
+      });
+      console.log(1000*($(this).index()/2));
+    });
+  });
+})(jQuery);*/
 
 //Toggel INFO Nav
 (function($){

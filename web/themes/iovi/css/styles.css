@@ -83,13 +83,12 @@ ul, li {
 
 /* Overlay style */
 .overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(233, 76, 79, 0.9);
-  z-index: 9999; }
+  /*position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(233,76,79,0.9);*/ }
 
 .overlay-title {
   font-size: 8vh;
