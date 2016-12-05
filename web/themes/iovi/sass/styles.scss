@@ -341,7 +341,7 @@ header{
       height:100vh;
     }
 
-    #myTopnav > li.menu-item{
+    #myTopnav > li.menu-item:not(:first-child){
       padding:0 0 2em 5px;
     }
 
@@ -359,6 +359,7 @@ header{
       a:active{
         font-style: italic;
       }
+
     }
     ul.menu a.is-active{
       color:#e94c4f;
@@ -371,13 +372,13 @@ header{
       }
     }
     ul.menu li.menu-item--expanded{
-      list-style-image:none;
+      list-style-image: none;
       list-style-type: none;
     }
+
     ul.menu li.icon{
       display:none;
       @include susy-breakpoint(0px 414px){
-
       }
 
       a{
@@ -853,4 +854,9 @@ form#rentform{
 //other
 .node--type-page h3{
   color: $rot;
+}
+
+//archiv
+.pager__item{
+  display:inline;
 }

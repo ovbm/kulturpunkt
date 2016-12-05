@@ -263,7 +263,7 @@ header {
         margin-top: 5em;
         margin-left: 8.75em;
         height: 100vh; } }
-    header nav.navigation #myTopnav > li.menu-item {
+    header nav.navigation #myTopnav > li.menu-item:not(:first-child) {
       padding: 0 0 2em 5px; }
     header nav.navigation ul.menu
 a {
@@ -806,3 +806,6 @@ form#rentform {
 
 .node--type-page h3 {
   color: #e94c4f; }
+
+.pager__item {
+  display: inline; }
