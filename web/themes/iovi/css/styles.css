@@ -273,6 +273,9 @@ header {
         display: none; } }
     header nav.navigation #myTopnav > li.menu-item:not(:first-child) {
       padding: 0 0 2em 5px; }
+    @media (min-width: 0px) and (max-width: 414px) {
+      header nav.navigation #myTopnav > li.menu-item:first-child {
+        padding: 0 0 2em 5px; } }
     header nav.navigation ul.menu a {
       color: #e94c4f;
       text-decoration: none;
@@ -326,6 +329,24 @@ header {
       header nav.navigation ul.menu.responsive li a {
         display: block;
         text-align: right; } }
+
+.menu-item--expanded .menu {
+  display: none; }
+  .menu-item--expanded .menu .menu-item {
+    float: none !important;
+    padding-left: 15px;
+    width: 100% !important; }
+  .menu-item--expanded .menu .menu-item:first-child {
+    margin-top: 5px; }
+
+.menu-item--active-trail .menu {
+  display: block; }
+  .menu-item--active-trail .menu .menu-item {
+    float: none !important;
+    padding-left: 15px;
+    width: 100% !important; }
+  .menu-item--active-trail .menu .menu-item:first-child {
+    margin-top: 5px; }
 
 main {
   clear: both;

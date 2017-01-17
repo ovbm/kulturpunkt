@@ -76,6 +76,12 @@ Drupal.behaviors.myBehavior = {
 
 (function ($) {
   $(document).ready(function () {
+    $('.menu-item--expanded:not(.menu-item--active-trail) ').hover(function () {
+      $('ul.menu', this).slideToggle();
+    });
+  });
+
+  $(document).ready(function () {
     $('#nav-toggle, #menu-nav-toggle').click(function () {
       $('#block-mainnavigation').slideToggle();
       $('#myTopnav').delay(200).animate({
