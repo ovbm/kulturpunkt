@@ -53,17 +53,21 @@
 %}
 
 {% if label_hidden %}
-  {% if multiple %}
-      {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__items carousel-cell') }}>
-        {{ item.content }}
-      </div>
-      {% endfor %}
-  {% else %}
-    {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item carousel-cell') }}>{{ item.content }}</div>
-    {% endfor %}
-  {% endif %}
+  <div class="event_detail_video">
+    <div class="main-carousel">
+      {% if multiple %}
+          {% for item in items %}
+          <div{{ attributes.addClass(classes, 'field__items carousel-cell') }}>
+            {{ item.content }}
+          </div>
+          {% endfor %}
+      {% else %}
+        {% for item in items %}
+          <div{{ attributes.addClass(classes, 'field__item carousel-cell') }}>{{ item.content }}</div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>

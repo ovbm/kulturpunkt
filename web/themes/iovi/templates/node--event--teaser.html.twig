@@ -129,7 +129,7 @@
 <div class="event_detail">
   <div class="event_detail_col1">
     <div class="event_detail_body">
-      {{content.body}}
+      {{ content.body }}
     </div>
     <div class="event_detail_info">
 
@@ -163,11 +163,9 @@
 
   </div>
   <div class="event_detail_col2">
-    <div class="event_detail_video">
-      <div class="main-carousel">
-        {{content.field_video}}
-      </div>
-    </div>
+    {% if content.field_video %}
+        {{ content.field_video }}
+    {% endif %}
     <div class="event_detail_image">
       <div class="main-carousel">
           {{ content.field_event_bild }}

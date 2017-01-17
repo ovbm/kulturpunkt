@@ -40,14 +40,14 @@
   ]
 %}
 
-{# Overlay Video#}
-<div class="overlay overlay-hugeinc open">
+{# Overlay Video
+ <div class="overlay overlay-hugeinc open">
   <div class="overlay-wrap">
     <div class="field--type-video welcomevideo">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/0GhOZS7ikvg" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-</div>
+</div>#}
 
 
 
@@ -62,13 +62,12 @@
       {{ header }}
     </div>
   {% endif %}
-  {#
+
   {% if exposed %}
-    /**<div class="view-filters">
-      * {{ exposed }}
-      *  </div>
-    * {% endif %} */
-  #}
+    <div class="view-filters">
+       {{ exposed }}
+    </div>
+  {% endif %}
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}

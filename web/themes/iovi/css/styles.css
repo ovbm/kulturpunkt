@@ -68,9 +68,6 @@ ul, li {
       color: black;
       mix-blend-mode: normal; }
 
-#edit-submit-programm {
-  display: none; }
-
 .headroom {
   will-change: transform;
   transition: transform 200ms linear; }
@@ -173,7 +170,8 @@ header {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    margin-top: 1rem; }
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
     header #block-sitebranding .site-logo {
       float: left;
       margin-right: 1rem;
@@ -201,6 +199,7 @@ header {
       float: right;
       margin-right: 0; }
     header #block-sitebranding #menu-nav-toggle {
+      display: none;
       color: #e94c4f;
       float: right;
       text-decoration: none;
@@ -208,8 +207,9 @@ header {
       cursor: pointer; }
       @media (min-width: 0px) and (max-width: 414px) {
         header #block-sitebranding #menu-nav-toggle {
-          display: none; } }
+          display: inline-block; } }
     header #block-sitebranding #nav-toggle {
+      display: none;
       float: right;
       margin: 1em; }
       @media (min-width: 0px) and (max-width: 414px) {
@@ -242,8 +242,12 @@ header {
       transform: rotate(45deg); }
     header #block-sitebranding #nav-toggle.active span:after {
       transform: rotate(-45deg); }
-  header #block-mainnavigation {
-    display: none; }
+  @media (min-width: 415px) and (max-width: 960px) {
+    header #block-mainnavigation {
+      width: 95%;
+      float: none;
+      margin-left: auto;
+      margin-right: auto; } }
   header nav.navigation {
     clear: both;
     width: 100%;
@@ -262,60 +266,66 @@ header {
         padding-right: 8.57143%;
         margin-top: 5em;
         margin-left: 8.75em;
-        height: 100vh; } }
+        height: 100vh;
+        display: none; } }
+    @media (min-width: 0px) and (max-width: 414px) {
+      header nav.navigation #myTopnav {
+        display: none; } }
     header nav.navigation #myTopnav > li.menu-item:not(:first-child) {
       padding: 0 0 2em 5px; }
-    header nav.navigation ul.menu
-a {
+    header nav.navigation ul.menu a {
       color: #e94c4f;
-      text-decoration: none; }
+      text-decoration: none;
+      font-size: 1.5em; }
+      @media (min-width: 414px) and (max-width: 960px) {
+        header nav.navigation ul.menu a {
+          font-size: 1.25em; } }
       @media (min-width: 0px) and (max-width: 414px) {
-        header nav.navigation ul.menu
-a {
+        header nav.navigation ul.menu a {
           font-size: 2em; } }
-    header nav.navigation a:hover {
+      header nav.navigation ul.menu a a:hover {
+        font-style: italic; }
+      header nav.navigation ul.menu a a:active {
+        font-style: italic; }
+    header nav.navigation ul.menu a.is-active {
+      color: #e94c4f;
       font-style: italic; }
-    header nav.navigation a:active {
-      font-style: italic; }
-  header ul.menu a.is-active {
-    color: #e94c4f;
-    font-style: italic; }
-  header ul.menu li.menu-item {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 16.66667%;
-    float: left; }
+    header nav.navigation ul.menu li.menu-item {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 16.66667%;
+      float: left; }
+      @media (min-width: 0px) and (max-width: 414px) {
+        header nav.navigation ul.menu li.menu-item {
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0; } }
+    header nav.navigation ul.menu li.menu-item--expanded {
+      list-style-image: none;
+      list-style-type: none; }
+    header nav.navigation ul.menu li.icon {
+      display: none; }
+      header nav.navigation ul.menu li.icon a {
+        font-size: 7vmin; }
     @media (min-width: 0px) and (max-width: 414px) {
-      header ul.menu li.menu-item {
-        width: 100%;
-        float: left;
-        margin-left: 0;
-        margin-right: 0; } }
-  header ul.menu li.menu-item--expanded {
-    list-style-image: none;
-    list-style-type: none; }
-  header ul.menu li.icon {
-    display: none; }
-    header ul.menu li.icon a {
-      font-size: 7vmin; }
-  @media (min-width: 0px) and (max-width: 414px) {
-    header ul.menu.responsive {
-      position: relative;
-      float: none; } }
-  @media (min-width: 0px) and (max-width: 414px) {
-    header ul.menu.responsive li.icon {
-      position: absolute;
-      right: 0;
-      top: 0; } }
-  @media (min-width: 0px) and (max-width: 414px) {
-    header ul.menu.responsive li {
-      float: none;
-      display: inline; } }
-  @media (min-width: 0px) and (max-width: 414px) {
-    header ul.menu.responsive li a {
-      display: block;
-      text-align: right; } }
+      header nav.navigation ul.menu.responsive {
+        position: relative;
+        float: none; } }
+    @media (min-width: 0px) and (max-width: 414px) {
+      header nav.navigation ul.menu.responsive li.icon {
+        position: absolute;
+        right: 0;
+        top: 0; } }
+    @media (min-width: 0px) and (max-width: 414px) {
+      header nav.navigation ul.menu.responsive li {
+        float: none;
+        display: inline; } }
+    @media (min-width: 0px) and (max-width: 414px) {
+      header nav.navigation ul.menu.responsive li a {
+        display: block;
+        text-align: right; } }
 
 main {
   clear: both;
@@ -323,7 +333,7 @@ main {
   float: left;
   margin-left: 0;
   margin-right: 0;
-  margin: 6.5em auto 5vh; }
+  margin: 9em auto 5vh; }
   @media (min-width: 0px) and (max-width: 960px) {
     main {
       float: none;
@@ -331,13 +341,25 @@ main {
       margin-left: auto;
       margin-right: auto; } }
   main .view-filters {
+    display: none;
     clear: both;
     width: 100%;
     float: left;
     margin-left: 0;
-    margin-right: 0; }
+    margin-right: 0;
+    margin-top: 1em; }
     main .view-filters .form--inline .form-item {
-      float: right; }
+      float: left;
+      margin-bottom: 1em; }
+    main .view-filters select, main .view-filters input {
+      margin: 0 1em 0 0.5em;
+      border-color: #e94c4f;
+      background-color: white;
+      border-radius: 5px;
+      border-width: 1px;
+      border-style: solid; }
+    main .view-filters input {
+      padding: 1px 6px 2px; }
   main article.node--type-event {
     clear: both;
     width: 100%;
@@ -364,9 +386,11 @@ main {
         color: black;
         text-decoration: none; }
     main article.node--type-event .event_type_genre {
-      width: 48.57143%;
+      clear: both;
+      width: 100%;
       float: left;
-      margin-right: 2.85714%; }
+      margin-left: 0;
+      margin-right: 0; }
     main article.node--type-event .event_date {
       width: 14.28571%;
       float: right;
