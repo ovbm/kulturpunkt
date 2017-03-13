@@ -40,17 +40,16 @@
   ]
 %}
 
-{# Overlay Video#}
-<button type="button" class="overlay-toggle">Close</button>
-<div class="overlay overlay-hugeinc open">
+{# Overlay Video
+ <div class="overlay overlay-hugeinc open">
   <div class="overlay-wrap">
-    <h1 class="overlay-title">kulturpunkt flawil</h1>
-    <h2 class="overlay-toggle"> zum programm </h2>
     <div class="field--type-video welcomevideo">
-      <iframe src="https://player.vimeo.com/video/188136652?color=ffffff&title=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/0GhOZS7ikvg" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
-</div>
+</div>#}
+
+
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -63,13 +62,12 @@
       {{ header }}
     </div>
   {% endif %}
-  {#
+
   {% if exposed %}
-    /**<div class="view-filters">
-      * {{ exposed }}
-      *  </div>
-    * {% endif %} */
-  #}
+    <div class="view-filters">
+       {{ exposed }}
+    </div>
+  {% endif %}
   {% if attachment_before %}
     <div class="attachment attachment-before">
       {{ attachment_before }}

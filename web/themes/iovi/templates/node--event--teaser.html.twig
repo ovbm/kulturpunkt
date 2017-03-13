@@ -129,7 +129,7 @@
 <div class="event_detail">
   <div class="event_detail_col1">
     <div class="event_detail_body">
-      {{content.body}}
+      {{ content.body }}
     </div>
     <div class="event_detail_info">
 
@@ -155,15 +155,17 @@
       {% if content.field_file %}
         {{ content.field_file }}
       {% endif %}
+      <div class="clearfix field---type-text">
+        <script class="lazy" type="text/javascript" data-src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-580cbf95932c256b"></script>
+        <div class="addthis_inline_share_toolbox"></div>
+      </div>
     </div>
 
   </div>
   <div class="event_detail_col2">
-    <div class="event_detail_video">
-      <div class="main-carousel">
-        {{content.field_video}}
-      </div>
-    </div>
+    {% if content.field_video %}
+        {{ content.field_video }}
+    {% endif %}
     <div class="event_detail_image">
       <div class="main-carousel">
           {{ content.field_event_bild }}

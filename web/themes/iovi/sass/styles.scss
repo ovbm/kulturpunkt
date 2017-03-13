@@ -129,10 +129,6 @@ ul, li{
   }
 }
 
-#edit-submit-programm{
-  display: none;
-}
-
 .headroom {
     will-change: transform;
     transition: transform 200ms linear;
@@ -146,13 +142,13 @@ ul, li{
 
 /* Overlay style */
 .overlay {
-	position: fixed;
+	/*position: fixed;
 	width: 100%;
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(233,76,79,0.9);
-  z-index:9999;
+	background: rgba(233,76,79,0.9);*/
+  ;
 }
 
 .overlay-title{
@@ -224,7 +220,7 @@ button.overlay-toggle {
 
 }
 
-header{
+header {
   @include mix-blend-mode-difference;
   @include container;
   @include topofpage;
@@ -233,46 +229,66 @@ header{
   box-sizing: border-box;
   background-color: #fff;
   z-index: 999;
+
   #block-sitebranding{
     @include full;
     margin-top:1rem;
+    margin-bottom:1rem;
+
     .site-logo{
       float:left;
       margin-right:1rem;
       padding-left:5px;
+
       img{
         height:60px;
         width:auto;
       }
+
       a{
         text-decoration: none;
       }
     }
+
     .site-name{
       height:60px;
       float:left;
-      a{
+
+      a {
         text-decoration: none;
         color: #e94c4f;
         font-size: 32px;
         line-height: 1;
-        @include susy-breakpoint(0px 414px){
-          font-size: 32px;
+          @include susy-breakpoint(0px 414px){
+            font-size: 32px;
+          }
         }
       }
-    }
     .site-slogan{
       color:#fff;
       font-size: 3vmin;
       @include span(last 11);
     }
 
+    #menu-nav-toggle{
+      display: none;
+      color: $rot;
+      float: right;
+      text-decoration: none;
+      margin: 1em 0;
+      cursor: pointer;
+        @include susy-breakpoint(0px 414px){
+          display:inline-block;
+        }
+    }
+
     #nav-toggle {
+      display: none;
     	float:right;
     	margin: 1em;
-      @include susy-breakpoint(0px 414px){
-        display: inline-block;
-      }
+        @include susy-breakpoint(0px 414px){
+          display: inline-block;
+        }
     }
 
     #nav-toggle {
@@ -290,129 +306,164 @@ header{
       display: block;
       content: '';
     }
+
     #nav-toggle span:before {
       top: -10px;
     }
+
     #nav-toggle span:after {
       bottom: -10px;
     }
 
     #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
       transition: all 500ms ease-in-out;
-
     }
+
     #nav-toggle.active span {
       background-color: transparent;
     }
+
     #nav-toggle.active span:before, #nav-toggle.active span:after {
       top: 0;
       background-color: #e94c4f;
     }
+
     #nav-toggle.active span:before {
       transform: rotate(45deg);
     }
+
     #nav-toggle.active span:after {
       transform: rotate(-45deg);
     }
   }
+
   #block-mainnavigation{
-    display:none;
+    @include susy-breakpoint(415px 960px){
+      width:95%;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   nav.navigation{
     @include full;
     margin-top:1em;
-    @include susy-breakpoint(0px 414px){
-      @include full;
-      @include prefix(0);
-      @include suffix(1);
-      margin-top:5em;
-      margin-left:8.75em;
-      height:100vh;
-    }
+      @include susy-breakpoint(0px 414px){
+        @include full;
+        @include prefix(0);
+        @include suffix(1);
+        margin-top:5em;
+        margin-left:8.75em;
+        height:100vh;
+        display:none;
+      }
 
-    #myTopnav > li.menu-item{
-      padding:0 0 2em 5px;
-    }
+      #myTopnav{
+        @include susy-breakpoint(0px 414px){
+        display:none;
+        }
+      }
 
-    ul.menu
-      a{
+      #myTopnav > li.menu-item:not(:first-child){
+        padding:0 0 2em 5px;
+      }
+
+      ul.menu a {
         color:#e94c4f;
         text-decoration: none;
+        font-size: 1.5em;
+          @include susy-breakpoint(414px 960px){
+            font-size: 1.25em;
+          }
+          @include susy-breakpoint(0px 414px){
+            font-size: 2em;
+          }
+        a:hover{
+          font-style: italic;
+        }
+        a:active{
+          font-style: italic;
+        }
+      }
+      ul.menu a.is-active{
+        color:#e94c4f;
+        font-style: italic;
+      }
+      ul.menu li.menu-item{
+        @include span(2 of $nav_layout);
         @include susy-breakpoint(0px 414px){
-          font-size: 2em;
+          @include span(12 of $nav_layout_mobile);
         }
       }
-      a:hover{
-        font-style: italic;
-      }
-      a:active{
-        font-style: italic;
-      }
-    }
-    ul.menu a.is-active{
-      color:#e94c4f;
-      font-style: italic;
-    }
-    ul.menu li.menu-item{
-      @include span(2 of $nav_layout);
-      @include susy-breakpoint(0px 414px){
-        @include span(12 of $nav_layout_mobile);
-      }
-    }
-    ul.menu li.menu-item--expanded{
-      list-style-image:none;
-      list-style-type: none;
-    }
-    ul.menu li.icon{
-      display:none;
-      @include susy-breakpoint(0px 414px){
-
+      ul.menu li.menu-item--expanded{
+        list-style-image: none;
+        list-style-type: none;
       }
 
-      a{
-        font-size: 7vmin;
-      }
-    }
-
-    ul.menu.responsive{
-      @include susy-breakpoint(0px 414px){
-        position: relative;
-        float: none;
-      }
-    }
-    ul.menu.responsive li.icon{
-      @include susy-breakpoint(0px 414px){
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-    }
-    ul.menu.responsive li{
-      @include susy-breakpoint(0px 414px){
-        float: none;
-        display: inline;
-      }
-    }
-    ul.menu.responsive li a{
-      @include susy-breakpoint(0px 414px){
-        display: block;
-        text-align: right;
-      }
-    }
-    #site-nav{
-        .menu-item{
+      ul.menu li.icon{
+        display:none;
+        @include susy-breakpoint(0px 414px){
         }
+
+        a{
+          font-size: 7vmin;
+        }
+      }
+      ul.menu.responsive{
+        @include susy-breakpoint(0px 414px){
+          position: relative;
+          float: none;
+        }
+      }
+      ul.menu.responsive li.icon{
+        @include susy-breakpoint(0px 414px){
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      ul.menu.responsive li{
+        @include susy-breakpoint(0px 414px){
+          float: none;
+          display: inline;
+        }
+      }
+      ul.menu.responsive li a{
+        @include susy-breakpoint(0px 414px){
+          display: block;
+          text-align: right;
+        }
+      }
     }
   }
 
-
 main{
   @include full;
-  margin: 6.5em auto 5vh;
+  margin: 9em auto 5vh;
+  @include susy-breakpoint(0px 960px){
+    float:none;
+    width:95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .view-filters{
+    display: none;
     @include full;
-    .form--inline .form-item {
-      float:right;
+    margin-top:1em;
+    .form--inline .form-item, {
+      float:left;
+      margin-bottom: 1em;
+    }
+    select, input{
+      margin: 0 1em 0 0.5em;
+      border-color: $rot;
+      background-color: white;
+      border-radius: 5px;
+      border-width: 1px;
+      border-style: solid;
+    }
+    input{
+      padding: 1px 6px 2px;
     }
   }
 
@@ -421,6 +472,7 @@ main{
     max-height: 20vh;
     margin-top:5vh;
     overflow: hidden;
+
 
     .event_image{
       @include span(4);
@@ -441,7 +493,7 @@ main{
       }
     }
     .event_type_genre{
-      @include span(6);
+      @include full;
     }
     .event_date{
       @include span(last 2);
@@ -541,14 +593,16 @@ footer{
   background-color: $rot;
   color: white;
   @include mix-blend-mode-difference-footer;
+
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
   }
 
   .layout-container{
     color: white;
+    @include susy-breakpoint(0px 960px){
+      width:95%;
+    }
   }
   .footerrow{
     @include full;
@@ -695,9 +749,7 @@ footer{
 .field--name-field-textbildrechts{
   @include span (8);
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
   }
 }
 .page-7 .field--name-field-textbildrechtsbild{
@@ -707,23 +759,39 @@ footer{
   }
 }
 
-// band area
+// Text mit teaser rechts
 .field--name-field-text-mit-teaser-rechts-tex{
   @include span (7);
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
+
   }
 }
 .field--name-field-text-mit-teaser-rechts-tea{
   @include span (last 4);
   @include susy-breakpoint(0px 414px){
-    @include span (10);
-    @include prefix (1);
-    @include suffix (1);
+    @include span (12);
   }
 }
+
+// Band area
+.page-3{
+  .field--name-field-text-mit-teaser-rechts-tex{
+    @include span (6);
+    @include susy-breakpoint(0px 414px){
+      @include span (12);
+    }
+  }
+  .field--name-field-text-mit-teaser-rechts-tea{
+    @include span (last 6);
+    @include susy-breakpoint(0px 414px){
+      @include span (12);
+    }
+  }
+
+}
+
+
 .page-5{
   .paragraph{
     overflow: auto;
@@ -732,9 +800,8 @@ footer{
   .field--name-field-textbildrechts{
     @include span (7);
     @include susy-breakpoint(0px 414px){
-      @include span (10);
-      @include prefix (1);
-      @include suffix (1);
+      @include span (12);
+
     }
   }
   .field--name-field-textbildrechtsbild{
@@ -742,30 +809,25 @@ footer{
     @include span (last 4);
     @include susy-clearfix;
     @include susy-breakpoint(0px 414px){
-      @include span (10);
-      @include prefix (1);
-      @include suffix (1);
+      @include span (12);
     }
   }
 
 }
+
 
 // newsletter
 .page-10{
   .paragraph--type--text .field__item{
    @include span (5);
    @include susy-breakpoint(0px 414px){
-     @include span (10);
-     @include prefix (1);
-     @include suffix (1);
+     @include span (12);
    }
   }
   .paragraph--type--text .field__item:nth-child(2){
    @include span (last 5);
    @include susy-breakpoint(0px 414px){
-     @include span (10);
-     @include prefix (1);
-     @include suffix (1);
+     @include span (12);
      margin-top:10vh;
    }
   }
@@ -788,7 +850,46 @@ footer{
   font-weight:300;
 }
 
+form#rentform{
+  font-size:0.6875em;
+  margin-top:2em;
+
+  input{
+    margin-right: 0.5em;
+  }
+
+  legend{
+  font-size:1em;
+
+  }
+
+  label{
+    display: block;
+    margin-top:1em;
+  }
+  ul{
+    margin-bottom:1em;
+  }
+  ul li{
+    margin-bottom: 0.5em;
+  }
+  .forminfo{
+    display:block;
+    font-weight:300;
+  }
+
+  #totalPrice{
+    margin-bottom:1em;
+  }
+
+}
+
 //other
 .node--type-page h3{
   color: $rot;
+}
+
+//archiv
+.pager__item{
+  display:inline;
 }
