@@ -1,0 +1,13 @@
+{
+    "extends":[
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": 0,
+      "space-before-function-paren": 0,
+      "comma-dangle": 0,
+      "space-before-blocks": 0,
+      "no-new-require": 0,
+      "no-unused-vars": 0,
+    }
+}

@@ -25,9 +25,6 @@ npm-debug.log
 # We absolutely don't want to have the .sass-cache in git.
 .sass-cache
 
-# Ignore .map files
-*.css.map
-css/map
-
 # Other
 .DS_Store
+_MACOSX

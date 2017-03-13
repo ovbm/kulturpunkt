@@ -368,12 +368,6 @@ header {
         padding:0 0 2em 5px;
       }
 
-      #myTopnav > li.menu-item:first-child{
-        @include susy-breakpoint(0px 414px){
-          padding:0 0 2em 5px;
-        }
-      }
-
       ul.menu a {
         color:#e94c4f;
         text-decoration: none;
@@ -404,7 +398,6 @@ header {
       ul.menu li.menu-item--expanded{
         list-style-image: none;
         list-style-type: none;
-
       }
 
       ul.menu li.icon{
@@ -443,35 +436,6 @@ header {
       }
     }
   }
-
-//Submenu
-.menu-item--expanded {
-  .menu{
-    display:none;
-    .menu-item{
-      float:none !important;
-      padding-left:15px;
-      width:100% !important;
-    }
-    .menu-item:first-child{
-      margin-top: 5px;
-    }
-  }
-}
-.menu-item--active-trail{
-  .menu{
-    display:block;
-    .menu-item{
-      float:none !important;
-      padding-left:15px;
-      width:100% !important;
-    }
-    .menu-item:first-child{
-      margin-top: 5px;
-    }
-  }
-}
-
 
 main{
   @include full;
