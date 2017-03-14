@@ -1,0 +1,18 @@
+uuid: 2784d115-237a-4511-a14b-4587d21da2d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:views_view:views.programm.page_1'
+name: Kurs
+type: kurs
+description: 'Regelmässige Kurse'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

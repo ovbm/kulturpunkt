@@ -1,0 +1,11 @@
+uuid: 85d73261-a6d0-45f8-a205-088b48df10d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.kurs
+id: node.kurs
+target_entity_type_id: node
+target_bundle: kurs
+default_langcode: site_default
+language_alterable: false

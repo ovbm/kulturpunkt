@@ -47,11 +47,11 @@ display:
       exposed_form:
         type: basic
         options:
-          submit_button: Apply
-          reset_button: false
+          submit_button: Filtern
+          reset_button: true
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
@@ -302,6 +302,46 @@ display:
           entity_type: node
           entity_field: type
           plugin_id: bundle
+        field_event_datum_value_1:
+          id: field_event_datum_value_1
+          table: node__field_event_datum
+          field: field_event_datum_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: '-12 hours'
+            type: offset
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
       sorts:
         field_event_datum_value:
           id: field_event_datum_value
@@ -350,11 +390,12 @@ display:
         type: normal
         title: programm
         description: ''
-        expanded: false
+        expanded: true
         parent: ''
         weight: -50
         context: '0'
         menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:

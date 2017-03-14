@@ -1,0 +1,20 @@
+uuid: 7b179de0-228b-48df-bf66-f97d38bb81fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.kurs.field_kursdetails
+    - node.type.kurs
+  module:
+    - user
+id: node.kurs.teaser
+targetEntityType: node
+bundle: kurs
+mode: teaser
+content:
+  links:
+    weight: 100
+hidden:
+  field_kursdetails: true
+  langcode: true
