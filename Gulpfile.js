@@ -2,7 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 
 gulp.task('styles', function() {
-    gulp.src('web/themes/iovi/sass/**/*.scss')
+    gulp.src('web/themes/iovi/sass/styles.scss')
         .pipe(sass({
           includePaths: ['node_modules/susy/sass']
         }).on('error', sass.logError))

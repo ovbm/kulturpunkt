@@ -1,0 +1,22 @@
+@mixin mix-blend-mode-difference {
+  //color: white;
+  //mix-blend-mode: difference;
+  .user-logged-in & {
+    color: black;
+    mix-blend-mode: normal;
+  }
+}
+
+@mixin mix-blend-mode-difference-footer {
+  //mix-blend-mode: difference;
+  .user-logged-in & {
+    mix-blend-mode: normal;
+  }
+}
+
+@mixin topofpage {
+  top: 0;
+  .user-logged-in &{
+    top:80px;
+  }
+}

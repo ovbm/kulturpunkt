@@ -2,23 +2,25 @@ body {
   color: black;
   font-family: "modesto-text";
   line-height: 1.25;
-  font-size: 2.0vh; }
+  font-size: 1em; }
 
 h1 {
-  font-size: 4vh;
-  font-weight: 700; }
+  font-size: 2em;
+  line-height: 1.25em; }
 
 h2 {
-  font-size: 3vh;
-  margin-top: 0;
-  font-weight: 300; }
+  font-size: 1.375em;
+  line-height: 1.25em;
+  font-weight: 300;
+  margin-top: 0; }
 
 h3 {
-  font-size: 2.5vh;
+  font-size: 1.25em;
   font-weight: 300; }
 
 p {
-  font-size: 2vh;
+  font-size: 1em;
+  line-height: 1.25em;
   font-weight: 300; }
 
 canvas {
@@ -49,8 +51,8 @@ ul, li {
   mix-blend-mode: normal; }
 
 .event_date {
-  font-size: 3vh;
-  line-height: 1; }
+  font-size: 1.375em;
+  line-height: 1.25em; }
 
 .layout-container {
   max-width: 960px;
@@ -273,9 +275,6 @@ header {
         display: none; } }
     header nav.navigation #myTopnav > li.menu-item:not(:first-child) {
       padding: 0 0 2em 5px; }
-    @media (min-width: 0px) and (max-width: 414px) {
-      header nav.navigation #myTopnav > li.menu-item:first-child {
-        padding: 0 0 2em 5px; } }
     header nav.navigation ul.menu a {
       color: #e94c4f;
       text-decoration: none;
@@ -329,24 +328,6 @@ header {
       header nav.navigation ul.menu.responsive li a {
         display: block;
         text-align: right; } }
-
-.menu-item--expanded .menu {
-  display: none; }
-  .menu-item--expanded .menu .menu-item {
-    float: none !important;
-    padding-left: 15px;
-    width: 100% !important; }
-  .menu-item--expanded .menu .menu-item:first-child {
-    margin-top: 5px; }
-
-.menu-item--active-trail .menu {
-  display: block; }
-  .menu-item--active-trail .menu .menu-item {
-    float: none !important;
-    padding-left: 15px;
-    width: 100% !important; }
-  .menu-item--active-trail .menu .menu-item:first-child {
-    margin-top: 5px; }
 
 main {
   clear: both;

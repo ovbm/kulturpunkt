@@ -1,0 +1,216 @@
+header {
+  @include mix-blend-mode-difference;
+  @include container;
+  @include topofpage;
+  width:100%;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 999;
+
+  #block-sitebranding{
+    @include full;
+    margin-top:1rem;
+    margin-bottom:1rem;
+
+    .site-logo{
+      float:left;
+      margin-right:1rem;
+      padding-left:5px;
+
+      img{
+        height:60px;
+        width:auto;
+      }
+
+      a{
+        text-decoration: none;
+      }
+    }
+
+    .site-name{
+      height:60px;
+      float:left;
+
+      a {
+        text-decoration: none;
+        color: #e94c4f;
+        font-size: 32px;
+        line-height: 1;
+          @include susy-breakpoint(0px 414px){
+            font-size: 32px;
+          }
+        }
+      }
+    .site-slogan{
+      color:#fff;
+      font-size: 3vmin;
+      @include span(last 11);
+    }
+
+    #menu-nav-toggle{
+      display: none;
+      color: $rot;
+      float: right;
+      text-decoration: none;
+      margin: 1em 0;
+      cursor: pointer;
+        @include susy-breakpoint(0px 414px){
+          display:inline-block;
+        }
+    }
+
+    #nav-toggle {
+      display: none;
+    	float:right;
+    	margin: 1em;
+        @include susy-breakpoint(0px 414px){
+          display: inline-block;
+        }
+    }
+
+    #nav-toggle {
+    	cursor: pointer;
+    	padding: 10px 35px 16px 0px;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      cursor: pointer;
+      border-radius: 1px;
+      height: 5px;
+      width: 35px;
+      background: #e94c4f;
+      position: absolute;
+      display: block;
+      content: '';
+    }
+
+    #nav-toggle span:before {
+      top: -10px;
+    }
+
+    #nav-toggle span:after {
+      bottom: -10px;
+    }
+
+    #nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+      transition: all 500ms ease-in-out;
+    }
+
+    #nav-toggle.active span {
+      background-color: transparent;
+    }
+
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+      top: 0;
+      background-color: #e94c4f;
+    }
+
+    #nav-toggle.active span:before {
+      transform: rotate(45deg);
+    }
+
+    #nav-toggle.active span:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  #block-mainnavigation{
+    @include susy-breakpoint(415px 960px){
+      width:95%;
+      float: none;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  nav.navigation{
+    @include full;
+    margin-top:1em;
+      @include susy-breakpoint(0px 414px){
+        @include full;
+        @include prefix(0);
+        @include suffix(1);
+        margin-top:5em;
+        margin-left:8.75em;
+        height:100vh;
+        display:none;
+      }
+
+      #myTopnav{
+        @include susy-breakpoint(0px 414px){
+        display:none;
+        }
+      }
+
+      #myTopnav > li.menu-item:not(:first-child){
+        padding:0 0 2em 5px;
+      }
+
+      ul.menu a {
+        color:#e94c4f;
+        text-decoration: none;
+        font-size: 1.5em;
+          @include susy-breakpoint(414px 960px){
+            font-size: 1.25em;
+          }
+          @include susy-breakpoint(0px 414px){
+            font-size: 2em;
+          }
+        a:hover{
+          font-style: italic;
+        }
+        a:active{
+          font-style: italic;
+        }
+      }
+      ul.menu a.is-active{
+        color:#e94c4f;
+        font-style: italic;
+      }
+      ul.menu li.menu-item{
+        @include span(2 of $nav_layout);
+        @include susy-breakpoint(0px 414px){
+          @include span(12 of $nav_layout_mobile);
+        }
+      }
+      ul.menu li.menu-item--expanded{
+        list-style-image: none;
+        list-style-type: none;
+      }
+
+      ul.menu li.icon{
+        display:none;
+        @include susy-breakpoint(0px 414px){
+        }
+
+        a{
+          font-size: 7vmin;
+        }
+      }
+      ul.menu.responsive{
+        @include susy-breakpoint(0px 414px){
+          position: relative;
+          float: none;
+        }
+      }
+      ul.menu.responsive li.icon{
+        @include susy-breakpoint(0px 414px){
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      ul.menu.responsive li{
+        @include susy-breakpoint(0px 414px){
+          float: none;
+          display: inline;
+        }
+      }
+      ul.menu.responsive li a{
+        @include susy-breakpoint(0px 414px){
+          display: block;
+          text-align: right;
+        }
+      }
+    }
+  }
