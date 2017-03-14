@@ -53,15 +53,19 @@
 %}
 
 {% if label_hidden %}
-  {% if multiple %}
+  {% if items|length > 1 %}
+    <div class="main-carousel">
       {% for item in items %}
       <div{{ attributes.addClass(classes, 'field__items carousel-cell') }}>
         {{ item.content }}
       </div>
       {% endfor %}
+    </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item carousel-cell') }}>{{ item.content }}</div>
+      <div{{ attributes.addClass(classes, 'field__item') }}>
+        {{ item.content }}
+      </div>
     {% endfor %}
   {% endif %}
 {% else %}
