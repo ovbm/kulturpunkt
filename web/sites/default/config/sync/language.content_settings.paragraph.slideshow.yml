@@ -1,0 +1,11 @@
+uuid: b18bef2b-a080-4c6d-abd3-33d750dd8bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.slideshow
+id: paragraph.slideshow
+target_entity_type_id: paragraph
+target_bundle: slideshow
+default_langcode: site_default
+language_alterable: false

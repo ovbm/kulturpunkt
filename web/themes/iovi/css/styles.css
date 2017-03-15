@@ -335,7 +335,7 @@ main {
   float: left;
   margin-left: 0;
   margin-right: 0;
-  margin: 9em auto 5vh; }
+  margin: 12em auto 5vh; }
   @media (min-width: 0px) and (max-width: 960px) {
     main {
       float: none;
@@ -368,9 +368,24 @@ main {
     float: left;
     margin-left: 0;
     margin-right: 0;
-    max-height: 20vh;
-    margin-top: 5vh;
-    overflow: hidden; }
+    max-height: 169px;
+    margin-top: 30px;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+    display: flex; }
+    main article.node--type-event .event_content {
+      width: 100%; }
+    main article.node--type-event .event_date {
+      width: 14.28571%;
+      float: left;
+      margin-right: 2.85714%;
+      height: 100%;
+      background-color: #e94c4f;
+      margin-right: 0; }
+      main article.node--type-event .event_date div {
+        padding-top: 0.5em;
+        text-align: center;
+        color: white; }
     main article.node--type-event .event_image {
       width: 31.42857%;
       float: left;
@@ -380,10 +395,11 @@ main {
       overflow: hidden; }
     main article.node--type-event .event_title {
       width: 48.57143%;
-      float: left;
-      margin-right: 2.85714%; }
+      float: right;
+      margin-right: 0; }
       main article.node--type-event .event_title h2 {
-        margin: 0; }
+        margin: 0;
+        padding: 0.5em; }
       main article.node--type-event .event_title a {
         color: black;
         text-decoration: none; }
@@ -392,10 +408,6 @@ main {
       width: 100%;
       float: left;
       margin-left: 0;
-      margin-right: 0; }
-    main article.node--type-event .event_date {
-      width: 14.28571%;
-      float: right;
       margin-right: 0; }
   main .event_detail {
     clear: both;

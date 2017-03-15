@@ -1,0 +1,11 @@
+uuid: 50201d3c-5ebc-440d-8ab4-5ed1e3f899fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.sponsoren
+id: paragraph.sponsoren
+target_entity_type_id: paragraph
+target_bundle: sponsoren
+default_langcode: site_default
+language_alterable: false

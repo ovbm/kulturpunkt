@@ -1,0 +1,11 @@
+uuid: 5d978b93-745a-4866-960f-2c7ca08c1eef
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.offnungszeiten
+id: paragraph.offnungszeiten
+target_entity_type_id: paragraph
+target_bundle: offnungszeiten
+default_langcode: site_default
+language_alterable: false

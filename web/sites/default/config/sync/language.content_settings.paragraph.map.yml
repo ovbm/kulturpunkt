@@ -1,0 +1,11 @@
+uuid: c03a0bce-733f-4453-b0a5-fb15affa760e
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.map
+id: paragraph.map
+target_entity_type_id: paragraph
+target_bundle: map
+default_langcode: site_default
+language_alterable: false

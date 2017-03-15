@@ -205,7 +205,7 @@ button.overlay-toggle {
 
 main{
   @include full;
-  margin: 9em auto 5vh;
+  margin: 12em auto 5vh;
   @include susy-breakpoint(0px 960px){
     float:none;
     width:95%;
@@ -235,35 +235,47 @@ main{
 
   article.node--type-event{
     @include full;
-    max-height: 20vh;
-    margin-top:5vh;
+    max-height: 169px;
+    margin-top:30px;
     overflow: hidden;
-
-
-    .event_image{
-      @include span(4);
-      height: 0;
-      padding-bottom: 17.678570625%;
-      overflow: hidden;
-      img{
+    box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
+    display: flex;
+      .event_content{
+        width:100%;
       }
-    }
-    .event_title{
-      @include span(6);
-      h2{
-        margin:0;
+      .event_date{
+        @include span(2);
+        height:100%;
+        background-color:$rot;
+        margin-right:0;
+        div{
+          padding-top: 0.5em;
+          text-align: center;
+          color: white;
+        }
       }
-      a{
-        color:black;
-        text-decoration: none
+      .event_image{
+        @include span(4);
+        height: 0;
+        padding-bottom: 17.678570625%;
+        overflow: hidden;
+        img{
+        }
       }
-    }
-    .event_type_genre{
-      @include full;
-    }
-    .event_date{
-      @include span(last 2);
-    }
+      .event_title{
+        @include span(last 6);
+        h2{
+          margin:0;
+          padding: 0.5em;
+        }
+        a{
+          color:black;
+          text-decoration: none
+        }
+      }
+      .event_type_genre{
+        @include full;
+      }
 
   }
 

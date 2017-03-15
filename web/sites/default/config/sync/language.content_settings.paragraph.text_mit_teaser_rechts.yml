@@ -1,0 +1,11 @@
+uuid: 119d902b-d072-4cf0-a638-feaf34f2f544
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.text_mit_teaser_rechts
+id: paragraph.text_mit_teaser_rechts
+target_entity_type_id: paragraph
+target_bundle: text_mit_teaser_rechts
+default_langcode: site_default
+language_alterable: false

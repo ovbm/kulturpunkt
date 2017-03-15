@@ -70,6 +70,7 @@
  *   in different view modes.
  */
 #}
+
 {%
   set classes = [
     'node',
@@ -86,10 +87,15 @@
 <article href="#{{node.canonical}}"{{ attributes.addClass(classes,'accordion event_header') }}>
 
   <div{{ content_attributes.addClass('node__content event_content') }}>
+    <div class="event_date">
+        {{content.field_event_datum}}
+        <div class="field_item">
+          {{ node.field_event_datum[0].value|date('H:i')}}
+        </div>
+    </div>
     <div class="event_image">
         {{ content.field_event_bild[0] }}
     </div>
-
     <div class="event_title carousel">
       {{ title_prefix }}
       {% if not page %}
@@ -105,13 +111,6 @@
           {{content.field_genre}}
       </div>
     </div>
-
-    <div class="event_date">
-        {{ content.field_event_datum}}
-        {{ node.field_event_datum[0].value|date('H:i') }}
-    </div>
-
-
   </div>
 
   {% if display_submitted %}

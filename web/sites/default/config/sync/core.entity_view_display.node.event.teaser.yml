@@ -51,7 +51,7 @@ content:
     label: hidden
     settings:
       timezone_override: ''
-      date_format: 'd/ m'
+      date_format: 'D j M'
     third_party_settings: {  }
   field_event_land:
     type: entity_reference_label

@@ -1,0 +1,11 @@
+uuid: b311fb4d-6467-4318-b669-00ee734e1e17
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.text_mit_bild_rechts
+id: paragraph.text_mit_bild_rechts
+target_entity_type_id: paragraph
+target_bundle: text_mit_bild_rechts
+default_langcode: site_default
+language_alterable: false

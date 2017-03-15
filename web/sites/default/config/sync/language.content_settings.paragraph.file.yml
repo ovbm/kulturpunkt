@@ -1,0 +1,11 @@
+uuid: 1595cc4a-e212-400d-acd3-7469120cd560
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.file
+id: paragraph.file
+target_entity_type_id: paragraph
+target_bundle: file
+default_langcode: site_default
+language_alterable: false
