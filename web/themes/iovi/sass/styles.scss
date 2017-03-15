@@ -51,6 +51,9 @@ h2 {
   line-height: 1.25em;
   font-weight: 300;
   margin-top: 0;
+  @include susy-breakpoint(0px 760px){
+    font-size: 1.25em;
+  }
 }
 
 h3{
@@ -95,10 +98,7 @@ ul, li{
   @include mix-blend-mode-difference;
 }
 
-.event_date{
-  font-size: 1.375em;
-  line-height: 1.25em;
-}
+
 
 .layout-container{
   @include container;
@@ -240,26 +240,55 @@ main{
     overflow: hidden;
     box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
     display: flex;
+    @include susy-breakpoint(0px 760px){
+      max-height: 201px;
+    }
       .event_content{
         width:100%;
       }
       .event_date{
+        font-size: 1.375em;
+        line-height: 1.25em;
         @include span(2);
         height:100%;
         background-color:$rot;
         margin-right:0;
         div{
-          padding-top: 0.5em;
+          padding-top: 0;
           text-align: center;
           color: white;
+        }
+        div:first-child{
+          padding-top: 0.5em;
+        }
+        @include susy-breakpoint(0px 760px){
+          font-size: 1em;
+          @include span(full);
+          height:2em;
+          div{
+            display:inline-block;
+            float:right;
+            padding-top:0;
+            padding: 0 0.25em;
+          }
+          div:first-child{
+            float:left;
+            padding-top:0;
+          }
+          div.field__items{
+            float:left;
+          }
         }
       }
       .event_image{
         @include span(4);
         height: 0;
         padding-bottom: 17.678570625%;
-        overflow: hidden;
         img{
+        }
+        @include susy-breakpoint(0px 760px){
+          @include span(5);
+          margin-right:0;
         }
       }
       .event_title{
@@ -271,6 +300,9 @@ main{
         a{
           color:black;
           text-decoration: none
+        }
+        @include susy-breakpoint(0px 760px){
+          @include span(7);
         }
       }
       .event_type_genre{

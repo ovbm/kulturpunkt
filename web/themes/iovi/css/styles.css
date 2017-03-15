@@ -13,6 +13,9 @@ h2 {
   line-height: 1.25em;
   font-weight: 300;
   margin-top: 0; }
+  @media (min-width: 0px) and (max-width: 760px) {
+    h2 {
+      font-size: 1.25em; } }
 
 h3 {
   font-size: 1.25em;
@@ -49,10 +52,6 @@ ul, li {
 .user-logged-in .field--name-body, .user-logged-in .event_date, .user-logged-in .event_detail_info, .user-logged-in .event_type_genre {
   color: black;
   mix-blend-mode: normal; }
-
-.event_date {
-  font-size: 1.375em;
-  line-height: 1.25em; }
 
 .layout-container {
   max-width: 960px;
@@ -373,9 +372,14 @@ main {
     overflow: hidden;
     box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
     display: flex; }
+    @media (min-width: 0px) and (max-width: 760px) {
+      main article.node--type-event {
+        max-height: 201px; } }
     main article.node--type-event .event_content {
       width: 100%; }
     main article.node--type-event .event_date {
+      font-size: 1.375em;
+      line-height: 1.25em;
       width: 14.28571%;
       float: left;
       margin-right: 2.85714%;
@@ -383,16 +387,41 @@ main {
       background-color: #e94c4f;
       margin-right: 0; }
       main article.node--type-event .event_date div {
-        padding-top: 0.5em;
+        padding-top: 0;
         text-align: center;
         color: white; }
+      main article.node--type-event .event_date div:first-child {
+        padding-top: 0.5em; }
+      @media (min-width: 0px) and (max-width: 760px) {
+        main article.node--type-event .event_date {
+          font-size: 1em;
+          width: 100%;
+          float: left;
+          margin-left: 0;
+          margin-right: 0;
+          height: 2em; }
+          main article.node--type-event .event_date div {
+            display: inline-block;
+            float: right;
+            padding-top: 0;
+            padding: 0 0.25em; }
+          main article.node--type-event .event_date div:first-child {
+            float: left;
+            padding-top: 0; }
+          main article.node--type-event .event_date div.field__items {
+            float: left; } }
     main article.node--type-event .event_image {
       width: 31.42857%;
       float: left;
       margin-right: 2.85714%;
       height: 0;
-      padding-bottom: 17.678570625%;
-      overflow: hidden; }
+      padding-bottom: 17.678570625%; }
+      @media (min-width: 0px) and (max-width: 760px) {
+        main article.node--type-event .event_image {
+          width: 40%;
+          float: left;
+          margin-right: 2.85714%;
+          margin-right: 0; } }
     main article.node--type-event .event_title {
       width: 48.57143%;
       float: right;
@@ -403,6 +432,11 @@ main {
       main article.node--type-event .event_title a {
         color: black;
         text-decoration: none; }
+      @media (min-width: 0px) and (max-width: 760px) {
+        main article.node--type-event .event_title {
+          width: 57.14286%;
+          float: left;
+          margin-right: 2.85714%; } }
     main article.node--type-event .event_type_genre {
       clear: both;
       width: 100%;
