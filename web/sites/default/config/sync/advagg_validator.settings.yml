@@ -2,3 +2,4 @@ csslint_ignore: ''
 jshint_ignore: ''
 _core:
   default_config_hash: Nf2uuYAmomhPPiQWudP-vzWJvGz9yVXhiK7IAjoVUTA
+langcode: de

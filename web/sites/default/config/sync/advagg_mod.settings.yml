@@ -18,3 +18,4 @@ unified_multisite_dir: ''
 _core:
   default_config_hash: K1LjGu1pf32pW_spWyBUfP4uJILVnK0p9-74sKbSxmo
 ga_inline_to_file: null
+langcode: de

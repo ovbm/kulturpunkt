@@ -24,3 +24,4 @@ skip_enabled_preprocess_check: false
 show_bypass_cookie_message: true
 _core:
   default_config_hash: dM1t64zyx5bFL4hR034jtXNjMraZdbGKWqLZFWm_nFg
+langcode: de

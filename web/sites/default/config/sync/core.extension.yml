@@ -34,6 +34,7 @@ module:
   image: 0
   image_widget_crop: 0
   kint: 0
+  kulturpunkt_project: 0
   language: 0
   link: 0
   linkit: 0
@@ -68,3 +69,4 @@ theme:
   iovi: 0
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
+langcode: de
