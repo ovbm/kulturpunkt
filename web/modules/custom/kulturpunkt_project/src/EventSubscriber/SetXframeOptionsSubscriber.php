@@ -1,43 +1,32 @@
 <?php
-
-/**
- * @file
- * Contains Drupal\kulturpunkt_project\EventSubscriber\SetXframeOptionsSubscriber.
- */
-
 namespace Drupal\kulturpunkt_project\EventSubscriber;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
-use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
 
 /**
- * Response subscriber to handle finished responses.
+ * Subscriber for changing header.
  */
 class SetXframeOptionsSubscriber implements EventSubscriberInterface {
 
   /**
-   * Sets extra headers on successful responses.
-   *
-   * @param \Symfony\Component\HttpKernel\Event\FilterResponseEvent $event
-   *   The event to process.
+   * Remove X-Frame-Options, adding Content-Security-Policy.
    */
-  public function setXframeOptions(FilterResponseEvent $event) {
-    if (!$event->isMasterRequest()) {
-      return;
-    }
-    $response = $event->getResponse();
-    $response->headers->set('X-Frame-Options', 'ALLOW-FROM https://www.iovi.io/kulturpunkt', TRUE);
+  public function setHeaderContentSecurityPolicy(FilterResponseEvent $event) {
+    $response = $event--->getResponse();
+    $response->headers->remove('X-Frame-Options');
+    // Set the header, use FALSE to not replace it if it's set already.
+    $response->headers->set('Content-Security-Policy', "frame-ancestors 'self' iovi.io *.iovi.io", FALSE);
   }
 
   /**
-   * Registers the methods in this class that should be listeners.
-   *
-   * @return array
-   *   An array of event listener definitions.
+   * {@inheritdoc}
    */
-  public static function getSubscribedEvents() {
-    $events[KernelEvents::RESPONSE][] = array('setXframeOptions');
+  static public function getSubscribedEvents() {
+    // Response: set header content for security policy.
+    $events[KernelEvents::RESPONSE][] = ['setHeaderContentSecurityPolicy', -10];
     return $events;
   }
+
 }
