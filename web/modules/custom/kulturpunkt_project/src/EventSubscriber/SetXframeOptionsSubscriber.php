@@ -14,7 +14,7 @@ class SetXframeOptionsSubscriber implements EventSubscriberInterface {
    * Remove X-Frame-Options, adding Content-Security-Policy.
    */
   public function setHeaderContentSecurityPolicy(FilterResponseEvent $event) {
-    $response = $event--->getResponse();
+    $response = $event->getResponse();
     $response->headers->remove('X-Frame-Options');
     // Set the header, use FALSE to not replace it if it's set already.
     $response->headers->set('Content-Security-Policy', "frame-ancestors 'self' iovi.io *.iovi.io", FALSE);
