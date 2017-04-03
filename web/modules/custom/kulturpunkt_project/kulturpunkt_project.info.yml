@@ -1,0 +1,6 @@
+name: iframe enabler
+description: enables embeds on ioviio.
+package: Custom
+
+type: module
+core: 8.x
