@@ -27,7 +27,7 @@ class SetXframeOptionsSubscriber implements EventSubscriberInterface {
       return;
     }
     $response = $event->getResponse();
-    $response->headers->set('X-Frame-Options', 'ALLOW-FROM https://www.iovi.io/', TRUE);
+    $response->headers->set('X-Frame-Options', 'ALLOW-FROM https://www.iovi.io/kulturpunkt', TRUE);
   }
 
   /**
