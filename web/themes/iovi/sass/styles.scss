@@ -245,7 +245,7 @@ main{
   article.node--type-projektgruppe:nth-child(2n+2){
     @include span(last 6);
   }
-  .view-projektgruppen .node_content{
+  .view-projektgruppen.node_content{
     @include span(6);
 
     background-color: none;
@@ -259,7 +259,7 @@ main{
       max-height: none;
     }
   }
-  .view-projektgruppen .node_content:nth-child(2n+2){
+  .view-projektgruppen.node_content:nth-child(2n+2){
     @include span(last 6);
   }
 
