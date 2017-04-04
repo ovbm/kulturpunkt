@@ -241,6 +241,10 @@ main{
     @include susy-breakpoint(0px 760px){
       @include full;
     }
+    .paragraph{
+      overflow: auto;
+      margin-bottom: 2em;
+    }
   }
 
   .projektdetails{
@@ -255,6 +259,16 @@ main{
     &.active {
       opacity: 1;
       max-height: none;
+    }
+    .carousel-cell {
+      width: 100%;
+    }
+    .paragraph--type--slideshow{
+      clear: both;
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 

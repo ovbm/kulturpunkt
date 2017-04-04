@@ -376,6 +376,9 @@ main {
         float: left;
         margin-left: 0;
         margin-right: 0; } }
+    main article.node--type-projektgruppe .paragraph {
+      overflow: auto;
+      margin-bottom: 2em; }
   main .projektdetails {
     clear: both;
     width: 100%;
@@ -390,6 +393,14 @@ main {
     main .projektdetails.active {
       opacity: 1;
       max-height: none; }
+    main .projektdetails .carousel-cell {
+      width: 100%; }
+    main .projektdetails .paragraph--type--slideshow {
+      clear: both;
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
   main .projektgruppenfeld {
     width: 48.57143%;
     float: left;
