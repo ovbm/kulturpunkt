@@ -374,10 +374,23 @@ main {
         float: left;
         margin-left: 0;
         margin-right: 0; } }
-    main article.node--type-projektgruppe .node_content {
-      width: 100%;
-      opacity: 0; }
   main article.node--type-projektgruppe:nth-child(2n+2) {
+    width: 48.57143%;
+    float: right;
+    margin-right: 0; }
+  main .view-projektgruppen .node_content {
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%;
+    background-color: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0; }
+    main .view-projektgruppen .node_content.active {
+      opacity: 1;
+      max-height: none; }
+  main .view-projektgruppen .node_content:nth-child(2n+2) {
     width: 48.57143%;
     float: right;
     margin-right: 0; }

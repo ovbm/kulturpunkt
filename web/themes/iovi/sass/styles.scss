@@ -241,16 +241,27 @@ main{
     @include susy-breakpoint(0px 760px){
       @include full;
     }
-    .node_content{
-      width:100%;
-      opacity: 0;
-    }
-
   }
   article.node--type-projektgruppe:nth-child(2n+2){
     @include span(last 6);
   }
+  .view-projektgruppen .node_content{
+    @include span(6);
 
+    background-color: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.6s ease-in-out;
+    opacity: 0;
+
+    &.active {
+      opacity: 1;
+      max-height: none;
+    }
+  }
+  .view-projektgruppen .node_content:nth-child(2n+2){
+    @include span(last 6);
+  }
 
 
   article.node--type-event{
