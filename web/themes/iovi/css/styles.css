@@ -364,7 +364,9 @@ main {
   main article.node--type-projektgruppe {
     width: 48.57143%;
     float: left;
-    margin-right: 2.85714%; }
+    margin-right: 2.85714%;
+    overflow: hidden;
+    max-height: 300px; }
     @media (min-width: 0px) and (max-width: 760px) {
       main article.node--type-projektgruppe {
         clear: both;
@@ -373,7 +375,8 @@ main {
         margin-left: 0;
         margin-right: 0; } }
     main article.node--type-projektgruppe .node_content {
-      width: 100%; }
+      width: 100%;
+      opacity: 0; }
   main article.node--type-projektgruppe:nth-child(2n+2) {
     width: 48.57143%;
     float: right;

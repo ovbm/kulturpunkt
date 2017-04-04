@@ -235,11 +235,15 @@ main{
 
   article.node--type-projektgruppe{
     @include span(6);
+    overflow: hidden;
+    max-height: 300px;
+
     @include susy-breakpoint(0px 760px){
       @include full;
     }
     .node_content{
       width:100%;
+      opacity: 0;
     }
 
   }

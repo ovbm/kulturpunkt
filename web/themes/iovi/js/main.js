@@ -33,6 +33,36 @@ Drupal.behaviors.myBehavior = {
         return false;
       });
 
+      var allPanelsPro = $('#accordion > .node_content');
+      var allHeadersPro = $('#accordion > article');
+
+      $('#accordion > .node--type-projektgruppe').once().click(function () {
+        $this = $(this);
+        $target = $this.next();
+
+        if (!$this.hasClass('headeractive')) {
+          allHeaders.removeClass('headeractive');
+          allHeaders.removeAttr('id');
+          $this.addClass('headeractive');
+          $this.attr('id', 'scrolltop');
+
+            /* $('html, body').animate({
+                  scrollTop: $("#scrolltop").offset().top
+                }, 1000);*/
+        }
+
+        if (!$target.hasClass('active')) {
+          allPanels.removeClass('active');
+          allPanels.removeAttr('id');
+          $target.attr('id', 'scrolltop');
+          $target.addClass('active');
+        }
+        else {
+          $target.removeClass('active');
+        }
+        return false;
+      });
+
       // FLICKITY
       var galleryElems = document.querySelectorAll('.main-carousel');
 
