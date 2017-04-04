@@ -33,10 +33,10 @@ Drupal.behaviors.myBehavior = {
         return false;
       });
 
-      var allPanelsPro = $('#accordion > .node_content');
-      var allHeadersPro = $('#accordion > article');
+      var allPanelsPro = $('#accordion > .projektgruppenfeld > .node_content');
+      var allHeadersPro = $('#accordion > .projektgruppenfeld > article');
 
-      $('#accordion > .node--type-projektgruppe').once().click(function () {
+      $('#accordion > .projektgruppenfeld > .node--type-projektgruppe').once().click(function () {
         $this = $(this);
         $target = $this.next();
 

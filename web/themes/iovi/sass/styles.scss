@@ -234,7 +234,7 @@ main{
   }
 
   article.node--type-projektgruppe{
-    @include span(6);
+    @include full;
     overflow: hidden;
     max-height: 300px;
 
@@ -243,12 +243,8 @@ main{
     }
   }
 
-  article.node--type-projektgruppe:nth-child(2n+2){
-    @include span(last 6);
-  }
-
   .projektdetails{
-    @include span(6);
+    @include full;
 
     background-color: none;
     max-height: 0;
@@ -261,7 +257,11 @@ main{
       max-height: none;
     }
   }
-  .projektdetails:nth-child(2n+2){
+
+  .projektgruppenfeld{
+    @include span(6);
+  }
+  .projektgruppenfeld:nth-child(2n+2){
     @include span(last 6);
   }
 

@@ -362,9 +362,11 @@ main {
     main .view-filters input {
       padding: 1px 6px 2px; }
   main article.node--type-projektgruppe {
-    width: 48.57143%;
+    clear: both;
+    width: 100%;
     float: left;
-    margin-right: 2.85714%;
+    margin-left: 0;
+    margin-right: 0;
     overflow: hidden;
     max-height: 300px; }
     @media (min-width: 0px) and (max-width: 760px) {
@@ -374,14 +376,12 @@ main {
         float: left;
         margin-left: 0;
         margin-right: 0; } }
-  main article.node--type-projektgruppe:nth-child(2n+2) {
-    width: 48.57143%;
-    float: right;
-    margin-right: 0; }
   main .projektdetails {
-    width: 48.57143%;
+    clear: both;
+    width: 100%;
     float: left;
-    margin-right: 2.85714%;
+    margin-left: 0;
+    margin-right: 0;
     background-color: none;
     max-height: 0;
     overflow: hidden;
@@ -390,7 +390,11 @@ main {
     main .projektdetails.active {
       opacity: 1;
       max-height: none; }
-  main .projektdetails:nth-child(2n+2) {
+  main .projektgruppenfeld {
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%; }
+  main .projektgruppenfeld:nth-child(2n+2) {
     width: 48.57143%;
     float: right;
     margin-right: 0; }

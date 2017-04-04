@@ -81,21 +81,23 @@
   ]
 %}
 {{ attach_library('classy/node') }}
-<article{{ attributes.addClass(classes) }}>
+<div class="projektgruppenfeld">
+  <article{{ attributes.addClass(classes) }}>
 
-  {{ title_prefix }}
-  {% if not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
-    </h2>
-  {% endif %}
-  {{ title_suffix }}
+    {{ title_prefix }}
+    {% if not page %}
+      <h2{{ title_attributes }}>
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+      </h2>
+    {% endif %}
+    {{ title_suffix }}
 
-  <div class="project_image">
-      {{ content.field_projektbild[0] }}
+    <div class="project_image">
+        {{ content.field_projektbild[0] }}
+    </div>
+  </article>
+
+  <div{{ content_attributes.addClass('node__content projektdetails') }}>
+    {{ content.field_projektabsatz }}
   </div>
-</article>
-
-<div{{ content_attributes.addClass('node__content projektdetails') }}>
-  {{ content.field_projektabsatz }}
 </div>
