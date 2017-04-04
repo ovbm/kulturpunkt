@@ -361,6 +361,23 @@ main {
       border-style: solid; }
     main .view-filters input {
       padding: 1px 6px 2px; }
+  main article.node--type-projektgruppe {
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%; }
+    @media (min-width: 0px) and (max-width: 760px) {
+      main article.node--type-projektgruppe {
+        clear: both;
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0; } }
+    main article.node--type-projektgruppe .node_content {
+      width: 100%; }
+  main article.node--type-projektgruppe:nth-child(2n+2) {
+    width: 48.57143%;
+    float: right;
+    margin-right: 0; }
   main article.node--type-event {
     clear: both;
     width: 100%;

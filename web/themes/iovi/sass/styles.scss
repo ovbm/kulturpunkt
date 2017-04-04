@@ -233,6 +233,22 @@ main{
     }
   }
 
+  article.node--type-projektgruppe{
+    @include span(6);
+    @include susy-breakpoint(0px 760px){
+      @include full;
+    }
+    .node_content{
+      width:100%;
+    }
+
+  }
+  article.node--type-projektgruppe:nth-child(2n+2){
+    @include span(last 6);
+  }
+
+
+
   article.node--type-event{
     @include full;
     max-height: 169px;
