@@ -20,8 +20,11 @@ module:
   crop: 0
   ctools: 0
   ctools_views: 0
+  date_recur: 0
   datetime: 0
+  datetime_range: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   entity_reference_revisions: 0

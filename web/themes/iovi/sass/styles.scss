@@ -47,12 +47,13 @@ h1 {
 }
 
 h2 {
-  font-size: 1.375em;
+  font-size: 1.275em;
   line-height: 1.25em;
   font-weight: 300;
   margin-top: 0;
   @include susy-breakpoint(0px 760px){
-    font-size: 1.25em;
+    font-size: .90em;
+    line-height: 1em;
   }
 }
 
@@ -211,6 +212,7 @@ main{
     width:95%;
     margin-left: auto;
     margin-right: auto;
+    margin: 8em auto 5vh;
   }
   .view-filters{
     display: none;
@@ -280,7 +282,7 @@ main{
   }
 
 
-  article.node--type-event{
+  article.event_header{
     @include full;
     max-height: 169px;
     margin-top:30px;
@@ -288,7 +290,7 @@ main{
     box-shadow: 0px 0px 5px rgba(51, 51, 51, 0.3);
     display: flex;
     @include susy-breakpoint(0px 760px){
-      max-height: 201px;
+      height: 120px;
     }
       .event_content{
         width:100%;
@@ -300,30 +302,41 @@ main{
         height:100%;
         background-color:$rot;
         margin-right:0;
-        div{
-          padding-top: 0;
+        padding:5px;
+        span{
           text-align: center;
           color: white;
         }
-        div:first-child{
-          padding-top: 0.5em;
+        .weekday:not(.daymonth){
+          font-size: 2em;
+          font-weight: 200;
+          width:100%;
+          display:block;
+          margin: .5em 0 .5em 0;
         }
+        .daymonth:not(.time){
+          font-size: 1em;
+          width:100%;
+          display:block;
+          margin: 0 0 .5em 0;
+        }
+        .time{
+          font-size: 1em;
+          width:100%;
+          display:block;
+          margin: 0 0 .5em 0;
+        }
+
+
         @include susy-breakpoint(0px 760px){
           font-size: 1em;
           @include span(full);
-          height:2em;
-          div{
+          height:1.5em;
+          span{
             display:inline-block;
             float:right;
             padding-top:0;
             padding: 0 0.25em;
-          }
-          div:first-child{
-            float:left;
-            padding-top:0;
-          }
-          div.field__items{
-            float:left;
           }
         }
       }
@@ -350,12 +363,30 @@ main{
         }
         @include susy-breakpoint(0px 760px){
           @include span(7);
+          top:-0.75em;
         }
       }
       .event_type_genre{
-        @include full;
+        div{
+          float:right;
+          color: $rot;
+          font-weight:300;
+          font-size: 0.9em;
+          opacity:0.5;
+          @include susy-breakpoint(0px 760px){
+            font-size: 0.75em;
+          }
+        }
       }
 
+  }
+
+
+  article.node--type-event.Austausch{
+    max-height: 85px;
+    @include susy-breakpoint(0px 760px){
+      max-height: 85px;
+    }
   }
 
   .event_detail{
@@ -387,6 +418,12 @@ main{
       }
       .event_detail_info{
         @include full;
+        .field--name-field-event-datum{
+          .field__item{
+            display: inline;
+            margin-right:1em;
+          }
+        }
       }
     }
     .event_detail_col2{

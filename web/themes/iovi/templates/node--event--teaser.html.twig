@@ -78,25 +78,19 @@
     node.isPromoted() ? 'node--promoted',
     node.isSticky() ? 'node--sticky',
     not node.isPublished() ? 'node--unpublished',
-    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class
   ]
 %}
 
 {{ attach_library('classy/node') }}
 
-<article href="#{{node.canonical}}"{{ attributes.addClass(classes,'accordion event_header') }}>
-
-  <div{{ content_attributes.addClass('node__content event_content') }}>
-    <div class="event_date">
-        {{content.field_event_datum}}
-        <div class="field_item">
-          {{ node.field_event_datum[0].value|date('H:i')}}
-        </div>
-    </div>
     <div class="event_image">
         {{ content.field_event_bild[0] }}
     </div>
-    <div class="event_title carousel">
+    <div {{ attributes.addClass('event_type_genre',content.field_event_typ[0]|first) }}>
+        {{content.field_genre}}
+    </div>
+    <div class="event_title">
       {{ title_prefix }}
       {% if not page %}
         <h2{{ title_attributes }}>
@@ -104,12 +98,7 @@
         </h2>
       {% endif %}
       {{ title_suffix }}
-      <div class="event_type_genre">
-        {% if not content.field_event_typ == "Konzert" %}
-          {{content.field_event_typ}}
-        {% endif %}
-          {{content.field_genre}}
-      </div>
+
     </div>
   </div>
 
@@ -125,7 +114,7 @@
 
 </article>
 
-<div class="event_detail">
+<div {{ attributes.addClass('event_detail')}}>
   <div class="event_detail_col1">
     <div class="event_detail_body">
       {{ content.body }}
@@ -135,7 +124,7 @@
       <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
         <div class="field__label">Datum</div>
         <div class="field__item">
-            {{ node.field_event_datum[0].value|date('d.m.Y') }}
+            {{ node.field_event_datum.value|date('d.m.Y') }}
         </div>
       </div>
       <div class="clearfix text-formatted field field--name-field-event-datum field--type-text field--label-inline">
