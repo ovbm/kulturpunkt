@@ -353,7 +353,7 @@ main {
   float: left;
   margin-left: 0;
   margin-right: 0;
-  margin: 12em auto 5vh; }
+  margin: 12.5em auto 5vh; }
   @media (min-width: 0px) and (max-width: 960px) {
     main {
       float: none;

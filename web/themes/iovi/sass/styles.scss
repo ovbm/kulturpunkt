@@ -206,7 +206,7 @@ button.overlay-toggle {
 
 main{
   @include full;
-  margin: 12em auto 5vh;
+  margin: 12.5em auto 5vh;
   @include susy-breakpoint(0px 960px){
     float:none;
     width:95%;
