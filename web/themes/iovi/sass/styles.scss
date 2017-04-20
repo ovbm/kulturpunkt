@@ -350,15 +350,38 @@ main{
           display:block;
           margin: 0 0 .5em 0;
         }
-
-
         @include susy-breakpoint(0px 760px){
           font-size: 1em;
           @include span(full);
           height:1.5em;
           span{
             display:inline-block;
-            float:right;
+            float:left;
+            padding-top:0;
+            padding: 0 0.25em;
+            margin: 0 0 .5em 0 !important;
+          }
+          .weekday:not(.daymonth){
+            width:auto;
+            font-size: 1em;
+            display:inline-block;
+            float:left;
+            padding-top:0;
+            padding: 0 0.25em;
+          }
+          .daymonth:not(.time){
+            width:auto;
+            font-size: 1em;
+            display:inline-block;
+            float:left;
+            padding-top:0;
+            padding: 0 0.25em;
+          }
+          .time{
+            width:auto;
+            font-size: 1em;
+            display:inline-block;
+            float:left;
             padding-top:0;
             padding: 0 0.25em;
           }

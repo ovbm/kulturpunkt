@@ -267,14 +267,14 @@ header {
         padding-left: 0%;
         padding-right: 8.57143%;
         margin-top: 5em;
-        margin-left: 8.75em;
+        margin-left: 5em;
         height: 100vh;
         display: none; } }
     @media (min-width: 0px) and (max-width: 414px) {
       header nav.navigation #myTopnav {
         display: none; } }
     header nav.navigation #myTopnav > li.menu-item:not(:first-child) {
-      padding: 0 0 2em 5px; }
+      padding: 0 0 1em 5px; }
     header nav.navigation ul.menu a {
       color: #e94c4f;
       text-decoration: none;
@@ -296,7 +296,7 @@ header {
       -moz-box-sizing: border-box;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
-      width: 16.66667%;
+      width: 25%;
       float: left; }
       @media (min-width: 0px) and (max-width: 414px) {
         header nav.navigation ul.menu li.menu-item {
@@ -304,9 +304,27 @@ header {
           float: left;
           margin-left: 0;
           margin-right: 0; } }
+      header nav.navigation ul.menu li.menu-item ul {
+        width: 600px;
+        padding-top: .5em; }
+      header nav.navigation ul.menu li.menu-item ul li {
+        width: auto;
+        padding-right: 1.5em;
+        float: left; }
+        @media (min-width: 0px) and (max-width: 414px) {
+          header nav.navigation ul.menu li.menu-item ul li {
+            width: 100%; } }
+        header nav.navigation ul.menu li.menu-item ul li a {
+          font-size: 1.25em;
+          font-weight: 300; }
+        @media (min-width: 0px) and (max-width: 414px) {
+          header nav.navigation ul.menu li.menu-item ul li {
+            padding-left: 1em; } }
     header nav.navigation ul.menu li.menu-item--expanded {
       list-style-image: none;
       list-style-type: none; }
+    header nav.navigation ul.menu li.menu-item--expanded:not(.menu-item--active-trail) ul.menu {
+      display: none; }
     header nav.navigation ul.menu li.icon {
       display: none; }
       header nav.navigation ul.menu li.icon a {
@@ -495,7 +513,29 @@ main {
           height: 1.5em; }
           main article.event_header .event_date span {
             display: inline-block;
-            float: right;
+            float: left;
+            padding-top: 0;
+            padding: 0 0.25em;
+            margin: 0 0 .5em 0 !important; }
+          main article.event_header .event_date .weekday:not(.daymonth) {
+            width: auto;
+            font-size: 1em;
+            display: inline-block;
+            float: left;
+            padding-top: 0;
+            padding: 0 0.25em; }
+          main article.event_header .event_date .daymonth:not(.time) {
+            width: auto;
+            font-size: 1em;
+            display: inline-block;
+            float: left;
+            padding-top: 0;
+            padding: 0 0.25em; }
+          main article.event_header .event_date .time {
+            width: auto;
+            font-size: 1em;
+            display: inline-block;
+            float: left;
             padding-top: 0;
             padding: 0 0.25em; } }
     main article.event_header .event_image {
