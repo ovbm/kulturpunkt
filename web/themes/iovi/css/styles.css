@@ -575,6 +575,19 @@ main {
       @media (min-width: 0px) and (max-width: 760px) {
         main article.event_header .event_type_genre div {
           font-size: 0.75em; } }
+  main article.event_header:not(.Konzert) {
+    max-height: 100px; }
+    main article.event_header:not(.Konzert) .event_date {
+      background-color: white; }
+      main article.event_header:not(.Konzert) .event_date span {
+        text-align: center;
+        color: #e94c4f; }
+      main article.event_header:not(.Konzert) .event_date .weekday:not(.daymonth) {
+        font-size: 1em;
+        margin: 3px 0 3px 0; }
+      main article.event_header:not(.Konzert) .event_date .daymonth:not(.time) {
+        font-size: .75em;
+        margin: 0; }
   main article.node--type-event.Austausch {
     max-height: 85px; }
     @media (min-width: 0px) and (max-width: 760px) {

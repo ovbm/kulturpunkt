@@ -428,6 +428,26 @@ main{
 
   }
 
+    article.event_header:not(.Konzert){
+      max-height:100px;
+      .event_date{
+        background-color: white;
+        span{
+          text-align: center;
+          color: $rot;
+        }
+        .weekday:not(.daymonth){
+          font-size: 1em;
+          margin:3px 0 3px 0;
+        }
+        .daymonth:not(.time){
+          font-size: .75em;
+          margin: 0;
+        }
+      }
+    }
+
+
 
   article.node--type-event.Austausch{
     max-height: 85px;

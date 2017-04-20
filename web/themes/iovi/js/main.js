@@ -106,6 +106,12 @@ Drupal.behaviors.myBehavior = {
 
 (function ($) {
   $(document).ready(function () {
+    $('.Workshops').prev('.accordion').addClass('Workshops');
+    $('.Konzert').prev('.accordion').addClass('Konzert');
+    $('.Austausch').prev('.accordion').addClass('Austausch');
+  });
+
+  $(document).ready(function () {
     $('.menu-item--expanded:not(.menu-item--active-trail) ').hover(function () {
       $('ul.menu', this).slideToggle();
     });
