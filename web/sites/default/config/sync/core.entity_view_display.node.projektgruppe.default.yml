@@ -1,0 +1,40 @@
+uuid: 9d0654f2-62bb-4092-9ba8-dc283da1f5e9
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.field.node.projektgruppe.field_projektabsatz
+    - field.field.node.projektgruppe.field_projektbild
+    - image.style.large
+    - node.type.projektgruppe
+  module:
+    - entity_reference_revisions
+    - image
+    - user
+id: node.projektgruppe.default
+targetEntityType: node
+bundle: projektgruppe
+mode: default
+content:
+  field_projektabsatz:
+    type: entity_reference_revisions_entity_view
+    weight: 103
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_projektbild:
+    weight: 102
+    label: hidden
+    settings:
+      image_style: large
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

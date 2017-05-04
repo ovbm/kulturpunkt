@@ -1,0 +1,18 @@
+uuid: ec76b327-9dc1-43f2-968d-a5046114ab1a
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projektgruppe
+id: node.projektgruppe.title
+field_name: title
+entity_type: node
+bundle: projektgruppe
+label: Projektgruppen
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

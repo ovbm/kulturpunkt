@@ -1,0 +1,11 @@
+uuid: 746320c2-4534-4534-b112-3ee5e317ab74
+langcode: de
+status: true
+dependencies:
+  config:
+    - node.type.projektgruppe
+id: node.projektgruppe
+target_entity_type_id: node
+target_bundle: projektgruppe
+default_langcode: site_default
+language_alterable: false

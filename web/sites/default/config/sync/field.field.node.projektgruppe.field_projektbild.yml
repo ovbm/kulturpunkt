@@ -1,17 +1,17 @@
-uuid: 504da0ec-641e-40d7-a18e-776822d58a2f
-langcode: en
+uuid: 3ec16d07-24fb-4096-964c-a1ef10d4c429
+langcode: de
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_slideshow
-    - paragraphs.paragraphs_type.slideshow
+    - field.storage.node.field_projektbild
+    - node.type.projektgruppe
   module:
     - image
-id: paragraph.slideshow.field_slideshow
-field_name: field_slideshow
-entity_type: paragraph
-bundle: slideshow
-label: slideshow
+id: node.projektgruppe.field_projektbild
+field_name: field_projektbild
+entity_type: node
+bundle: projektgruppe
+label: projektbild
 description: ''
 required: false
 translatable: false
@@ -23,7 +23,7 @@ settings:
   max_filesize: ''
   max_resolution: ''
   min_resolution: ''
-  alt_field: false
+  alt_field: true
   alt_field_required: false
   title_field: false
   title_field_required: false

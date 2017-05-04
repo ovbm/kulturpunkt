@@ -1,0 +1,33 @@
+uuid: 9010a31c-6b7d-4cf7-ab32-a6c48b7ae2f6
+langcode: de
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.projektgruppe.field_projektabsatz
+    - field.field.node.projektgruppe.field_projektbild
+    - image.style.large
+    - node.type.projektgruppe
+  module:
+    - image
+    - user
+id: node.projektgruppe.teaser
+targetEntityType: node
+bundle: projektgruppe
+mode: teaser
+content:
+  field_projektbild:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: large
+      image_link: content
+    third_party_settings: {  }
+  links:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_projektabsatz: true
+  langcode: true

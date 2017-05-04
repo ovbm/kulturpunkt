@@ -688,6 +688,55 @@ main {
     text-align: center;
     margin-top: 5vh; }
 
+.page-node-type-projektgruppe .node--type-projektgruppe {
+  background-color: #e94c4f;
+  width: 100%;
+  height: 100%;
+  margin: 1em 0 1em 0; }
+  .page-node-type-projektgruppe .node--type-projektgruppe .project_image {
+    max-width: 480px;
+    width: 48.57143%;
+    float: left;
+    margin-right: 2.85714%; }
+    .page-node-type-projektgruppe .node--type-projektgruppe .project_image img {
+      width: 100%;
+      height: auto;
+      padding: 0.5em; }
+    @media (min-width: 0px) and (max-width: 414px) {
+      .page-node-type-projektgruppe .node--type-projektgruppe .project_image {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0; }
+        .page-node-type-projektgruppe .node--type-projektgruppe .project_image img {
+          width: 100%;
+          height: auto;
+          padding: 0; } }
+  .page-node-type-projektgruppe .node--type-projektgruppe .projektgruppentitel {
+    padding-top: 0.5em;
+    font-size: 2em;
+    width: 48.57143%;
+    float: right;
+    margin-right: 0; }
+    .page-node-type-projektgruppe .node--type-projektgruppe .projektgruppentitel span {
+      color: white; }
+    @media (min-width: 0px) and (max-width: 414px) {
+      .page-node-type-projektgruppe .node--type-projektgruppe .projektgruppentitel {
+        width: 100%;
+        float: left;
+        margin-left: 0;
+        margin-right: 0; } }
+
+.page-node-type-projektgruppe .node--type-projektgruppe:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.page-node-type-projektgruppe .projektdetails {
+  opacity: 1;
+  overflow: auto;
+  max-height: 100%; }
+
 footer {
   clear: both;
   width: 100%;

@@ -304,7 +304,7 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: '1'
+          value: true
           group: 1
           exposed: false
           expose:
@@ -439,7 +439,6 @@ display:
       use_more: false
       use_more_always: false
       use_more_text: mehr
-      group_by: false
     cache_metadata:
       max-age: -1
       contexts:
@@ -455,6 +454,8 @@ display:
         - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.projektgruppe.default'
+        - 'config:core.entity_view_display.node.projektgruppe.teaser'
         - 'config:field.storage.node.field_event_datum'
   page_1:
     display_plugin: page
@@ -489,4 +490,6 @@ display:
         - 'config:core.entity_view_display.node.event.teaser'
         - 'config:core.entity_view_display.node.page.default'
         - 'config:core.entity_view_display.node.page.teaser'
+        - 'config:core.entity_view_display.node.projektgruppe.default'
+        - 'config:core.entity_view_display.node.projektgruppe.teaser'
         - 'config:field.storage.node.field_event_datum'

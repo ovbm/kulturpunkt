@@ -1,0 +1,62 @@
+uuid: b7829e4e-2311-4535-a828-c4fd82ef70e2
+langcode: de
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_projektabsatz
+    - node.type.projektgruppe
+    - paragraphs.paragraphs_type.file
+    - paragraphs.paragraphs_type.slideshow
+    - paragraphs.paragraphs_type.text
+    - paragraphs.paragraphs_type.text_mit_bild_rechts
+    - paragraphs.paragraphs_type.text_mit_teaser_rechts
+  module:
+    - entity_reference_revisions
+id: node.projektgruppe.field_projektabsatz
+field_name: field_projektabsatz
+entity_type: node
+bundle: projektgruppe
+label: projektabsatz
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      file: file
+      slideshow: slideshow
+      text: text
+      text_mit_bild_rechts: text_mit_bild_rechts
+      text_mit_teaser_rechts: text_mit_teaser_rechts
+    target_bundles_drag_drop:
+      file:
+        enabled: true
+        weight: 10
+      kontakt:
+        weight: 11
+        enabled: false
+      map:
+        weight: 12
+        enabled: false
+      offnungszeiten:
+        weight: 13
+        enabled: false
+      slideshow:
+        enabled: true
+        weight: 14
+      sponsoren:
+        weight: 15
+        enabled: false
+      text:
+        enabled: true
+        weight: 16
+      text_mit_bild_rechts:
+        enabled: true
+        weight: 17
+      text_mit_teaser_rechts:
+        enabled: true
+        weight: 18
+field_type: entity_reference_revisions

@@ -548,6 +548,57 @@ main{
   }
 }
 
+
+.page-node-type-projektgruppe{
+  .node--type-projektgruppe{
+    background-color: $rot;
+    width:100%;
+    height: 100%;
+    margin: 1em 0 1em 0;
+    .project_image{
+      max-width:480px;
+      @include span (6);
+      img{
+        width:100%;
+        height:auto;
+        padding:0.5em;
+      }
+      @include susy-breakpoint(0px 414px){
+        @include span (12);
+        img{
+          width:100%;
+          height:auto;
+          padding:0;
+        }
+      }
+
+    }
+    .projektgruppentitel{
+      padding-top:0.5em;
+      font-size:2em;
+      @include span (last 6);
+      span{
+        color:white;
+      }
+      @include susy-breakpoint(0px 414px){
+        @include span (12);
+      }
+    }
+  }
+  .node--type-projektgruppe:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  .projektdetails {
+    opacity: 1;
+    overflow:auto;
+    max-height: 100%;
+  }
+
+}
+
 footer{
   @include full;
   margin-top:10vh;

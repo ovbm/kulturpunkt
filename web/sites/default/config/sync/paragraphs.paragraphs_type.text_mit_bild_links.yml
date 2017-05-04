@@ -1,0 +1,6 @@
+uuid: e29bd7ef-f286-4a30-96ad-9df616c4cdde
+langcode: de
+status: true
+dependencies: {  }
+id: text_mit_bild_links
+label: 'text mit bild links'
