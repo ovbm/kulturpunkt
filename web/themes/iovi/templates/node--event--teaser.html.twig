@@ -93,12 +93,17 @@
     <div class="event_title">
       {{ title_prefix }}
       {% if not page %}
+        {% if content.field_event_typ[0]|first == "Projektgruppe" %}
+        <h2{{ title_attributes }}>
+          {{ content.field_event_links[0] }}
+        </h2>
+        {% else %}
         <h2{{ title_attributes }}>
           <a class="event_title_link" href="{{ "#" }}" rel="bookmark">{{ label }}</a>
         </h2>
+        {% endif %}
       {% endif %}
       {{ title_suffix }}
-
     </div>
   </div>
 
@@ -114,6 +119,10 @@
 
 </article>
 
+{% if content.field_event_typ[0]|first == "Projektgruppe" %}
+  <div {{ attributes.addClass('event_detail')}}>
+  </div>
+{% else %}
 <div {{ attributes.addClass('event_detail')}}>
   <div class="event_detail_col1">
     <div class="event_detail_body">
@@ -146,3 +155,4 @@
     </div>
   </div>
 </div>
+{% endif %}

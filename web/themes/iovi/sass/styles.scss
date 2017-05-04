@@ -589,14 +589,19 @@ main{
   content: "";
   display: table;
   clear: both;
-}
+  }
 
   .projektdetails {
     opacity: 1;
     overflow:auto;
     max-height: 100%;
   }
-
+  .paragraph--type--slideshow{
+    @include span (6);
+    @include susy-breakpoint(0px 414px){
+      @include span (12);
+    }
+  }
 }
 
 footer{
