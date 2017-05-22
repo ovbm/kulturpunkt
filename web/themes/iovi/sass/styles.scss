@@ -447,6 +447,15 @@ main{
       }
     }
 
+    article.Highlight{
+      .event_content{
+        color: $rot;
+        .event_title{
+          color:white;
+        }
+      }
+
+    }
 
 
   article.node--type-event.Austausch{

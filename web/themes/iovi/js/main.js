@@ -9,6 +9,8 @@ Drupal.behaviors.myBehavior = {
         $('.Konzert').prev('.accordion').addClass('Konzert');
         $('.Austausch').prev('.accordion').addClass('Austausch');
         $('.Projektgruppe').prev('.accordion').addClass('Projektgruppe');
+        $('.Highlight').prev('.accordion').addClass('Highlight');
+
       });
 
       $(document).ready(function () {
