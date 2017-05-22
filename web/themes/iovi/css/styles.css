@@ -591,7 +591,7 @@ main {
   main article.Highlight .event_content {
     background-color: #e94c4f; }
     main article.Highlight .event_content .event_title a {
-      color: white; }
+      color: white !important; }
   main article.node--type-event.Austausch {
     max-height: 85px; }
     @media (min-width: 0px) and (max-width: 760px) {
