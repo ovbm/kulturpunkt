@@ -589,8 +589,8 @@ main {
         font-size: .75em;
         margin: 0; }
   main article.Highlight .event_content {
-    color: #e94c4f; }
-    main article.Highlight .event_content .event_title {
+    background-color: #e94c4f; }
+    main article.Highlight .event_content .event_title a {
       color: white; }
   main article.node--type-event.Austausch {
     max-height: 85px; }
