@@ -428,7 +428,7 @@ main{
 
   }
 
-    article.event_header:not(.Konzert){
+    article.event_header:not(.Konzert):not(.Highlight){
       max-height:100px;
       .event_date{
         background-color: white;
